@@ -1,7 +1,18 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["testing-library"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@shopify/esnext",
+    "plugin:@shopify/prettier"
+  ],
+  "plugins": ["testing-library", "@typescript-eslint", "no-loops"],
+  "rules": {
+    "no-console": 2, // change to 0 to enable console
+    "no-loops/no-loops": 2
+  },
   "overrides": [
     // Only uses Testing Library lint rules in test files
     {

@@ -5,7 +5,12 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "prepare": "husky install",
+    "format": "prettier '**/*.{js,ts,css}' --write --ignore-unknown",
+    "lint": "eslint src",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "next": "latest",
@@ -13,12 +18,23 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@shopify/eslint-plugin": "^42.0.1",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.2.0",
     "@types/react": "18.0.9",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "husky": "^8.0.0",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "typescript": "4.6.4"
+  },
+  "lint-staged": {
+    "**/*": "yarn format",
+    "*.ts": "yarn lint"
   }
 }
