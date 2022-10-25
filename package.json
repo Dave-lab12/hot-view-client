@@ -8,8 +8,8 @@
     "test:ci": "jest --ci",
     "prepare": "husky install",
     "format": "prettier '**/*.{js,ts,css}' --write --ignore-unknown",
-    "lint": "next lint",
-    "lint-and-fix": "next lint  --fix",
+    "lint": "eslint pages --ext .ts,.tsx,.js",
+    "lint-and-fix": "eslint pages --ext .ts,.tsx,.js --fix",
     "coverage": "jest --coverage"
   },
   "dependencies": {
