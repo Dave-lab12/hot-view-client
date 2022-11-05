@@ -30,8 +30,7 @@ function Login(){
                 buttonClass="h-9 mt-3"                
             />
 
-            <h4 className="my-1">or</h4>
-            <h1>Login with</h1>
+            <h1 className="my-2">Login with</h1>
             <div className="grid grid-cols-2 ">
                 <Button
                     buttonType="button"
@@ -47,16 +46,16 @@ function Login(){
                     buttonClass="h-9 rounded-full"
                 />
             </div>
-            <div className="flex flex-row">
-                <Link
+
+            <h4 className="my-1">or</h4>
+            <Link
                     text="Sign up"
                     link="#"
                 />
-                <Link
-                    text="Forgot password"
-                    link="#"
-                />
-            </div>
+            <Link
+                text="Forgot password"
+                link="#"
+            />
       </div>
     )
 
