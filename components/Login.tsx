@@ -21,14 +21,15 @@ function Login(){
             <Input
                 inputName="password"
                 inputType="password"
-                inputClass=""
             />
 
             <Button 
                 buttonType="submit"
                 text="Login"
-                buttonClass="h-9 mt-3"                
+                buttonClass="h-9 my-3"                
             />
+
+            <h4>or</h4>
 
       </div>
     )
