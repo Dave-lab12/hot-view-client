@@ -6,7 +6,7 @@ import Image from "next/image"
 function Login(){
     return (
         
-        <div className="grid place-items-center">
+        <div className="grid bg-gray-100 place-items-center hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-md h-3/5 p-5">
 
             <Logo 
                 src="/hot-news-logo.png"
@@ -15,13 +15,11 @@ function Login(){
             <Input 
                 inputName="email"
                 inputType="email"
-                className={'mt-10'}
             />
 
             <Input
                 inputName="password"
                 inputType="password"
-                className={''}
             />
       </div>
     )

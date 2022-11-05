@@ -1,10 +1,9 @@
 import Login from "@/components/Login";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-gray-100 overflow-hidden">
+    <div className="bg-gray-300 overflow-hidden">
       <Head>
         <title>Login</title>
         <link 
@@ -13,8 +12,10 @@ export default function Home() {
           type="image"
         />
       </Head>
-      <main className="">
-        <Login />
+      <main>
+        <div className="grid place-items-center h-screen">
+          <Login />
+        </div>
       </main>
     </div>
   );
