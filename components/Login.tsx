@@ -1,6 +1,7 @@
 import Input from "./Input"
 import Logo from "./Logo"
 import Button from "./Button"
+import Link from './Link';
 
 
 function Login(){
@@ -26,13 +27,36 @@ function Login(){
             <Button 
                 buttonType="submit"
                 text="Login"
-                buttonClass="h-9 my-3"                
+                buttonClass="h-9 mt-3"                
             />
 
-            <h4>or</h4>
-            <a className="underline text-blue-700 hover:cursor-pointer">Sign up</a>
+            <h4 className="my-1">or</h4>
+            <h1>Login with</h1>
+            <div className="grid grid-cols-2 ">
+                <Button
+                    buttonType="button"
+                    text="Google"
+                    link="#"
+                    buttonClass="mr-2 h-9 rounded-full"
+                />
 
-
+                <Button
+                    buttonType="button"
+                    text="Facebook"
+                    link="#"
+                    buttonClass="h-9 rounded-full"
+                />
+            </div>
+            <div className="flex flex-row">
+                <Link
+                    text="Sign up"
+                    link="#"
+                />
+                <Link
+                    text="Forgot password"
+                    link="#"
+                />
+            </div>
       </div>
     )
 
