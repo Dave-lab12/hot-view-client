@@ -6,7 +6,11 @@ interface IProps {
 
 function Input({inputName, inputType}: IProps){
     return (
-        <input type={inputType} placeholder={inputName} name={inputName} />
+        <input type={inputType}
+            placeholder={inputName}
+            name={inputName}
+            className='border'
+           />
     )
 }
 
