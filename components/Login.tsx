@@ -1,10 +1,12 @@
 import Input from "./Input"
 import Logo from "./Logo"
+import Image from "next/image"
 
 
 function Login(){
     return (
-        <div className="grid">
+        
+        <div className="grid place-items-center">
 
             <Logo 
                 src="/hot-news-logo.png"
@@ -19,7 +21,7 @@ function Login(){
                 inputName="password"
                 inputType="password"
             />
-        </div>
+      </div>
     )
 
 }

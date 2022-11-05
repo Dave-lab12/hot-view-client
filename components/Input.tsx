@@ -9,7 +9,6 @@ function Input({inputName, inputType}: IProps){
         <input type={inputType}
             placeholder={inputName}
             name={inputName}
-            className='border'
            />
     )
 }
