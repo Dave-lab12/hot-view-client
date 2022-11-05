@@ -13,7 +13,7 @@ export default function Home() {
           type="image"
         />
       </Head>
-      <main>
+      <main className="">
         <Login />
       </main>
     </div>

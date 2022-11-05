@@ -15,11 +15,13 @@ function Login(){
             <Input 
                 inputName="email"
                 inputType="email"
+                className={'mt-10'}
             />
 
             <Input
                 inputName="password"
                 inputType="password"
+                className={''}
             />
       </div>
     )
