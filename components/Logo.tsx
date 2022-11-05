@@ -9,7 +9,7 @@ function Logo({src}: IProps){
             src={src}
             width={100}
             height={100}
-            className='border rounded-full hover:scale-105 hover:animate-pulse'
+            className='border rounded-full tranistion duration-100 transform ease-in-out hover:scale-105'
         />
     )
 }
