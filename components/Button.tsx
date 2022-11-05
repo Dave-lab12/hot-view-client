@@ -2,7 +2,7 @@
 interface IProps {
     buttonType: "button" | "submit" | "reset",
     text: string,
-    buttonClass: string,
+    buttonClass?: string,
 }
 
 function Button({buttonType, text, buttonClass}:IProps){

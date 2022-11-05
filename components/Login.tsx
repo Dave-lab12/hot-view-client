@@ -30,6 +30,8 @@ function Login(){
             />
 
             <h4>or</h4>
+            <a className="underline text-blue-700 hover:cursor-pointer">Sign up</a>
+
 
       </div>
     )
