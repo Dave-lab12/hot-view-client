@@ -1,13 +1,12 @@
 import Head from "next/head";
+import { signIn } from "next-auth/react";
 
 import Input from "./Input";
 import Logo from "./Logo";
 import Button from "./Button";
 import Link from "./Link";
-// import { signIn } from "next-auth/react"
 
 function Login() {
-  function signIn() {}
   return (
     <div className="bg-gray-300 overflow-hidden">
       <Head>
