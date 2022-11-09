@@ -39,6 +39,7 @@ function Login(){
                     text="Google"
                     link="#"
                     buttonClass="mr-2 h-9 rounded-full"
+                    click={signIn}
                 />
 
                 <Button
@@ -46,6 +47,7 @@ function Login(){
                     text="Facebook"
                     link="#"
                     buttonClass="h-9 rounded-full"
+                    click={signIn}
                 />
             </div>
 
