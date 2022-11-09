@@ -31,7 +31,6 @@ function Login(){
                 buttonType="submit"
                 text="Login"
                 buttonClass="h-9 mt-3"
-                click={signIn}            
             />
 
             <h1 className="my-2">Login with</h1>

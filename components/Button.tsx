@@ -4,7 +4,7 @@ interface IProps {
     text: string,
     buttonClass?: string,
     link?:string,
-    click: any
+    click?: any
 }
 
 function Button({buttonType, text, buttonClass, link, click}:IProps){

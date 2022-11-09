@@ -48,6 +48,11 @@ function SignUp(){
                     inputType="number"
                 />
 
+                <Button
+                    buttonType="submit"
+                    text="sign up"
+                />
+
             </div>
           </div>
         </main>
