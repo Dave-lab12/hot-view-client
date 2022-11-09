@@ -1,16 +1,12 @@
 import SignUp from "@/components/SignUp";
 import Head from "next/head";
+import Header from "@/components/Header";
 
-function signIn(){
+function signUp(){
     <div className="bg-gray-300 overflow-hidden">
-        <Head>
-          <title>SignUp</title>
-          <link 
-            rel="icon" 
-            href="/hot-news-logo.png"
-            type="image"
-          />
-        </Head>
+        <Header
+            title="signup"
+        />
         <main>
           <div className="grid place-items-center h-screen">
             <SignUp />
@@ -18,3 +14,5 @@ function signIn(){
         </main>
       </div>
 }
+
+export default signUp
