@@ -1,21 +1,16 @@
-import Head from "next/head"
+import Head from "next/head";
 
-interface IProps{
-    title: string
+interface IProps {
+  title: string;
 }
 
-function Header({title}:IProps){
-    return(
-        <Head>
-          <title>SignUp</title>
-          <link 
-            rel="icon" 
-            href="/hot-news-logo.png"
-            type="image"
-          />
-        </Head>
-    )
-
+function Header({ title }: IProps) {
+  return (
+    <Head>
+      <title>{title}</title>
+      <link rel="icon" href="/hot-news-logo.png" type="image" />
+    </Head>
+  );
 }
 
-export default Header
+export default Header;

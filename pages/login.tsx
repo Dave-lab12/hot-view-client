@@ -1,8 +1,7 @@
-import Login from "@/components/Login"
-function login(){
-    return (
-      <Login />
-    )
+import Login from "@/components/Login";
+
+function login() {
+  return <Login />;
 }
 
-export default login
+export default login;

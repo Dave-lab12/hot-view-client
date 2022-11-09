@@ -1,7 +1,7 @@
 import SignUp from "@/components/SignUp";
 
-function signUp(){
-  return <SignUp />
+function signUp() {
+  return <SignUp />;
 }
 
-export default signUp
+export default signUp;
