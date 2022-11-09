@@ -13,7 +13,7 @@ function SignUp() {
             <Logo src="/hot-news-logo.png" />
 
             <div className="grid grid-cols-2">
-              <h1 className="col-span-2 place-self-center mb-2 text-orange-700 ">
+              <h1 className="col-span-2 place-self-start text-sm ml-1 mb-2 text-orange-700 ">
                 Fill the following form please
               </h1>
 

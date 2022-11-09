@@ -12,7 +12,7 @@ function Login() {
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
-          <div className="flex flex-col items-center justify-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
+          <div className="grid place-items-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
             <Logo src="/hot-news-logo.png" />
 
             <Input
@@ -29,7 +29,7 @@ function Login() {
               inputClass="w-full"
             />
 
-            <Button buttonType="submit" text="Login" buttonClass="mt-3 h-16" />
+            <Button buttonType="submit" text="Login" buttonClass="mt-3" />
             <Link
               text="Forgot password"
               link="#"
@@ -37,7 +37,7 @@ function Login() {
               textClass="text-sm"
             />
 
-            <h1 className="my-4">Or login with</h1>
+            <h1 className="my-4 text-gray-700 mb-6">login with</h1>
             <div className="grid grid-cols-2 ">
               <Button
                 buttonType="button"
