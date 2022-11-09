@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface IProps {
   src: string;
-  logoClass: string;
+  logoClass?: string;
 }
 function Logo({ src, logoClass }: IProps) {
   return (

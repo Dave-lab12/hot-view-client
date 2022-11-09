@@ -13,7 +13,7 @@ function Login() {
       <main>
         <div className="grid place-items-center h-screen">
           <div className="flex flex-col items-center justify-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
-            <Logo src="/hot-news-logo.png" logoClass="" />
+            <Logo src="/hot-news-logo.png" />
 
             <Input
               inputName="email"
@@ -34,15 +34,16 @@ function Login() {
               text="Forgot password"
               link="#"
               linkClass="place-self-end mt-2"
+              textClass="text-sm"
             />
 
             <h1 className="my-4">Or login with</h1>
             <div className="grid grid-cols-2 ">
               <Button
                 buttonType="button"
-                text="Google"
                 link="#"
-                buttonClass="mr-2 h-9 rounded-full"
+                text="Google"
+                buttonClass="mr-2 h-9"
                 click={signIn}
                 iconLink="fa-brands fa-google"
               />
@@ -51,12 +52,18 @@ function Login() {
                 buttonType="button"
                 text="Facebook"
                 link="#"
+                buttonClass="w-35 mx-2"
                 click={signIn}
+                iconLink="fa-brands fa-facebook"
               />
             </div>
-
-            <h4 className="my-1">or</h4>
-            <Link text="Sign up" link="#" />
+            <p className="text-gray-700 text-sm mt-3">Don't have an account?</p>
+            <Link
+              text="Sign up"
+              link="#"
+              linkClass="display:inline"
+              textClass="text-sm"
+            />
           </div>
         </div>
       </main>
