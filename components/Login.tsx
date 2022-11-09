@@ -58,7 +58,6 @@ function Login(){
                         buttonType="button"
                         text="Facebook"
                         link="#"
-                        buttonClass="h-9 rounded-full"
                         click={signIn}
                     />
                 </div>

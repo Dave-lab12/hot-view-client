@@ -10,7 +10,7 @@ interface IProps {
 function Button({buttonType, text, buttonClass, link, click}:IProps){
     return (
         <button type={buttonType}
-                className={"rounded-lg bg-orange-700 text-white transition duration-150 hover:bg-orange-600 w-20 " + buttonClass}
+                className={"rounded-lg bg-orange-700 text-white transition duration-150 hover:bg-orange-600 w-20 h-9 rounded-full " + buttonClass}
                 onClick={click}
                 >
         {text}
