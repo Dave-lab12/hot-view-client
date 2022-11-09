@@ -44,6 +44,7 @@ function Login() {
                 link="#"
                 buttonClass="mr-2 h-9 rounded-full"
                 click={signIn}
+                iconLink="fa-brands fa-google"
               />
 
               <Button

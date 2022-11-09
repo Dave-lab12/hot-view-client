@@ -2,7 +2,7 @@ import { MouseEventHandler } from "react";
 
 interface IProps {
   buttonType: "button" | "submit" | "reset";
-  text: string;
+  text?: string;
   buttonClass?: string;
   link?: string;
   click?: unknown;
