@@ -10,9 +10,12 @@ function SignUp() {
       <main>
         <div className="grid place-items-center h-screen">
           <div className="grid place-items-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 px-5">
-            <Logo src="/hot-news-logo.png" />
-
             <div className="grid grid-cols-2">
+              <Logo
+                src="/hot-news-logo.png"
+                logoClass="col-span-2 place-self-center mb-6"
+              />
+
               <h1 className="col-span-2 place-self-start text-sm ml-1 mb-2 text-orange-700 ">
                 Fill the following form please
               </h1>

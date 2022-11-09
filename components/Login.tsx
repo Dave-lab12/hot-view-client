@@ -60,7 +60,7 @@ function Login() {
             <p className="text-gray-700 text-sm mt-3">Don't have an account?</p>
             <Link
               text="Sign up"
-              link="#"
+              link="/signup"
               linkClass="display:inline"
               textClass="text-sm"
             />
