@@ -7,9 +7,6 @@ interface IProps {
 
 function Input({ inputName, inputType, inputClass, inputId }: IProps) {
   return (
-    //
-    // />
-
     <div className="relative">
       <input
         type={inputType}
