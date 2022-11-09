@@ -21,6 +21,9 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@shopify/eslint-plugin": "^42.0.1",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",

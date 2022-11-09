@@ -1,4 +1,5 @@
-import { MouseEventHandler, FontAwesomeIcon } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MouseEventHandler } from "react";
 
 interface IProps {
   buttonType: "button" | "submit" | "reset";
@@ -16,7 +17,7 @@ function Button({ buttonType, text, buttonClass, link, click }: IProps) {
       onClick={click as MouseEventHandler}
     >
       {text}
-      <FontAwesomeIcon icon="fa-brands fa-google" />
+      <FontAwesomeIcon icon="google" />
     </button>
   );
 }
