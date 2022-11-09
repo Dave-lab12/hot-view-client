@@ -50,7 +50,7 @@ function SignUp(){
 
                 <Button
                     buttonType="submit"
-                    text="sign up"
+                    text="sign up" 
                 />
 
             </div>
