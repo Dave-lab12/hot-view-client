@@ -1,6 +1,10 @@
 import Head from "next/head"
 
-function Header(){
+interface IProps{
+    title: string
+}
+
+function Header({title}:IProps){
     return(
         <Head>
           <title>SignUp</title>
