@@ -1,13 +1,14 @@
 import Input from "./Input"
 import Logo from "./Logo"
 import Button from "./Button"
-import Link from './Link';
+import Link from './Link'
+import { signIn } from "next-auth/react"
 
 
 function Login(){
     return (
         
-        <div className="flex flex-col items-center justify-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/5 p-5">
+        <div className="flex flex-col items-center justify-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
 
             <Logo 
                 src="/hot-news-logo.png"
@@ -27,7 +28,8 @@ function Login(){
             <Button 
                 buttonType="submit"
                 text="Login"
-                buttonClass="h-9 mt-3"                
+                buttonClass="h-9 mt-3"
+                click={signIn}            
             />
 
             <h1 className="my-2">Login with</h1>
