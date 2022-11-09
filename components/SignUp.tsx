@@ -21,28 +21,43 @@ function SignUp() {
                 inputName="email"
                 inputType="email"
                 inputClass="mr-2 mb-2"
+                inputId="email"
               />
 
-              <Input inputName="First name" inputType="text" />
+              <Input inputName="phonenumber" inputType="number" inputId="pno" />
+
+              <Input
+                inputName="First name"
+                inputType="text"
+                inputId="firstName"
+                inputClass="mr-2 mb-2"
+              />
 
               <Input
                 inputName="Last name"
                 inputType="text"
-                inputClass="mr-2 mb-2"
+                inputId="lastName"
               />
 
-              <Input inputName="password" inputType="password" />
+              <Input
+                inputName="password"
+                inputType="password"
+                inputId="pass"
+                inputClass="mr-2 mb-2"
+              />
 
               <Input
                 inputName="confirm password"
                 inputType="password"
-                inputClass="mr-2 mb-2"
+                inputId="pass2"
               />
 
-              <Input inputName="phonenumber" inputType="number" />
+              <Button
+                buttonType="submit"
+                text="sign up"
+                buttonClass="col-span-2 place-self-center"
+              />
             </div>
-
-            <Button buttonType="submit" text="sign up" />
           </div>
         </div>
       </main>
