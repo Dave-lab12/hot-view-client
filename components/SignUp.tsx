@@ -18,9 +18,9 @@ function SignUp(){
                     src="/hot-news-logo.png"
                 />
 
-                <h1>Fill the following form please</h1>
-
                 <div className="grid grid-cols-2">
+                
+                    <h1 className="col-span-2 place-self-center mb-2 text-orange-700 ">Fill the following form please</h1>
                     
                     <Input 
                         inputName="email"
