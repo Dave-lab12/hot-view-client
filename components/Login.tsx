@@ -2,10 +2,12 @@ import Input from "./Input"
 import Logo from "./Logo"
 import Button from "./Button"
 import Link from './Link'
-import { signIn } from "next-auth/react"
-
+// import { signIn } from "next-auth/react"
 
 function Login(){
+    function signIn(){
+    
+    }
     return (
         
         <div className="flex flex-col items-center justify-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
