@@ -12,7 +12,7 @@ function Login() {
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
-          <div className="grid place-items-center bg-gray-100 hover:scale-110 transition duration-150 transform ease-in-out hover:shadow-lg rounded-lg h-3/5 w-1/4 p-5">
+          <div className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg w-1/4 p-5">
             <Logo src="/hot-news-logo.png" />
 
             <Input
