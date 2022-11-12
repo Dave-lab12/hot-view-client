@@ -36,7 +36,7 @@ function Login() {
             <Input
               inputName="email"
               inputType="email"
-              inputClass="mt-6 w-full"
+              inputClass="mt-6 mb-1 w-full"
               inputId="email"
               changed={formik.handleChange}
               acceptedValue={formik.values.email}
@@ -50,7 +50,7 @@ function Login() {
               inputName="password"
               inputType="password"
               inputId="pass"
-              inputClass="w-full"
+              inputClass="w-full mt-1"
               changed={formik.handleChange}
               acceptedValue={formik.values.password}
             />
