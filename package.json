@@ -13,6 +13,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "formik": "^2.2.9",
     "next": "latest",
     "next-auth": "^4.16.4",
     "react": "^18.1.0",

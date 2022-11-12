@@ -1,11 +1,14 @@
+import { ChangeEventHandler } from "react";
+
 interface IProps {
   inputId: string;
   inputName: string;
   inputType: string;
   inputClass?: string;
+  changed?: ChangeEventHandler;
 }
 
-function Input({ inputName, inputType, inputClass, inputId }: IProps) {
+function Input({ inputName, inputType, inputClass, inputId, changed }: IProps) {
   return (
     <div className={`relative ${inputClass}`}>
       <input
@@ -14,6 +17,7 @@ function Input({ inputName, inputType, inputClass, inputId }: IProps) {
         className="block rounded-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-orange-700 bg-white border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:ring-orange-700 peer"
         placeholder=" "
         name={inputName}
+        onChange={changed}
       />
       <label
         htmlFor={inputId}
