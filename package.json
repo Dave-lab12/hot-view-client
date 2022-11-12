@@ -13,6 +13,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "commitlint": "^17.2.0",
     "formik": "^2.2.9",
     "next": "latest",
     "next-auth": "^4.16.4",

@@ -321,7 +321,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@commitlint/cli@^17.1.2":
+"@commitlint/cli@^17.1.2", "@commitlint/cli@^17.2.0":
   version "17.2.0"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-17.2.0.tgz#75cb39181cea98ccc3c9ec122c367af4252d0b5a"
   integrity sha512-kd1zykcrjIKyDRftWW1E1TJqkgzeosEkv1BiYPCdzkb/g/3BrfgwZUHR1vg+HO3qKUb/0dN+jNXArhGGAHpmaQ==
@@ -1959,6 +1959,14 @@ commander@^9.3.0:
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.1.tgz#d1dd8f2ce6faf93147295c0df13c7c21141cfbdd"
   integrity sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==
+
+commitlint@^17.2.0:
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-17.2.0.tgz#0cc0b15aec02d4e2d87a20cf9922295481b17b76"
+  integrity sha512-0EWPSQUkAO/cF3uDsxANw4mPzIsrgJs46WOFJybwF5n4yLTYeaGdrzkzsqOIUU2c6Wn0sdYv+xZSFRlCnzIfgw==
+  dependencies:
+    "@commitlint/cli" "^17.2.0"
+    "@commitlint/types" "^17.0.0"
 
 common-tags@^1.8.2:
   version "1.8.2"
