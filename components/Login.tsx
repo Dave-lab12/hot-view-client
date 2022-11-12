@@ -1,6 +1,6 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
-import * as Yup from "yup";
+import { LoginSchema } from "schema/login.schema";
 
 import Input from "./Input";
 import Logo from "./Logo";
@@ -14,10 +14,7 @@ function Login() {
       email: "",
       password: "",
     },
-    validationSchema: Yup.object({
-      email: Yup.string().email().required("No email provided"),
-      password: Yup.string().required("No password provided"),
-    }),
+    validationSchema: LoginSchema,
     onSubmit(values) {
       // eslint-disable-next-line no-console
       console.log(values);
