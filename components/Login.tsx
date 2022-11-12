@@ -1,4 +1,5 @@
 import { signIn } from "next-auth/react";
+import { useFormik } from "formik";
 
 import Input from "./Input";
 import Logo from "./Logo";
@@ -7,12 +8,23 @@ import Link from "./Link";
 import Header from "./Header";
 
 function Login() {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit(values) {},
+  });
+
   return (
     <div className="bg-gray-300 overflow-hidden">
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
-          <div className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg w-1/4 p-5">
+          <form
+            onSubmit={formik.handleSubmit}
+            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg w-1/4 p-5"
+          >
             <Logo src="/hot-news-logo.png" />
 
             <Input
@@ -20,6 +32,7 @@ function Login() {
               inputType="email"
               inputClass="mt-6 mb-2 w-full"
               inputId="email"
+              changed={formik.handleChange}
             />
 
             <Input
@@ -27,6 +40,7 @@ function Login() {
               inputType="password"
               inputId="pass"
               inputClass="w-full"
+              changed={formik.handleChange}
             />
 
             <Button buttonType="submit" text="Login" buttonClass="mt-3" />
@@ -57,14 +71,14 @@ function Login() {
                 iconLink="fa-brands fa-facebook"
               />
             </div>
-            <p className="text-gray-700 text-sm mt-3">Don't have an account?</p>
+            <p className="text-gray-700 text-sm mt-3">Dont have an account?</p>
             <Link
               text="Sign up"
               link="/signup"
               linkClass="display:inline"
               textClass="text-sm"
             />
-          </div>
+          </form>
         </div>
       </main>
     </div>

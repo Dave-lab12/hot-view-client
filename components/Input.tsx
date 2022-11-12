@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, FocusEventHandler } from "react";
 
 interface IProps {
   inputId: string;
@@ -6,9 +6,19 @@ interface IProps {
   inputType: string;
   inputClass?: string;
   changed?: ChangeEventHandler;
+  blur?: FocusEventHandler;
+  acceptedValue: string | number;
 }
 
-function Input({ inputName, inputType, inputClass, inputId, changed }: IProps) {
+function Input({
+  inputName,
+  inputType,
+  inputClass,
+  inputId,
+  changed,
+  blur,
+  acceptedValue,
+}: IProps) {
   return (
     <div className={`relative ${inputClass}`}>
       <input
@@ -18,6 +28,8 @@ function Input({ inputName, inputType, inputClass, inputId, changed }: IProps) {
         placeholder=" "
         name={inputName}
         onChange={changed}
+        onBlur={blur}
+        value={acceptedValue}
       />
       <label
         htmlFor={inputId}
