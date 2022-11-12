@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import Button from "./Button";
 import Link from "./Link";
 import Header from "./Header";
+import ErrorSpan from "./ErrorSpan";
 
 function Login() {
   const formik = useFormik({
@@ -42,7 +43,7 @@ function Login() {
             />
 
             {formik.touched.email && formik.errors.email && (
-              <span className="text-red-400">{formik.errors.email}</span>
+              <ErrorSpan errorMessage={formik.errors.email} />
             )}
 
             <Input
@@ -55,7 +56,7 @@ function Login() {
             />
 
             {formik.touched.password && formik.errors.password && (
-              <span className="text-red-400">{formik.errors.password}</span>
+              <ErrorSpan errorMessage={formik.errors.password} />
             )}
 
             <Button buttonType="submit" text="Login" buttonClass="mt-3" />
