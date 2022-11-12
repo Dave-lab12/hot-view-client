@@ -36,7 +36,7 @@ function Login() {
             <Input
               inputName="email"
               inputType="email"
-              inputClass="mt-6 mb-2 w-full"
+              inputClass="mt-6 w-full"
               inputId="email"
               changed={formik.handleChange}
               acceptedValue={formik.values.email}
