@@ -1,5 +1,6 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import Input from "./Input";
 import Logo from "./Logo";
@@ -13,7 +14,14 @@ function Login() {
       email: "",
       password: "",
     },
-    onSubmit(values) {},
+    validationSchema: Yup.object({
+      email: Yup.string().email().required("No email provided"),
+      password: Yup.string().required("No password provided"),
+    }),
+    onSubmit(values) {
+      // eslint-disable-next-line no-console
+      console.log(values);
+    },
   });
 
   return (
