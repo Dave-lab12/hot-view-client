@@ -33,7 +33,12 @@ function Login() {
               inputClass="mt-6 mb-2 w-full"
               inputId="email"
               changed={formik.handleChange}
+              acceptedValue={formik.values.email}
             />
+
+            {formik.touched.email && formik.errors.email && (
+              <span className="text-red-400">{formik.errors.email}</span>
+            )}
 
             <Input
               inputName="password"
@@ -41,7 +46,12 @@ function Login() {
               inputId="pass"
               inputClass="w-full"
               changed={formik.handleChange}
+              acceptedValue={formik.values.password}
             />
+
+            {formik.touched.password && formik.errors.password && (
+              <span className="text-red-400">{formik.errors.password}</span>
+            )}
 
             <Button buttonType="submit" text="Login" buttonClass="mt-3" />
             <Link
