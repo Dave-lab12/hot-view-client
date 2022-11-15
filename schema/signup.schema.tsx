@@ -13,8 +13,8 @@ export const RegisterSchema = yup.object().shape({
   password: yup
     .string()
     .required("Password is required")
-    .min(8, "Password too short")
-    .max(32, "Password too long"),
+    .min(8, "Password should atleast contain 8 characters")
+    .max(32, "Password can't contain more than 32 characters"),
   confirmPassword: yup
     .string()
     .oneOf([yup.ref("password"), null], "Password Must match")

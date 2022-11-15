@@ -31,22 +31,21 @@ function SignUp() {
       <Header title="signup" />
       <main>
         <div className="grid place-items-center h-screen overflow-auto">
-          <div className="grid place-items-center bg-gray-100 hover:shadow-lg max-sm:w-3/4 sm:w-3/4 md:w-1/2 rounded-lg">
+          <div className="grid place-items-center bg-gray-100 hover:shadow-lg max-sm:w-3/4 sm:w-3/4 md:w-3/4 lg:w-2/6 rounded-lg">
             <Logo
               src="/hot-news-logo.png"
               logoClass="place-self-center mb-6 mt-3"
             />
             <div className="grid grid-flow-col place-content-evenly-center w-3/4 py-3">
               <form onSubmit={formik.handleSubmit}>
-                <h1 className="place-self-start text-sm ml-1 mb-2 text-orange-700 ">
+                <h1 className="place-self-start text-center pt-1 mb-2 text-white bg-orange-400 h-9 rounded-lg ">
                   Fill the following form please
                 </h1>
 
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="email"
                     inputType="email"
-                    inputClass="mr-2 mb-2"
                     inputId="email"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
@@ -57,7 +56,7 @@ function SignUp() {
                   )}
                 </div>
 
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="phonenumber"
                     inputType="number"
@@ -70,12 +69,11 @@ function SignUp() {
                     <ErrorSpan errorMessage={formik.errors.phonenumber} />
                   )}
                 </div>
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="firstname"
                     inputType="text"
                     inputId="firstname"
-                    inputClass="mr-2 mb-2"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
                     acceptedValue={formik.values.firstname}
@@ -85,7 +83,7 @@ function SignUp() {
                   )}
                 </div>
 
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="lastname"
                     inputType="text"
@@ -99,12 +97,11 @@ function SignUp() {
                   )}
                 </div>
 
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="password"
                     inputType="password"
                     inputId="pass"
-                    inputClass="mr-2 mb-2"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
                     acceptedValue={formik.values.password}
@@ -114,7 +111,7 @@ function SignUp() {
                   )}
                 </div>
 
-                <div>
+                <div className="my-2">
                   <Input
                     inputName="confirmPassword"
                     inputType="password"
