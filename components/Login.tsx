@@ -23,13 +23,13 @@ function Login() {
   });
 
   return (
-    <div className="bg-gray-300 overflow-hidden">
+    <div className="bg-gray-300 overflow-auto">
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
           <form
             onSubmit={formik.handleSubmit}
-            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg w-1/4 p-5"
+            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg max-sm:w-3/4 sm:w-1/2 lg:w-1/4  p-5"
           >
             <Logo src="/hot-news-logo.png" />
 
