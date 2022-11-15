@@ -1,23 +1,22 @@
 import * as yup from "yup";
 
 export const RegisterSchema = yup.object().shape({
-  email: yup.string().email().required(),
-  phoneNumber: yup
+  email: yup.string().email("Invalid Email").required("Email is required"),
+  phonenumber: yup
     .number()
     .positive("Must be positive")
     .integer("Must be an integer")
-    .min(10, "Invalid format"),
-  firstName: yup
-    .string()
-    .label("first name")
-    .required("First name is required"),
-  lastName: yup.string().label("last name").required("Last name is required"),
+    .min(10, "Invalid format")
+    .required("Phonenumber is required"),
+  firstname: yup.string().required("Firstname is required"),
+  lastname: yup.string().required("Lastname is required"),
   password: yup
     .string()
-    .required("password is required")
-    .min(8, "password too short")
-    .max(32, "password too long"),
+    .required("Password is required")
+    .min(8, "Password too short")
+    .max(32, "Password too long"),
   confirmPassword: yup
     .string()
-    .oneOf([yup.ref("password"), "Password Must match"]),
+    .oneOf([yup.ref("password"), null], "Password Must match")
+    .required(),
 });

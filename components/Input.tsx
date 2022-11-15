@@ -26,7 +26,6 @@ function Input({
         id={inputId}
         className="block rounded-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-orange-700 bg-white border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:ring-orange-700 peer"
         placeholder=" "
-        name={inputName}
         onChange={changed}
         onBlur={blur}
         value={acceptedValue}
