@@ -13,7 +13,7 @@ function SignUp() {
       email: "",
       fName: "",
       lName: "",
-      phonenumber: "",
+      phonenumber: undefined,
       password: "",
       confirmPassword: "",
     },
@@ -54,7 +54,7 @@ function SignUp() {
               <div>
                 <Input
                   inputName="phonenumber"
-                  inputType="number"
+                  inputType="text"
                   inputId="pno"
                   changed={formik.handleChange}
                   blur={formik.handleBlur}
@@ -88,7 +88,7 @@ function SignUp() {
                   blur={formik.handleBlur}
                   acceptedValue={formik.values.lName}
                 />
-                {formik.touched.lName && formik.errors.lName && (
+                {formik.errors.lName && (
                   <ErrorSpan errorMessage={formik.errors.lName} />
                 )}
               </div>

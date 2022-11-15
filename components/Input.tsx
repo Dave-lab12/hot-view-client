@@ -7,13 +7,13 @@ interface IProps {
   inputClass?: string;
   changed?: ChangeEventHandler;
   blur?: FocusEventHandler;
-  acceptedValue: string | number;
+  acceptedValue: string | number | undefined;
 }
 
 function Input({
   inputName,
   inputType,
-  inputClass,
+  inputClass = "",
   inputId,
   changed,
   blur,
