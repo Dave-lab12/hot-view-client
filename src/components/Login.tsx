@@ -1,6 +1,7 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
-import { LoginSchema } from "schema/login.schema";
+
+import { LoginSchema } from "src/schema/login.schema";
 
 import Input from "./Input";
 import Logo from "./Logo";

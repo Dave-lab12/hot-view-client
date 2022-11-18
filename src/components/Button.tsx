@@ -9,14 +9,7 @@ interface IProps {
   iconLink?: string;
 }
 
-function Button({
-  buttonType,
-  text,
-  buttonClass,
-  link,
-  click,
-  iconLink,
-}: IProps) {
+function Button({ buttonType, text, buttonClass, click, iconLink }: IProps) {
   return (
     <button
       type={buttonType}
