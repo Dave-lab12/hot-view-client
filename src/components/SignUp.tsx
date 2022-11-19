@@ -1,17 +1,23 @@
-import { useFormik } from "formik";
+import { useFormik, ErrorMessage } from "formik";
+import { useMutation } from "react-query";
+import { IUser } from "src/types/User";
+
+import { RegisterSchema } from "../schema/signup.schema";
+import { signUpUserFn } from "../utils/authApi";
 
 import Input from "./Input";
 import Button from "./Button";
 import Header from "./Header";
 import Logo from "./Logo";
 import ErrorSpan from "./ErrorSpan";
-import { RegisterSchema } from "../schema/signup.schema";
-import { useMutation } from "react-query";
-import { signUpUserFn } from "../utils/authApi";
-import { IUser } from "src/types/User";
 
 function SignUp() {
-  const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData));
+  const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData), {
+    onSuccess: (data) => {
+      if (data?.data.success) {
+      }
+    },
+  });
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -22,13 +28,20 @@ function SignUp() {
       passwordConfirm: "",
     },
     validationSchema: RegisterSchema,
-    onSubmit(values) {
+    onSubmit(values, actions) {
       const user: IUser = {
         ...values,
-        phonenumber: parseInt(values.phonenumber),
+        phonenumber: parseInt(values.phonenumber, 10),
       };
 
-      mutate(user);
+      try {
+        mutate(user);
+      } catch (error: Error) {
+        actions.setFieldError("general", error.message);
+      } finally {
+        actions.setSubmitting(false);
+      }
+
       formik.resetForm();
     },
   });
