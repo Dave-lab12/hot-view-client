@@ -1,25 +1,7 @@
 import axios from "axios";
+import { IUser } from "src/types/User";
 
-const BASE_URL = "http://localhost:8001";
-
-interface GenericResponse {
-  status: string;
-  message: string;
-}
-
-interface LoginInput {
-  email: string;
-  password: string;
-}
-
-export interface IUser {
-  email: string;
-  firstname: string;
-  lastname: string;
-  phonenumber: number;
-  password: string;
-  confirmPassword: string;
-}
+const BASE_URL = "http://localhost:8001/api/v1/auth";
 
 export const authApi = axios.create({
   baseURL: BASE_URL,
