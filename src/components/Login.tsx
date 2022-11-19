@@ -2,7 +2,6 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
-import { useState } from "react";
 
 import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
@@ -15,20 +14,8 @@ import Header from "./Header";
 import ErrorSpan from "./ErrorSpan";
 
 function Login() {
-  const [errors, setErrors] = useState("");
-  const { mutate } = useMutation(
-    (userData: LoginInput) => loginUserFn(userData),
-    {
-      onSuccess: (data: unknown) => {
-        const hasError = !data?.data.success;
-        if (hasError) {
-          throw new Error(data.data.message);
-        }
-      },
-      onError(error: Error) {
-        setErrors(error.message);
-      },
-    }
+  const { mutate, isError, error } = useMutation((userData: LoginInput) =>
+    loginUserFn(userData)
   );
   const formik = useFormik({
     initialValues: {
@@ -39,7 +26,9 @@ function Login() {
     onSubmit(values) {
       const user: LoginInput = { ...values };
       mutate(user);
-      formik.resetForm();
+      if (!error) {
+        formik.resetForm();
+      }
     },
   });
 
@@ -54,10 +43,10 @@ function Login() {
           >
             <Logo src="/hot-news-logo.png" />
 
-            {errors && (
-              <text className="mt-6 mb-0 place-self-start text-center text-sm pt-1 text-red-600 h-9 rounded-lg ">
-                {errors}
-              </text>
+            {isError && (
+              <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
+                {error?.response.data.message}
+              </h1>
             )}
             <Input
               inputName="email"

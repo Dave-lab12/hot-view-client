@@ -57,7 +57,7 @@ function SignUp() {
                 </h1>
                 {isError && (
                   <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
-                    {error.response.data.message}
+                    {error?.response.data.message}
                   </h1>
                 )}
 
