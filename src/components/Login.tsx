@@ -1,8 +1,10 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
+import { useMutation } from "react-query";
 
 import { loginUserFn } from "../utils/authApi";
+import { LoginInput } from "../types/LoginInput";
 
 import Input from "./Input";
 import Logo from "./Logo";
@@ -12,6 +14,9 @@ import Header from "./Header";
 import ErrorSpan from "./ErrorSpan";
 
 function Login() {
+  const { mutate } = useMutation((userData: LoginInput) =>
+    loginUserFn(userData)
+  );
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -20,7 +25,7 @@ function Login() {
     validationSchema: LoginSchema,
     onSubmit(values) {
       const user: LoginInput = { ...values };
-      await loginUserFn(user);
+      mutate(user);
     },
   });
 
