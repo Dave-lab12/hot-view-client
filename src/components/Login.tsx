@@ -1,6 +1,5 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
-
 import { LoginSchema } from "src/schema/login.schema";
 
 import Input from "./Input";
@@ -50,7 +49,7 @@ function Login() {
             <Input
               inputName="password"
               inputType="password"
-              inputId="pass"
+              inputId="password"
               inputClass="w-full mt-1"
               changed={formik.handleChange}
               acceptedValue={formik.values.password}
