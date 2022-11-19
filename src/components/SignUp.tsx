@@ -1,11 +1,12 @@
 import { useFormik } from "formik";
-import { RegisterSchema } from "schema/signup.schema";
 
 import Input from "./Input";
 import Button from "./Button";
 import Header from "./Header";
 import Logo from "./Logo";
 import ErrorSpan from "./ErrorSpan";
+import { useRegisterUser } from "../hooks/useRegisterUser";
+import { RegisterSchema } from "../schema/signup.schema";
 
 function SignUp() {
   const formik = useFormik({
@@ -18,13 +19,12 @@ function SignUp() {
       confirmPassword: "",
     },
     validationSchema: RegisterSchema,
-    onSubmit() {
-      // eslint-disable-next-line no-console
-      console.log("Submitted");
+    onSubmit(values) {
+      const user = { ...values };
+      const { mutate } = useRegisterUser();
+      mutate(user);
     },
   });
-  // eslint-disable-next-line no-console
-  console.log(formik);
 
   return (
     <div className="bg-gray-300 overflow-hidden">
