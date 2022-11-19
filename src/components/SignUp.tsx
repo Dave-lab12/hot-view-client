@@ -13,10 +13,7 @@ import ErrorSpan from "./ErrorSpan";
 
 function SignUp() {
   const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData), {
-    onSuccess: (data) => {
-      if (data?.data.success) {
-      }
-    },
+    onSuccess: (data) => {},
   });
   const formik = useFormik({
     initialValues: {

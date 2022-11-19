@@ -2,6 +2,8 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
 
+import { loginUserFn } from "../utils/authApi";
+
 import Input from "./Input";
 import Logo from "./Logo";
 import Button from "./Button";
@@ -17,8 +19,8 @@ function Login() {
     },
     validationSchema: LoginSchema,
     onSubmit(values) {
-      // eslint-disable-next-line no-console
-      console.log(values);
+      const user: LoginInput = { ...values };
+      await loginUserFn(user);
     },
   });
 
