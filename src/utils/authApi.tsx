@@ -7,10 +7,10 @@ export const authApi = axios.create({
   baseURL: BASE_URL,
 });
 
-authApi.defaults.headers.common["content-type"] = "application/json";
+// authApi.defaults.headers.common["content-type"] = "application/json";
 
 export const signUpUserFn = async (user: IUser) => {
-  const response = await authApi.post<GenericResponse>("/register", user);
+  const response = await authApi.post("/register", user);
   return response.data;
 };
 

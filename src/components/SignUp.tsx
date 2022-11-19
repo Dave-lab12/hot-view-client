@@ -7,18 +7,19 @@ import Logo from "./Logo";
 import ErrorSpan from "./ErrorSpan";
 import { RegisterSchema } from "../schema/signup.schema";
 import { useMutation } from "react-query";
-import { IUser, signUpUserFn } from "../utils/authApi";
+import { signUpUserFn } from "../utils/authApi";
+import { IUser } from "src/types/User";
 
 function SignUp() {
   const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData));
   const formik = useFormik({
     initialValues: {
       email: "",
-      firstname: "",
-      lastname: "",
+      firstName: "",
+      lastName: "",
       phonenumber: "",
       password: "",
-      confirmPassword: "",
+      passwordConfirm: "",
     },
     validationSchema: RegisterSchema,
     onSubmit(values) {
@@ -26,7 +27,7 @@ function SignUp() {
         ...values,
         phonenumber: parseInt(values.phonenumber),
       };
-      console.log(user);
+
       mutate(user);
       formik.resetForm();
     },
@@ -77,29 +78,29 @@ function SignUp() {
                 </div>
                 <div className="my-2">
                   <Input
-                    inputName="firstname"
+                    inputName="firstName"
                     inputType="text"
-                    inputId="firstname"
+                    inputId="firstName"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
-                    acceptedValue={formik.values.firstname}
+                    acceptedValue={formik.values.firstName}
                   />
-                  {formik.touched.firstname && formik.errors.firstname && (
-                    <ErrorSpan errorMessage={formik.errors.firstname} />
+                  {formik.touched.firstName && formik.errors.firstName && (
+                    <ErrorSpan errorMessage={formik.errors.firstName} />
                   )}
                 </div>
 
                 <div className="my-2">
                   <Input
-                    inputName="lastname"
+                    inputName="lastName"
                     inputType="text"
-                    inputId="lastname"
+                    inputId="lastName"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
-                    acceptedValue={formik.values.lastname}
+                    acceptedValue={formik.values.lastName}
                   />
-                  {formik.errors.lastname && (
-                    <ErrorSpan errorMessage={formik.errors.lastname} />
+                  {formik.errors.lastName && (
+                    <ErrorSpan errorMessage={formik.errors.lastName} />
                   )}
                 </div>
 
@@ -119,16 +120,16 @@ function SignUp() {
 
                 <div className="my-2">
                   <Input
-                    inputName="confirmPassword"
+                    inputName="passwordConfirm"
                     inputType="password"
-                    inputId="confirmPassword"
+                    inputId="passwordConfirm"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
-                    acceptedValue={formik.values.confirmPassword}
+                    acceptedValue={formik.values.passwordConfirm}
                   />
-                  {formik.touched.confirmPassword &&
-                    formik.errors.confirmPassword && (
-                      <ErrorSpan errorMessage={formik.errors.confirmPassword} />
+                  {formik.touched.passwordConfirm &&
+                    formik.errors.passwordConfirm && (
+                      <ErrorSpan errorMessage={formik.errors.passwordConfirm} />
                     )}
                 </div>
 
