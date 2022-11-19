@@ -5,10 +5,12 @@ import Button from "./Button";
 import Header from "./Header";
 import Logo from "./Logo";
 import ErrorSpan from "./ErrorSpan";
-import { useRegisterUser } from "../hooks/useRegisterUser";
 import { RegisterSchema } from "../schema/signup.schema";
+import { useMutation } from "react-query";
+import { IUser, signUpUserFn } from "../utils/authApi";
 
 function SignUp() {
+  const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData));
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -20,9 +22,13 @@ function SignUp() {
     },
     validationSchema: RegisterSchema,
     onSubmit(values) {
-      const user = { ...values };
-      const { mutate } = useRegisterUser();
+      const user: IUser = {
+        ...values,
+        phonenumber: parseInt(values.phonenumber),
+      };
+      console.log(user);
       mutate(user);
+      formik.resetForm();
     },
   });
 
@@ -101,7 +107,7 @@ function SignUp() {
                   <Input
                     inputName="password"
                     inputType="password"
-                    inputId="pass"
+                    inputId="password"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
                     acceptedValue={formik.values.password}
@@ -115,7 +121,7 @@ function SignUp() {
                   <Input
                     inputName="confirmPassword"
                     inputType="password"
-                    inputId="pass2"
+                    inputId="confirmPassword"
                     changed={formik.handleChange}
                     blur={formik.handleBlur}
                     acceptedValue={formik.values.confirmPassword}
