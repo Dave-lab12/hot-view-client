@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IUser } from "src/types/User";
+import { LoginInput } from "src/types/LoginInput";
 
 const BASE_URL = "http://localhost:8001/api/v1/auth";
 
@@ -11,10 +12,10 @@ export const authApi = axios.create({
 
 export const signUpUserFn = async (user: IUser) => {
   const response = await authApi.post("/register", user);
-  return response.data;
+  return response;
 };
 
 export const loginUserFn = async (user: LoginInput) => {
   const response = await authApi.post("/login", user);
-  return response.data;
+  return response;
 };

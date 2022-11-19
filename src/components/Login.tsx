@@ -2,6 +2,7 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
+import { useState } from "react";
 
 import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
@@ -14,8 +15,20 @@ import Header from "./Header";
 import ErrorSpan from "./ErrorSpan";
 
 function Login() {
-  const { mutate } = useMutation((userData: LoginInput) =>
-    loginUserFn(userData)
+  const [errors, setErrors] = useState("");
+  const { mutate } = useMutation(
+    (userData: LoginInput) => loginUserFn(userData),
+    {
+      onSuccess: (data: unknown) => {
+        const hasError = !data?.data.success;
+        if (hasError) {
+          throw new Error(data.data.message);
+        }
+      },
+      onError(error: Error) {
+        setErrors(error.message);
+      },
+    }
   );
   const formik = useFormik({
     initialValues: {
@@ -26,6 +39,7 @@ function Login() {
     onSubmit(values) {
       const user: LoginInput = { ...values };
       mutate(user);
+      formik.resetForm();
     },
   });
 
@@ -40,10 +54,15 @@ function Login() {
           >
             <Logo src="/hot-news-logo.png" />
 
+            {errors && (
+              <text className="mt-6 mb-0 place-self-start text-center text-sm pt-1 text-red-600 h-9 rounded-lg ">
+                {errors}
+              </text>
+            )}
             <Input
               inputName="email"
               inputType="email"
-              inputClass="mt-6 mb-1 w-full"
+              inputClass="mb-1 w-full"
               inputId="email"
               changed={formik.handleChange}
               acceptedValue={formik.values.email}
@@ -92,6 +111,7 @@ function Login() {
                 buttonClass="w-35 mx-2"
                 click={signIn}
                 iconLink="fa-brands fa-facebook"
+                disable={formik.isSubmitting}
               />
             </div>
             <p className="text-gray-700 text-sm mt-3">Dont have an account?</p>

@@ -1,6 +1,7 @@
 import { useFormik, ErrorMessage } from "formik";
 import { useMutation } from "react-query";
 import { IUser } from "src/types/User";
+import { useState } from "react";
 
 import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
@@ -12,9 +13,9 @@ import Logo from "./Logo";
 import ErrorSpan from "./ErrorSpan";
 
 function SignUp() {
-  const { mutate } = useMutation((userData: IUser) => signUpUserFn(userData), {
-    onSuccess: (data) => {},
-  });
+  const { mutate, isError, error } = useMutation((userData: IUser) =>
+    signUpUserFn(userData)
+  );
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -25,21 +26,17 @@ function SignUp() {
       passwordConfirm: "",
     },
     validationSchema: RegisterSchema,
-    onSubmit(values, actions) {
+    onSubmit(values) {
       const user: IUser = {
         ...values,
         phonenumber: parseInt(values.phonenumber, 10),
       };
 
-      try {
-        mutate(user);
-      } catch (error: Error) {
-        actions.setFieldError("general", error.message);
-      } finally {
-        actions.setSubmitting(false);
-      }
+      mutate(user);
 
-      formik.resetForm();
+      if (!isError) {
+        formik.resetForm();
+      }
     },
   });
 
@@ -55,9 +52,14 @@ function SignUp() {
             />
             <div className="grid grid-flow-col place-content-evenly-center w-3/4 py-3">
               <form onSubmit={formik.handleSubmit}>
-                <h1 className="place-self-start text-center pt-1 mb-2 text-white bg-orange-400 h-9 rounded-lg ">
+                <h1 className="place-self-start text-center pt-1 my-2 text-white bg-orange-400 h-9 rounded-lg ">
                   Fill the following form please
                 </h1>
+                {isError && (
+                  <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
+                    {error.response.data.message}
+                  </h1>
+                )}
 
                 <div className="my-2">
                   <Input
