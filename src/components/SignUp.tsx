@@ -1,7 +1,6 @@
-import { useFormik, ErrorMessage } from "formik";
+import { useFormik } from "formik";
 import { useMutation } from "react-query";
 import { IUser } from "src/types/User";
-import { useState } from "react";
 
 import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
