@@ -1,7 +1,10 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
-
 import { LoginSchema } from "src/schema/login.schema";
+import { useMutation } from "react-query";
+
+import { loginUserFn } from "../utils/authApi";
+import { LoginInput } from "../types/LoginInput";
 
 import Input from "./Input";
 import Logo from "./Logo";
@@ -11,6 +14,9 @@ import Header from "./Header";
 import ErrorSpan from "./ErrorSpan";
 
 function Login() {
+  const { mutate, isError, error } = useMutation((userData: LoginInput) =>
+    loginUserFn(userData)
+  );
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -18,26 +24,34 @@ function Login() {
     },
     validationSchema: LoginSchema,
     onSubmit(values) {
-      // eslint-disable-next-line no-console
-      console.log(values);
+      const user: LoginInput = { ...values };
+      mutate(user);
+      if (!error) {
+        formik.resetForm();
+      }
     },
   });
 
   return (
-    <div className="bg-gray-300 overflow-hidden">
+    <div className="bg-gray-300 overflow-auto">
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
           <form
             onSubmit={formik.handleSubmit}
-            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg w-1/4 p-5"
+            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg max-sm:w-3/4 sm:w-1/2 lg:w-1/4  p-5"
           >
             <Logo src="/hot-news-logo.png" />
 
+            {isError && (
+              <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
+                {error?.response.data.message}
+              </h1>
+            )}
             <Input
               inputName="email"
               inputType="email"
-              inputClass="mt-6 w-full"
+              inputClass="mb-1 w-full"
               inputId="email"
               changed={formik.handleChange}
               acceptedValue={formik.values.email}
@@ -50,8 +64,8 @@ function Login() {
             <Input
               inputName="password"
               inputType="password"
-              inputId="pass"
-              inputClass="w-full"
+              inputId="password"
+              inputClass="w-full mt-1"
               changed={formik.handleChange}
               acceptedValue={formik.values.password}
             />
@@ -86,6 +100,7 @@ function Login() {
                 buttonClass="w-35 mx-2"
                 click={signIn}
                 iconLink="fa-brands fa-facebook"
+                disable={formik.isSubmitting}
               />
             </div>
             <p className="text-gray-700 text-sm mt-3">Dont have an account?</p>
