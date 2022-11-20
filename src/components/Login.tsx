@@ -8,10 +8,10 @@ import { LoginInput } from "../types/LoginInput";
 
 import Input from "./Input";
 import Logo from "./Logo";
-import Button from "./Button";
+import Button from "./Form/Button";
 import Link from "./Link";
 import Header from "./Header";
-import ErrorSpan from "./ErrorSpan";
+import ErrorSpan from "./Form/ErrorSpan";
 
 function Login() {
   const { mutate, isError, error } = useMutation((userData: LoginInput) =>

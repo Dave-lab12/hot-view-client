@@ -6,10 +6,10 @@ import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
 
 import Input from "./Input";
-import Button from "./Button";
+import Button from "./Form/Button";
 import Header from "./Header";
 import Logo from "./Logo";
-import ErrorSpan from "./ErrorSpan";
+import ErrorSpan from "./Form/ErrorSpan";
 
 function SignUp() {
   const { mutate, isError, error } = useMutation((userData: IUser) =>
