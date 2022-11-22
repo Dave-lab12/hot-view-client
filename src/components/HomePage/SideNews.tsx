@@ -9,13 +9,29 @@ interface IProps {
   newsDate: string;
   readingTime: number;
   title: string;
+  imageWidth?: number;
+  imageHieght?: number;
+  sideNewsClass?: string;
 }
 
-function SideNews({ imageUrl, newsDate, readingTime, title }: IProps) {
+function SideNews({
+  imageUrl,
+  newsDate,
+  readingTime,
+  title,
+  imageWidth,
+  imageHieght,
+  sideNewsClass,
+}: IProps) {
   return (
-    <div className="flex flex-row flex-grow">
+    <div className={`flex flex-row flex-grow ${sideNewsClass}`}>
       <div>
-        <Image src={imageUrl} alt="News image" />
+        <Image
+          src={imageUrl}
+          alt="News image"
+          width={imageWidth}
+          height={imageHieght}
+        />
       </div>
       <div className="grid grid-flow-col px-5 py-2">
         <div className="flex flex-row flex-grow">
