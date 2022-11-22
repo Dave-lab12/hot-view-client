@@ -6,7 +6,7 @@ import { useMutation } from "react-query";
 import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
 
-import Input from "./Input";
+import Input from "./Form/Input";
 import Logo from "./Logo";
 import Button from "./Form/Button";
 import Link from "./Link";

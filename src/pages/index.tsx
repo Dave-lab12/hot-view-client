@@ -2,6 +2,7 @@ import SideNews from "@/components/HomePage/News/SideNews";
 
 import FeaturedNews from "../components/HomePage/News/FeaturedNews";
 import TopNewsCard from "../components/HomePage/News/TopNewsCard";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -12,12 +13,13 @@ export default function Home() {
     // views: number;
     // postedDate: string;
     <>
+      <Header title="home page" />
       <div className="h-screen">
         <TopNewsCard
           imageUrl="/iStockPic.jpg"
           title="Hello there"
           postedBy="SomeOne"
-          isVerified={false}
+          isVerified={true}
           views={100}
           postedDate="2 Days"
         />
