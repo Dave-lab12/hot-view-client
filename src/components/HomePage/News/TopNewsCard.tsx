@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import NewsHeading from "@/components/NewsComponents/NewsHeading";
 import NewsInfo from "@/components/NewsComponents/NewsInfo";
+import Header from "@/components/Header";
 
 interface IProps {
   imageUrl: string;
@@ -38,7 +39,7 @@ function TopNewsCard({
 
       <div className="flex flex-row">
         <NewsInfo displayInfo={views as unknown as string} infoClass="pr-1" />
-        <i className="fa-solid fa-circle-small"></i>
+        <i className="fa-solid fa-circle-small fa-xl"></i>
         <NewsInfo displayInfo={`${postedDate} ago`} infoClass="pl-1" />
       </div>
     </div>
