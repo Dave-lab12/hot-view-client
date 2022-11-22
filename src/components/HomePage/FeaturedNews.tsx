@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface IProps {
   imageUrl: string;
@@ -20,19 +21,17 @@ function FeaturedNews({
   return (
     <div>
       <div
-        className="bg-cover bg-no-repeat "
-        style={`background-image: url('${{ imageUrl }}')`}
+        className="flex flex-col bg-cover bg-no-repeat h-52 bg-gray-800 bg-opacity-25 place-content-end text-white"
+        style={{ backgroundImage: `url(${imageUrl}  )` }}
       >
-        <div className=" bg-gray-800 bg-opacity-25 ">
-          <div className="flex flex-row place-content-start">
-            <h3>{newsCategory}</h3>
-            <h3>{postedBy}</h3>
-            <h3>{postedDate}</h3>
-          </div>
-          <div>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </div>
+        <div className="flex flex-row text-gray-500">
+          <h3 className="px-3 text-lg ">{newsCategory}</h3>
+          <h3 className="pr-3 text-lg">{postedBy}</h3>
+          <h3 className="pr-3 text-lg">{postedDate}</h3>
+        </div>
+        <div className="px-3 py-4">
+          <h1 className="font-bold text-xl">{title}</h1>
+          <p>{description}</p>
         </div>
       </div>
     </div>
