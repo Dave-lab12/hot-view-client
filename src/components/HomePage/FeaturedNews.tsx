@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import NewsInfo from "./NewsInfo";
 import NewsHeading from "./NewsHeading";
