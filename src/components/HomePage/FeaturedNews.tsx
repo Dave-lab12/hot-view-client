@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import NewsInfo from "./NewsInfo";
 import NewsHeading from "./NewsHeading";
+import NewsDescription from "./NewsDescription";
 
 interface IProps {
   imageUrl: string;
@@ -34,7 +35,7 @@ function FeaturedNews({
         </div>
         <div className="px-3 py-4">
           <NewsHeading title={title} />
-          <p>{description}</p>
+          <NewsDescription description={description} />
         </div>
       </div>
     </div>
