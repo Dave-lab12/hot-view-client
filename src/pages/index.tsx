@@ -1,18 +1,26 @@
 import SideNews from "@/components/HomePage/News/SideNews";
 
 import FeaturedNews from "../components/HomePage/News/FeaturedNews";
+import TopNewsCard from "../components/HomePage/News/TopNewsCard";
 
 export default function Home() {
   return (
-    //  imageUrl: string;
-    // newsDate: string;
-    // readingTime: number;
+    // imageUrl: string;
     // title: string;
-    // imageWidth?: number;
-    // imageHieght?: number;
-    // sideNewsClass?: string;
+    // postedBy: string;
+    // isVerified: boolean;
+    // views: number;
+    // postedDate: string;
     <>
       <div className="h-screen">
+        <TopNewsCard
+          imageUrl="/iStockPic.jpg"
+          title="Hello there"
+          postedBy="SomeOne"
+          isVerified={false}
+          views={100}
+          postedDate="2 Days"
+        />
         <div className="">
           <FeaturedNews
             imageUrl="/iStockPic.jpg"
