@@ -9,7 +9,7 @@ interface IProps {
   description: string;
 }
 
-export function FeaturedNews({
+function FeaturedNews({
   imageUrl,
   newsCategory,
   postedDate,
@@ -38,3 +38,5 @@ export function FeaturedNews({
     </div>
   );
 }
+
+export default FeaturedNews;

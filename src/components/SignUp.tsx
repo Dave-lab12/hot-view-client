@@ -5,7 +5,7 @@ import { IUser } from "src/types/User";
 import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
 
-import Input from "./Input";
+import Input from "./Form/Input";
 import Button from "./Form/Button";
 import Header from "./Header";
 import Logo from "./Logo";
@@ -56,7 +56,9 @@ function SignUp() {
                 </h1>
                 {isError && (
                   <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
-                    {error?.response.data.message}
+                    {error.response
+                      ? error.response.data.message
+                      : error.message}
                   </h1>
                 )}
 
