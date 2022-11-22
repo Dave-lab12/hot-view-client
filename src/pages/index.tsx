@@ -1,4 +1,4 @@
-import FeaturedNews from "../components/HomePage/FeaturedNews";
+import FeaturedNews from "../components/HomePage/News/FeaturedNews";
 
 export default function Home() {
   return (
