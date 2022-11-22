@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
+import NewsInfo from "./NewsInfo";
+import NewsHeading from "./NewsHeading";
+
 interface IProps {
   imageUrl: string;
   newsCategory: string;
@@ -25,12 +28,12 @@ function FeaturedNews({
         style={{ backgroundImage: `url(${imageUrl}  )` }}
       >
         <div className="flex flex-row text-gray-500">
-          <h3 className="px-3 text-lg ">{newsCategory}</h3>
-          <h3 className="pr-3 text-lg">{postedBy}</h3>
-          <h3 className="pr-3 text-lg">{postedDate}</h3>
+          <NewsInfo displayInfo={newsCategory} />
+          <NewsInfo displayInfo={postedBy} />
+          <NewsInfo displayInfo={postedDate} />
         </div>
         <div className="px-3 py-4">
-          <h1 className="font-bold text-xl">{title}</h1>
+          <NewsHeading title={title} />
           <p>{description}</p>
         </div>
       </div>
