@@ -1,8 +1,8 @@
 import React from "react";
 
-import NewsInfo from "./NewsInfo";
-import NewsHeading from "./NewsHeading";
-import NewsDescription from "./NewsDescription";
+import NewsDescription from "../NewsComponents/NewsDescription";
+import NewsInfo from "../NewsComponents/NewsInfo";
+import NewsHeading from "../NewsComponents/NewsHeading";
 
 interface IProps {
   imageUrl: string;
