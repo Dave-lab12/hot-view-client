@@ -7,7 +7,7 @@ interface IProps {
 function NewsDescription({ description }: IProps) {
   return (
     <div>
-      <p>{description}</p>
+      <p className="text-md text-gray-500">{description}</p>
     </div>
   );
 }
