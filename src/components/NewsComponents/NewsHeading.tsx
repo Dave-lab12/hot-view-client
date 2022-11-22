@@ -2,12 +2,13 @@ import React from "react";
 
 interface IProps {
   title: string;
+  titleClass?: string;
 }
 
-function NewsHeading({ title }: IProps) {
+function NewsHeading({ title, titleClass }: IProps) {
   return (
     <div>
-      <h1 className="font-bold text-xl">{title}</h1>
+      <h1 className={`font-bold text-xl ${titleClass}`}>{title}</h1>
     </div>
   );
 }
