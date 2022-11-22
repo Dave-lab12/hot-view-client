@@ -8,7 +8,7 @@ export default function Home() {
           <FeaturedNews
             imageUrl="/iStockPic.jpg"
             newsCategory="Health"
-            postedDate="November 11 2024"
+            postedDate="Nov 11, 2024"
             postedBy="News Direct"
             title="The highest breaking news ever"
             description="This is just a test news discription"

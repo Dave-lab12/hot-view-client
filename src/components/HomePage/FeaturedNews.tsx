@@ -29,9 +29,9 @@ function FeaturedNews({
       >
         <div className="bg-gradient-to-t from-black to-transparent fill-transparent">
           <div className="flex flex-row text-gray-500 ">
-            <NewsInfo displayInfo={newsCategory} />
-            <NewsInfo displayInfo={postedBy} />
-            <NewsInfo displayInfo={postedDate} />
+            <NewsInfo displayInfo={newsCategory} infoClass="px-4" />
+            <NewsInfo displayInfo={postedBy} infoClass="px-4" />
+            <NewsInfo displayInfo={postedDate} infoClass="px-4" />
           </div>
           <div className="px-3 py-4">
             <NewsHeading title={title} />
