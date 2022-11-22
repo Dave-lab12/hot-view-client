@@ -26,6 +26,7 @@ function TopNewsCard({
         src={imageUrl}
         alt="Top news image"
         width={250}
+        height={250}
         objectFit="contain"
       />
       <NewsHeading title={title} />
