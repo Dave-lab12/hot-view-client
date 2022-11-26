@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import { useMutation } from "react-query";
 import { IUser } from "src/types/User";
+import { useRouter } from "next/router";
 
 import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
@@ -12,8 +13,14 @@ import Logo from "./Logo";
 import ErrorSpan from "./Form/ErrorSpan";
 
 function SignUp() {
-  const { mutate, isError, error } = useMutation((userData: IUser) =>
-    signUpUserFn(userData)
+  const router = useRouter();
+  const { mutate, isError, error } = useMutation(
+    (userData: IUser) => signUpUserFn(userData),
+    {
+      onSuccess: () => {
+        router.push("/login");
+      },
+    }
   );
   const formik = useFormik({
     initialValues: {

@@ -2,6 +2,7 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
+import { useRouter } from "next/router";
 
 import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
@@ -14,8 +15,14 @@ import Header from "./Header";
 import ErrorSpan from "./Form/ErrorSpan";
 
 function Login() {
-  const { mutate, isError, error } = useMutation((userData: LoginInput) =>
-    loginUserFn(userData)
+  const router = useRouter();
+  const { mutate, isError, error } = useMutation(
+    (userData: LoginInput) => loginUserFn(userData),
+    {
+      onSuccess: () => {
+        router.push("/");
+      },
+    }
   );
   const formik = useFormik({
     initialValues: {
