@@ -1,12 +1,13 @@
 import * as NavBar from "@radix-ui/react-navigation-menu";
-import { Fragment } from "react";
+import * as Label from "@radix-ui/react-label";
 
 function HomePage() {
   return (
     <>
-      <div>
-        <p className="space-x-3">
-          Follow us: <i>Facebook</i> <i>Twitter</i> <i>Instagram</i>
+      <div className="p-2 mx-4 mt-3 rounded-md bg-blue-100">
+        <p className="space-x-3 text-gray-700">
+          <Label.Root className="text-sm">Follow us:</Label.Root>
+          <i>Facebook</i> <i>Twitter</i> <i>Instagram</i>
           <i>YouTube</i>
         </p>
       </div>
