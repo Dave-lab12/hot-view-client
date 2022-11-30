@@ -13,7 +13,6 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@radix-ui/react-popover": "latest",
     "axios": "^1.1.3",
     "commitlint": "^17.2.0",
     "formik": "^2.2.9",
