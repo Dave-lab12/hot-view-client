@@ -1224,6 +1224,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-aspect-ratio@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-aspect-ratio@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-primitive": 1.0.1
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 621b938ae251497aaf86706527c2cd983f719f5af8a8d87e177a2e22d1ee545ae2af80668a8503ea7286bc9cc39eb06ac3cef091ad58855652a1ec6312cd0474
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-collection@npm:1.0.1":
   version: 1.0.1
   resolution: "@radix-ui/react-collection@npm:1.0.1"
@@ -7706,6 +7719,7 @@ next@latest:
   dependencies:
     "@commitlint/cli": ^17.1.2
     "@commitlint/config-conventional": ^17.1.0
+    "@radix-ui/react-aspect-ratio": ^1.0.1
     "@radix-ui/react-label": ^2.0.0
     "@radix-ui/react-navigation-menu": ^1.1.1
     "@shopify/eslint-plugin": ^42.0.1
