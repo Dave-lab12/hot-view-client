@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
 
 function HomePage() {
-  return <>Homepage</>;
+  return <>HomePage</>;
 }
 
 export default HomePage;
