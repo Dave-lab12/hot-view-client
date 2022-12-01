@@ -24,11 +24,11 @@ function FeaturedNews({
   return (
     <>
       <div
-        className="flex flex-col bg-cover bg-no-repeat h-full w-1/2 bg-gray-800 bg-opacity-25 place-content-end text-white"
+        className=" flex flex-col bg-cover h-full w-1/2 place-content-end text-white"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
-        <div className="bg-gradient-to-t from-black to-transparent fill-transparent">
-          <div className="flex flex-row text-gray-500 ">
+        <div className="bg-black bg-opacity-70 ">
+          <div className="flex flex-row text-gray-400 ">
             <NewsInfo displayInfo={newsCategory} infoClass="px-4" />
             <NewsInfo displayInfo={postedBy} infoClass="px-4" />
             <NewsInfo displayInfo={postedDate} infoClass="px-4" />
