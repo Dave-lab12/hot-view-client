@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import NewsInfo from "../../NewsComponents/NewsInfo";
 import NewsHeading from "../../NewsComponents/NewsHeading";
@@ -26,13 +27,15 @@ function SideNews({
   return (
     <div className={`flex flex-row flex-grow ${sideNewsClass}`}>
       <div>
-        <Image
-          src={imageUrl}
-          alt="News image"
-          width={imageWidth}
-          height={imageHeight}
-          objectFit="contain"
-        />
+        <AspectRatio.Root ratio={16 / 9}>
+          <Image
+            src={imageUrl}
+            alt="News image"
+            width={imageWidth}
+            height={imageHeight}
+            objectFit="contain"
+          />
+        </AspectRatio.Root>
       </div>
       <div className="grid grid-flow-row px-5 py-2">
         <div className="flex flex-row">

@@ -1,4 +1,5 @@
 import React from "react";
+import * as Label from "@radix-ui/react-label";
 
 interface IProps {
   displayInfo: string;
@@ -7,13 +8,13 @@ interface IProps {
 
 function NewsInfo({ displayInfo, infoClass }: IProps) {
   return (
-    <div>
-      <h3
+    <>
+      <Label.Root
         className={`text-md hover:text-green-500 transition delay-100 ease-in-out ${infoClass}`}
       >
         {displayInfo}
-      </h3>
-    </div>
+      </Label.Root>
+    </>
   );
 }
 

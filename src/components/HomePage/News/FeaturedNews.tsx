@@ -24,7 +24,7 @@ function FeaturedNews({
   return (
     <>
       <div
-        className=" flex flex-col bg-cover h-full w-1/2 place-content-end text-white"
+        className=" flex flex-col bg-cover h-full place-content-end text-white"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div className="bg-black bg-opacity-70 ">

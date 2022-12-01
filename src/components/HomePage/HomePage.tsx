@@ -1,7 +1,5 @@
 import * as NavBar from "@radix-ui/react-navigation-menu";
-import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import * as Label from "@radix-ui/react-label";
-import Image from "next/image";
 
 import FeaturedNews from "./News/FeaturedNews";
 
@@ -44,8 +42,8 @@ function HomePage() {
           </NavBar.List>
         </div>
       </NavBar.Root>
-      <div className=" m-20 mx-40 ">
-        <div className="h-96">
+      <div className="grid grid-cols-2 m-20 mx-40 ">
+        <div className="h-96 ">
           <FeaturedNews
             imageUrl="/iStockPic.jpg"
             newsCategory="Health"
@@ -55,6 +53,7 @@ function HomePage() {
             description="Short description for the featured news"
           />
         </div>
+        <div className="ml-10">hello there</div>
       </div>
     </>
   );
