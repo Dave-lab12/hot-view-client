@@ -33,6 +33,7 @@ function TopNewsCard({
         alt="Top news image"
         width={220}
         height={220}
+        className="w-full"
         objectFit="contain"
       />
       <div className="flex flex-row items-center">
