@@ -44,7 +44,7 @@ function HomePage() {
           </NavBar.List>
         </div>
       </NavBar.Root>
-      <div className="m-20 mx-40 ">
+      <div className="grid place-content-center md:px-40 mt-10">
         <div className="grid grid-cols-3 ">
           <div className=" h-96 col-span-2 ">
             <FeaturedNews
@@ -87,7 +87,7 @@ function HomePage() {
           <Label.Root className="font-bold text-blue-900 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid grid-flow-col place-content-stretch mt-5">
+          <div className="grid md:grid-cols-5 sm:auto-cols-fr place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="/iStockPic.jpg"
               title="Top news Title"
