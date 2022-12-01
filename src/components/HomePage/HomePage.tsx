@@ -133,36 +133,41 @@ function HomePage() {
               customClass="mb-4"
             />
           </div>
-          <div className="col-span-1 mt-5 w-2/5 p-5 border rounded-md h-fit">
+          <div className="col-span-1 mt-5 w-2/5 p-3 border rounded-md h-fit">
             <SideNews
               imageUrl="/iStockPic.jpg"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
+              sideNewsClass="my-2"
             />
             <SideNews
               imageUrl="/iStockPic.jpg"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
+              sideNewsClass="my-2"
             />
             <SideNews
               imageUrl="/iStockPic.jpg"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
+              sideNewsClass="my-2"
             />
             <SideNews
               imageUrl="/iStockPic.jpg"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
+              sideNewsClass="my-2"
             />
             <SideNews
               imageUrl="/iStockPic.jpg"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
+              sideNewsClass="my-2"
             />
           </div>
         </div>
