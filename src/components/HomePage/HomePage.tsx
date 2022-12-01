@@ -1,7 +1,7 @@
 import * as NavBar from "@radix-ui/react-navigation-menu";
+import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import * as Label from "@radix-ui/react-label";
-
-import Button from "../Form/Button";
+import Image from "next/image";
 
 function HomePage() {
   return (
@@ -42,6 +42,18 @@ function HomePage() {
           </NavBar.List>
         </div>
       </NavBar.Root>
+      <div className=" m-20 mx-40 ">
+        <div>
+          <AspectRatio.Root ratio={16 / 9}>
+            <Image
+              src="/iStockPic.jpg"
+              alt="test news pic"
+              width={700}
+              height={150}
+            />
+          </AspectRatio.Root>
+        </div>
+      </div>
     </>
   );
 }
