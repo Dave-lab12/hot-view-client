@@ -3,6 +3,8 @@ import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import * as Label from "@radix-ui/react-label";
 import Image from "next/image";
 
+import FeaturedNews from "./News/FeaturedNews";
+
 function HomePage() {
   return (
     <>
@@ -43,15 +45,15 @@ function HomePage() {
         </div>
       </NavBar.Root>
       <div className=" m-20 mx-40 ">
-        <div>
-          <AspectRatio.Root ratio={16 / 9}>
-            <Image
-              src="/iStockPic.jpg"
-              alt="test news pic"
-              width={700}
-              height={150}
-            />
-          </AspectRatio.Root>
+        <div className="h-96">
+          <FeaturedNews
+            imageUrl="/iStockPic.jpg"
+            newsCategory="Health"
+            postedDate="November 20 2022"
+            postedBy="News Direct"
+            title="Title for the featured news"
+            description="Short description for the featured news"
+          />
         </div>
       </div>
     </>

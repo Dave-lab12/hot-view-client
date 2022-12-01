@@ -22,10 +22,10 @@ function FeaturedNews({
   description,
 }: IProps) {
   return (
-    <div>
+    <>
       <div
-        className="flex flex-col bg-cover bg-no-repeat h-52 bg-gray-800 bg-opacity-25 place-content-end text-white"
-        style={{ backgroundImage: `url(${imageUrl}  )` }}
+        className="flex flex-col bg-cover bg-no-repeat h-full w-1/2 bg-gray-800 bg-opacity-25 place-content-end text-white"
+        style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div className="bg-gradient-to-t from-black to-transparent fill-transparent">
           <div className="flex flex-row text-gray-500 ">
@@ -39,7 +39,7 @@ function FeaturedNews({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
