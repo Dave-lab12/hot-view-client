@@ -2,6 +2,7 @@ import * as NavBar from "@radix-ui/react-navigation-menu";
 import * as Label from "@radix-ui/react-label";
 
 import FeaturedNews from "./News/FeaturedNews";
+import SideNews from "./News/SideNews";
 
 function HomePage() {
   return (
@@ -42,8 +43,8 @@ function HomePage() {
           </NavBar.List>
         </div>
       </NavBar.Root>
-      <div className="grid grid-cols-2 m-20 mx-40 ">
-        <div className="h-96 ">
+      <div className="grid grid-cols-3 m-20 mx-40 ">
+        <div className=" h-96 col-span-2 ">
           <FeaturedNews
             imageUrl="/iStockPic.jpg"
             newsCategory="Health"
@@ -53,7 +54,38 @@ function HomePage() {
             description="Short description for the featured news"
           />
         </div>
-        <div className="ml-10">hello there</div>
+        <div className="grid space-y-2 place-content-center ml-10">
+          <SideNews
+            imageUrl="/iStockPic.jpg"
+            postedDate="Nov 30, 2020"
+            readingTime={30}
+            title="News title"
+          />
+          <SideNews
+            imageUrl="/iStockPic.jpg"
+            postedDate="Nov 30, 2020"
+            readingTime={30}
+            title="News title"
+            imageHeight={150}
+            imageWidth={150}
+          />
+          <SideNews
+            imageUrl="/iStockPic.jpg"
+            postedDate="Nov 30, 2020"
+            readingTime={30}
+            title="News title"
+            imageHeight={150}
+            imageWidth={150}
+          />
+          <SideNews
+            imageUrl="/iStockPic.jpg"
+            postedDate="Nov 30, 2020"
+            readingTime={30}
+            title="News title"
+            imageHeight={150}
+            imageWidth={150}
+          />
+        </div>
       </div>
     </>
   );

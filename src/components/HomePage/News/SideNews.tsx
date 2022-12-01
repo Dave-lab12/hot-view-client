@@ -10,8 +10,8 @@ interface IProps {
   postedDate: string;
   readingTime: number;
   title: string;
-  imageWidth: number;
-  imageHeight: number;
+  imageWidth?: number;
+  imageHeight?: number;
   sideNewsClass?: string;
 }
 
@@ -20,29 +20,30 @@ function SideNews({
   postedDate,
   readingTime,
   title,
-  imageWidth,
-  imageHeight,
-  sideNewsClass,
+  imageWidth = 200,
+  imageHeight = 200,
+  sideNewsClass = "",
 }: IProps) {
   return (
-    <div className={`flex flex-row flex-grow ${sideNewsClass}`}>
+    <div className={`flex flex-row border-b pb-2 ${sideNewsClass}`}>
       <div>
-        <AspectRatio.Root ratio={16 / 9}>
-          <Image
-            src={imageUrl}
-            alt="News image"
-            width={imageWidth}
-            height={imageHeight}
-            objectFit="contain"
-          />
-        </AspectRatio.Root>
+        <Image
+          src={imageUrl}
+          alt="News image"
+          width={imageWidth}
+          height={imageHeight}
+          objectFit="contain"
+        />
       </div>
-      <div className="grid grid-flow-row px-5 py-2">
-        <div className="flex flex-row">
-          <NewsInfo displayInfo={postedDate} infoClass="pr-3 text-gray-500" />
+      <div className="grid grid-flow-row px-5 py-2 w-full">
+        <div className="flex flex-row place-content-stretch">
+          <NewsInfo
+            displayInfo={postedDate}
+            infoClass="pr-3 text-gray-500 grow"
+          />
           <NewsInfo
             displayInfo={`${readingTime} mins read`}
-            infoClass="pr-3 text-gray-500 place-self-center"
+            infoClass="pr-3 text-gray-500 place-self-center grow"
           />
         </div>
         <NewsHeading title={title} titleClass="text-blue-900" />
