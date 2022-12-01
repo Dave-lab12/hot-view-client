@@ -35,8 +35,8 @@ function SideNews({
           objectFit="contain"
         />
       </div>
-      <div className="grid grid-flow-row px-5 py-2 w-full">
-        <div className="flex flex-row place-content-stretch">
+      <div className="grid grid-flow-row px-5 py-1 w-full">
+        <div className="flex flex-row place-content-stretch items-center">
           <NewsInfo
             displayInfo={postedDate}
             infoClass="pr-3 text-gray-500 grow"
