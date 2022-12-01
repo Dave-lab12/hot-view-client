@@ -6,6 +6,7 @@ import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
 import TopNewsCard from "./News/TopNewsCard";
 import UserCreatedNews from "./News/UserCreatedNews";
+import Schedule from "./Schedule";
 
 function HomePage() {
   return (
@@ -133,42 +134,70 @@ function HomePage() {
               customClass="mb-4"
             />
           </div>
-          <div className="col-span-1 mt-5 w-2/5 p-3 border rounded-md h-fit">
-            <SideNews
-              imageUrl="/iStockPic.jpg"
-              postedDate="Nov 30, 2020"
-              readingTime={30}
-              title="News title"
-              sideNewsClass="my-2"
-            />
-            <SideNews
-              imageUrl="/iStockPic.jpg"
-              postedDate="Nov 30, 2020"
-              readingTime={30}
-              title="News title"
-              sideNewsClass="my-2"
-            />
-            <SideNews
-              imageUrl="/iStockPic.jpg"
-              postedDate="Nov 30, 2020"
-              readingTime={30}
-              title="News title"
-              sideNewsClass="my-2"
-            />
-            <SideNews
-              imageUrl="/iStockPic.jpg"
-              postedDate="Nov 30, 2020"
-              readingTime={30}
-              title="News title"
-              sideNewsClass="my-2"
-            />
-            <SideNews
-              imageUrl="/iStockPic.jpg"
-              postedDate="Nov 30, 2020"
-              readingTime={30}
-              title="News title"
-              sideNewsClass="my-2"
-            />
+          <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">
+            <div className="p-2 border rounded-md h-fit">
+              <SideNews
+                imageUrl="/iStockPic.jpg"
+                postedDate="Nov 30, 2020"
+                readingTime={30}
+                title="News title"
+                sideNewsClass="my-2"
+              />
+              <SideNews
+                imageUrl="/iStockPic.jpg"
+                postedDate="Nov 30, 2020"
+                readingTime={30}
+                title="News title"
+                sideNewsClass="my-2"
+              />
+              <SideNews
+                imageUrl="/iStockPic.jpg"
+                postedDate="Nov 30, 2020"
+                readingTime={30}
+                title="News title"
+                sideNewsClass="my-2"
+              />
+              <SideNews
+                imageUrl="/iStockPic.jpg"
+                postedDate="Nov 30, 2020"
+                readingTime={30}
+                title="News title"
+                sideNewsClass="my-2"
+              />
+              <SideNews
+                imageUrl="/iStockPic.jpg"
+                postedDate="Nov 30, 2020"
+                readingTime={30}
+                title="News title"
+                sideNewsClass="my-2"
+              />
+            </div>
+            <div className="border rounded-md mt-5 p-2 h-fit">
+              <Label.Root className="text-xl text-blue-900 font-bold">
+                Upcoming streams
+              </Label.Root>
+              <Schedule
+                title="Trade war in 2022"
+                date="Jan 02"
+                dateTimeStamp="Jan 10, 2022, 11:30 AM"
+                customClass="mt-5"
+              />
+              <Schedule
+                title="Trade war in 2022"
+                date="Jan 02"
+                dateTimeStamp="Jan 10, 2022, 11:30 AM"
+              />
+              <Schedule
+                title="Trade war in 2022"
+                date="Jan 02"
+                dateTimeStamp="Jan 10, 2022, 11:30 AM"
+              />
+              <Schedule
+                title="Trade war in 2022"
+                date="Jan 02"
+                dateTimeStamp="Jan 10, 2022, 11:30 AM"
+              />
+            </div>
           </div>
         </div>
       </div>
