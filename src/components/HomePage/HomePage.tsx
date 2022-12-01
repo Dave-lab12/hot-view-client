@@ -102,8 +102,31 @@ function HomePage() {
             />
           </div>
         </div>
-        <div className="">
-          <UserCreatedNews />
+        <div className="w-3/5">
+          <UserCreatedNews
+            profileImg="/iStockPic.jpg"
+            firstName="FirstName"
+            lastName="lastName"
+            newsImage="/iStockPic.jpg"
+          />
+          <UserCreatedNews
+            profileImg="/iStockPic.jpg"
+            firstName="FirstName"
+            lastName="lastName"
+            newsImage="/iStockPic.jpg"
+          />
+          <UserCreatedNews
+            profileImg="/iStockPic.jpg"
+            firstName="FirstName"
+            lastName="lastName"
+            newsImage="/iStockPic.jpg"
+          />
+          <UserCreatedNews
+            profileImg="/iStockPic.jpg"
+            firstName="FirstName"
+            lastName="lastName"
+            newsImage="/iStockPic.jpg"
+          />
         </div>
       </div>
     </>

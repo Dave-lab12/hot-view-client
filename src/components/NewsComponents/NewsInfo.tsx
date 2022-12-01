@@ -10,7 +10,7 @@ function NewsInfo({ displayInfo, infoClass }: IProps) {
   return (
     <>
       <Label.Root
-        className={`text-md hover:text-green-500 transition delay-100 ease-in-out ${infoClass}`}
+        className={`text-sm text-gray-700 hover:text-green-500 transition delay-100 ease-in-out ${infoClass}`}
       >
         {displayInfo}
       </Label.Root>

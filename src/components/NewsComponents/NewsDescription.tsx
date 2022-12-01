@@ -3,12 +3,15 @@ import * as Label from "@radix-ui/react-label";
 
 interface IProps {
   description: string;
+  descClass?: string;
 }
 
-function NewsDescription({ description }: IProps) {
+function NewsDescription({ description, descClass }: IProps) {
   return (
     <>
-      <Label.Root className="text-md text-gray-500">{description}</Label.Root>
+      <Label.Root className={`text-md text-gray-500 text-sm ${descClass}`}>
+        {description}
+      </Label.Root>
     </>
   );
 }
