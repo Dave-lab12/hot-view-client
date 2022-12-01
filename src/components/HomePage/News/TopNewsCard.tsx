@@ -26,7 +26,7 @@ function TopNewsCard({
 }: IProps) {
   return (
     <div
-      className={`flex flex-col space-y-2 hover:scale-105 transition delay-100 ease-in-out hover:shadow-lg hover:shadow-black ${cardClass}`}
+      className={`flex flex-col space-y-2 hover:scale-105 transition delay-100 ease-in-out hover:shadow-lg hover:shadow-gray-600 ${cardClass}`}
     >
       <Image
         src={imageUrl}
