@@ -33,7 +33,7 @@ function FeaturedNews({
             <NewsInfo displayInfo={postedBy} infoClass="px-4" />
             <NewsInfo displayInfo={postedDate} infoClass="px-4" />
           </div>
-          <div className="px-3 py-4">
+          <div className=" flex flex-col px-3 py-4">
             <NewsHeading title={title} />
             <NewsDescription description={description} />
           </div>
