@@ -66,24 +66,18 @@ function HomePage() {
             postedDate="Nov 30, 2020"
             readingTime={30}
             title="News title"
-            imageHeight={150}
-            imageWidth={150}
           />
           <SideNews
             imageUrl="/iStockPic.jpg"
             postedDate="Nov 30, 2020"
             readingTime={30}
             title="News title"
-            imageHeight={150}
-            imageWidth={150}
           />
           <SideNews
             imageUrl="/iStockPic.jpg"
             postedDate="Nov 30, 2020"
             readingTime={30}
             title="News title"
-            imageHeight={150}
-            imageWidth={150}
           />
         </div>
       </div>
