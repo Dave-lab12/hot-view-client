@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <>
       <MenuBar />
-      <div className="grid place-content-center md:px-40 mt-10">
+      <div className="grid grid-flow-row place-content-center md:px-40 mt-10">
         <div className="grid grid-cols-3 ">
           <div className=" h-96 col-span-2 ">
             <FeaturedNews
@@ -102,31 +102,69 @@ function HomePage() {
             />
           </div>
         </div>
-        <div className="w-3/5">
-          <UserCreatedNews
-            profileImg="/iStockPic.jpg"
-            firstName="FirstName"
-            lastName="lastName"
-            newsImage="/iStockPic.jpg"
-          />
-          <UserCreatedNews
-            profileImg="/iStockPic.jpg"
-            firstName="FirstName"
-            lastName="lastName"
-            newsImage="/iStockPic.jpg"
-          />
-          <UserCreatedNews
-            profileImg="/iStockPic.jpg"
-            firstName="FirstName"
-            lastName="lastName"
-            newsImage="/iStockPic.jpg"
-          />
-          <UserCreatedNews
-            profileImg="/iStockPic.jpg"
-            firstName="FirstName"
-            lastName="lastName"
-            newsImage="/iStockPic.jpg"
-          />
+        <div className="flex flex-row">
+          <div className="col-span-2 mt-5 mr-10">
+            <UserCreatedNews
+              profileImg="/iStockPic.jpg"
+              firstName="FirstName"
+              lastName="lastName"
+              newsImage="/iStockPic.jpg"
+              customClass="mb-4"
+            />
+            <UserCreatedNews
+              profileImg="/iStockPic.jpg"
+              firstName="FirstName"
+              lastName="lastName"
+              newsImage="/iStockPic.jpg"
+              customClass="mb-4"
+            />
+            <UserCreatedNews
+              profileImg="/iStockPic.jpg"
+              firstName="FirstName"
+              lastName="lastName"
+              newsImage="/iStockPic.jpg"
+              customClass="mb-4"
+            />
+            <UserCreatedNews
+              profileImg="/iStockPic.jpg"
+              firstName="FirstName"
+              lastName="lastName"
+              newsImage="/iStockPic.jpg"
+              customClass="mb-4"
+            />
+          </div>
+          <div className="col-span-1 mt-5 w-2/5 p-5 border rounded-md h-fit">
+            <SideNews
+              imageUrl="/iStockPic.jpg"
+              postedDate="Nov 30, 2020"
+              readingTime={30}
+              title="News title"
+            />
+            <SideNews
+              imageUrl="/iStockPic.jpg"
+              postedDate="Nov 30, 2020"
+              readingTime={30}
+              title="News title"
+            />
+            <SideNews
+              imageUrl="/iStockPic.jpg"
+              postedDate="Nov 30, 2020"
+              readingTime={30}
+              title="News title"
+            />
+            <SideNews
+              imageUrl="/iStockPic.jpg"
+              postedDate="Nov 30, 2020"
+              readingTime={30}
+              title="News title"
+            />
+            <SideNews
+              imageUrl="/iStockPic.jpg"
+              postedDate="Nov 30, 2020"
+              readingTime={30}
+              title="News title"
+            />
+          </div>
         </div>
       </div>
     </>

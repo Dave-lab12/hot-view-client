@@ -25,9 +25,7 @@ function SideNews({
   sideNewsClass = "",
 }: IProps) {
   return (
-    <div
-      className={`flex flex-row border-b pb-2 hover:scale-105 hover:shadow-md hover:shadow-gray-600 transition delay-100 ${sideNewsClass}`}
-    >
+    <div className={`flex flex-row border-b pb-2 ${sideNewsClass}`}>
       <div>
         <Image
           src={imageUrl}

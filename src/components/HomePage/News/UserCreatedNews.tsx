@@ -12,7 +12,7 @@ interface IProps {
   firstName: string;
   lastName: string;
   newsImage: string;
-  className?: string;
+  customClass?: string;
 }
 function UserCreatedNews({
   profileImg,
@@ -20,13 +20,11 @@ function UserCreatedNews({
   lastName,
   newsImage,
   fallBackUName = firstName[0] + lastName[0],
-  className = "",
+  customClass = " ",
 }: IProps) {
   return (
     <div
-      className={`grid grid-cols-3 place-items-start mt-5 border-b ${{
-        className,
-      }}`}
+      className={`grid grid-cols-3 place-items-start border-b ${customClass}`}
     >
       <div className="col-span-2  justify-center">
         <div className="flex flex-row items-center">
@@ -66,7 +64,7 @@ function UserCreatedNews({
           </div>
         </div>
       </div>
-      <div className="col-span-1">
+      <div className="col-span-1 place-self-end">
         <Image src={newsImage} alt="News image" width={250} height={250} />
       </div>
     </div>
