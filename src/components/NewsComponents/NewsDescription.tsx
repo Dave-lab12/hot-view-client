@@ -1,4 +1,5 @@
 import React from "react";
+import * as Label from "@radix-ui/react-label";
 
 interface IProps {
   description: string;
@@ -6,9 +7,9 @@ interface IProps {
 
 function NewsDescription({ description }: IProps) {
   return (
-    <div>
-      <p className="text-md text-gray-500">{description}</p>
-    </div>
+    <>
+      <Label.Root className="text-md text-gray-500">{description}</Label.Root>
+    </>
   );
 }
 

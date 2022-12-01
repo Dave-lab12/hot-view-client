@@ -1,4 +1,5 @@
 import React from "react";
+import * as Label from "@radix-ui/react-label";
 
 interface IProps {
   title: string;
@@ -7,9 +8,11 @@ interface IProps {
 
 function NewsHeading({ title, titleClass }: IProps) {
   return (
-    <div>
-      <h1 className={`font-bold text-xl ${titleClass}`}>{title}</h1>
-    </div>
+    <>
+      <Label.Root className={`font-bold text-xl ${titleClass}`}>
+        {title}
+      </Label.Root>
+    </>
   );
 }
 
