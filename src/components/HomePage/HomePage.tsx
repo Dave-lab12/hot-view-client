@@ -1,6 +1,7 @@
 import * as Label from "@radix-ui/react-label";
 
 import MenuBar from "../MenuBar";
+import CallToAction from "../CallToAction";
 
 import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
@@ -199,6 +200,9 @@ function HomePage() {
               />
             </div>
           </div>
+        </div>
+        <div className="my-5">
+          <CallToAction imageUrl="/iStockPic.jpg" />
         </div>
       </div>
     </>

@@ -29,7 +29,7 @@ function FeaturedNews({
       >
         <div className="flex flex-col place-content-end h-3/4 bg-gradient-to-t from-black to-transparent">
           <div className=" ">
-            <div className="flex flex-row text-gray-400 ">
+            <div className="flex flex-row text-gray-200">
               <NewsInfo displayInfo={newsCategory} infoClass="px-4" />
               <NewsInfo displayInfo={postedBy} infoClass="px-4" />
               <NewsInfo displayInfo={postedDate} infoClass="px-4" />
