@@ -2,6 +2,7 @@ import * as Label from "@radix-ui/react-label";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
+import Contact from "../Contact";
 
 import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
@@ -205,6 +206,13 @@ function HomePage() {
           <CallToAction imageUrl="/iStockPic.jpg" />
         </div>
       </div>
+      <section className="bg-gray-200 p-10 text-gray-800">
+        <Contact
+          address="F1 456 Caron Town"
+          email="info@example.com"
+          phonenumber="234-582432343"
+        />
+      </section>
     </>
   );
 }
