@@ -25,7 +25,7 @@ function TopNewsCard({
   cardClass = "",
 }: IProps) {
   return (
-    <div className={`flex flex-col ${cardClass}`}>
+    <div className={`flex flex-col space-y-2 ${cardClass}`}>
       <Image
         src={imageUrl}
         alt="Top news image"
@@ -33,8 +33,10 @@ function TopNewsCard({
         height={220}
         objectFit="contain"
       />
-
-      <NewsHeading title={title} titleClass="text-blue-900" />
+      <div className="flex flex-row items-center">
+        <NewsHeading title={title} titleClass="text-blue-900 grow" />
+        <i className="grow">3 dots</i>
+      </div>
 
       <div className="flex flex-row text-gray-600">
         <NewsInfo displayInfo={postedBy} infoClass="pr-3 " />
