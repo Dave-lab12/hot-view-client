@@ -3,6 +3,7 @@ import Image from "next/image";
 import NewsHeading from "@/components/NewsComponents/NewsHeading";
 import NewsInfo from "@/components/NewsComponents/NewsInfo";
 import Header from "@/components/Header";
+import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 interface IProps {
   imageUrl: string;
@@ -23,13 +24,16 @@ function TopNewsCard({
 }: IProps) {
   return (
     <div className="grid grid-flow-row">
-      <Image
-        src={imageUrl}
-        alt="Top news image"
-        width={250}
-        height={250}
-        objectFit="contain"
-      />
+      <AspectRatio.Root ratio={16 / 9}>
+        <Image
+          src={imageUrl}
+          alt="Top news image"
+          width={250}
+          height={250}
+          objectFit="contain"
+        />
+      </AspectRatio.Root>
+
       <NewsHeading title={title} />
 
       <div className="flex flex-row">
