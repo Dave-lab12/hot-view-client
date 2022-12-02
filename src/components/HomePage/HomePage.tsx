@@ -1,4 +1,5 @@
 import * as Label from "@radix-ui/react-label";
+import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
@@ -206,12 +207,23 @@ function HomePage() {
       <div className="my-5 mx-16">
         <CallToAction imageUrl="/iStockPic.jpg" />
       </div>
-      <section className="bg-gray-200 p-10 text-gray-800">
-        <Contact
-          address="F1 456 Caron Town"
-          email="info@example.com"
-          phonenumber="234-582432343"
-        />
+      <section className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg">
+        <div>
+          <div className="grid place-self-start mb-2">
+            <Logo src="/hot-news-logo.png" width={70} height={70} />
+          </div>
+          <Contact
+            address="F1 456 Caron Town"
+            email="info@example.com"
+            phonenumber="234-582432343"
+          />
+          <div className="space-x-2 text-2xl mt-2">
+            <BsFacebook className="inline-block" />
+            <BsTwitter className="inline-block " />
+            <BsInstagram className="inline-block " />
+            <BsLinkedin className="inline-block " />
+          </div>
+        </div>
       </section>
     </>
   );
