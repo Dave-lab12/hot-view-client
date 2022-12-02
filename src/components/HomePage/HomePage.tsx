@@ -202,9 +202,9 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <div className="my-5">
-          <CallToAction imageUrl="/iStockPic.jpg" />
-        </div>
+      </div>
+      <div className="my-5 mx-16">
+        <CallToAction imageUrl="/iStockPic.jpg" />
       </div>
       <section className="bg-gray-200 p-10 text-gray-800">
         <Contact
