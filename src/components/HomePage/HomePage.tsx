@@ -4,6 +4,7 @@ import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
 import Contact from "../Contact";
+import Logo from "../Logo";
 
 import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
