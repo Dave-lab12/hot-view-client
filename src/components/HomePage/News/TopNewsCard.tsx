@@ -3,7 +3,7 @@ import Image from "next/image";
 import NewsHeading from "@/components/NewsComponents/NewsHeading";
 import NewsInfo from "@/components/NewsComponents/NewsInfo";
 import Header from "@/components/Header";
-import * as AspectRatio from "@radix-ui/react-aspect-ratio";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 interface IProps {
   imageUrl: string;
@@ -38,7 +38,7 @@ function TopNewsCard({
       />
       <div className="flex flex-row items-center">
         <NewsHeading title={title} titleClass="text-blue-900 grow" />
-        <i className="grow">3 dots</i>
+        <BsThreeDotsVertical className="place-self-end text-xl" />
       </div>
 
       <div className="flex flex-row text-gray-600">

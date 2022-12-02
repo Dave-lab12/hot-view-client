@@ -5,6 +5,7 @@ import NewsHeading from "@/components/NewsComponents/NewsHeading";
 import NewsDescription from "@/components/NewsComponents/NewsDescription";
 import NewsInfo from "@/components/NewsComponents/NewsInfo";
 import Image from "next/image";
+import { BsBookmark, BsThreeDots } from "react-icons/bs";
 
 interface IProps {
   profileImg: string;
@@ -54,12 +55,12 @@ function UserCreatedNews({
             descClass="break-normal pr-20"
             description="User created news description in short which is very highly toxic that is used to do some stuff that are really great"
           />
-          <div className="flex flex-row items-start">
-            <NewsInfo infoClass="grow" displayInfo="Nov 20 2022" />
+          <div className="flex flex-row items-start space-x-16">
+            <NewsInfo infoClass="" displayInfo="Nov 20 2022" />
             <NewsInfo infoClass="grow" displayInfo="10 min read" />
-            <div className="text-sm space-x-1 pr-4">
-              <i className="grow">Bookmark</i>
-              <i className="grow">3 dots</i>
+            <div className="text-sm space-x-5 pr-4">
+              <BsBookmark className="inline-block text-xl" />
+              <BsThreeDots className="inline-block text-xl" />
             </div>
           </div>
         </div>
