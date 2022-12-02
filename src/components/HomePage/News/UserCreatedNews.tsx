@@ -46,7 +46,7 @@ function UserCreatedNews({
             {`${firstName} ${lastName}`}
           </Label.Root>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-2 mt-2">
           <NewsHeading
             title="User created news title"
             titleClass="text-blue-900"

@@ -4,6 +4,8 @@ import NewsHeading from "@/components/NewsComponents/NewsHeading";
 import NewsInfo from "@/components/NewsComponents/NewsInfo";
 import Header from "@/components/Header";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { GoVerified } from "react-icons/go";
+import { RxDotFilled } from "react-icons/rx";
 
 interface IProps {
   imageUrl: string;
@@ -25,9 +27,7 @@ function TopNewsCard({
   cardClass = "",
 }: IProps) {
   return (
-    <div
-      className={`flex flex-col space-y-2 hover:scale-105 transition delay-100 ease-in-out hover:shadow-lg hover:shadow-gray-600 ${cardClass}`}
-    >
+    <div className={`flex flex-col space-y-2 ${cardClass}`}>
       <Image
         src={imageUrl}
         alt="Top news image"
@@ -41,13 +41,14 @@ function TopNewsCard({
         <BsThreeDotsVertical className="place-self-end text-xl" />
       </div>
 
-      <div className="flex flex-row text-gray-600">
+      <div className="flex flex-row text-gray-600 items-center">
         <NewsInfo displayInfo={postedBy} infoClass="pr-3 " />
-        {isVerified && <i className="fa-solid fa-badge-check">v</i>}
+        {isVerified && <GoVerified className="" />}
       </div>
 
-      <div className="flex flex-row text-gray-600">
+      <div className="flex flex-row text-gray-600 items-center">
         <NewsInfo displayInfo={`${views} views`} infoClass="pr-1" />
+        <RxDotFilled className="text-gray-600 text-xs" />
         <NewsInfo displayInfo={`${postedDate} ago`} infoClass="pl-1" />
       </div>
     </div>

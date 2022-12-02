@@ -1,5 +1,6 @@
 import React from "react";
 import * as Label from "@radix-ui/react-label";
+import { BsCalendar4 } from "react-icons/bs";
 
 interface IProps {
   title: string;
@@ -10,8 +11,8 @@ interface IProps {
 
 function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
   return (
-    <div className={`flex flex-row space-x-3 items-center p-1 ${customClass}`}>
-      <div className="grid rounded-md bg-blue-200 text-gray-800 px-3 h-16 place-content-center break-normal ">
+    <div className={`flex flex-row items-center p-1 ${customClass}`}>
+      <div className="grid rounded-md bg-blue-200 text-gray-800 px-3 h-16 place-content-center break-normal mr-3 ">
         {date ? date.split(" ")[0] : "Jan"}
         <br />
         {date ? date.split(" ")[1] : "01"}
@@ -20,7 +21,7 @@ function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
         <Label.Root className="font-bold text-md">{title}</Label.Root>
         <Label.Root>{dateTimeStamp}</Label.Root>
       </div>
-      <i className="pl-10">calender</i>
+      <BsCalendar4 className="text-gray-500 ml-16 text-3xl" />
     </div>
   );
 }
