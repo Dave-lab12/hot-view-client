@@ -209,16 +209,17 @@ function HomePage() {
         <CallToAction imageUrl="/iStockPic.jpg" />
       </div>
       <section className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg">
-        <div>
-          <div className="grid place-self-start mb-2">
+        <div className="space-y-5">
+          <div className="grid place-self-start">
             <Logo src="/hot-news-logo.png" width={70} height={70} />
           </div>
           <Contact
             address="F1 456 Caron Town"
             email="info@example.com"
             phonenumber="234-582432343"
+            customClass=""
           />
-          <div className="space-x-2 text-2xl mt-2">
+          <div className="space-x-4 text-2xl mt-2">
             <BsFacebook className="inline-block" />
             <BsTwitter className="inline-block " />
             <BsInstagram className="inline-block " />
