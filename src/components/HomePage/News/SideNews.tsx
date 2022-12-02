@@ -32,7 +32,7 @@ function SideNews({
           alt="News image"
           width={imageWidth}
           height={imageHeight}
-          objectFit="contain"
+          className="object-cover"
         />
       </div>
       <div className="grid grid-flow-row px-5 py-1 w-full">

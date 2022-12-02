@@ -20,7 +20,7 @@ function HomePage() {
         <div className="grid grid-cols-3 ">
           <div className=" h-96 col-span-2 ">
             <FeaturedNews
-              imageUrl="https://picsum.photos/seed/picum/800/400"
+              imageUrl="https://picsum.photos/seed/picaum/800/400"
               newsCategory="Health"
               postedDate="November 20 2022"
               postedBy="News Direct"
@@ -30,25 +30,25 @@ function HomePage() {
           </div>
           <div className="grid space-y-2 place-content-center ml-10">
             <SideNews
-              imageUrl="https://picsum.photos/seed/pium/800/400"
+              imageUrl="https://picsum.photos/seed/pium/200/140"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
             />
             <SideNews
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/piaum/200/140"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
             />
             <SideNews
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/piumam/200/140"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
             />
             <SideNews
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/piumapum/200/140"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
@@ -61,7 +61,7 @@ function HomePage() {
           </Label.Root>
           <div className="grid md:grid-cols-5 sm:auto-cols-fr place-content-stretch mt-5">
             <TopNewsCard
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
               postedBy="News Direct"
               isVerified={true}
@@ -70,7 +70,7 @@ function HomePage() {
               cardClass="mr-4"
             />
             <TopNewsCard
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/e/200/140"
               title="Top news Title"
               postedBy="News Direct"
               isVerified={true}
@@ -79,7 +79,7 @@ function HomePage() {
               cardClass="mr-4"
             />
             <TopNewsCard
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/b/200/140"
               title="Top news Title"
               postedBy="News Direct"
               isVerified={true}
@@ -88,7 +88,7 @@ function HomePage() {
               cardClass="mr-4"
             />
             <TopNewsCard
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/c/200/140"
               title="Top news Title"
               postedBy="News Direct"
               isVerified={true}
@@ -97,7 +97,7 @@ function HomePage() {
               cardClass="mr-4"
             />
             <TopNewsCard
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/d/200/140"
               title="Top news Title"
               postedBy="News Direct"
               isVerified={true}
@@ -110,66 +110,66 @@ function HomePage() {
         <div className="flex flex-row">
           <div className="col-span-2 mt-5 mr-10">
             <UserCreatedNews
-              profileImg="/iStockPic.jpg"
+              profileImg="https://picsum.photos/seed/f/200/140"
               firstName="FirstName"
               lastName="lastName"
-              newsImage="/iStockPic.jpg"
+              newsImage="https://picsum.photos/seed/g/200/140"
               customClass="mb-4"
             />
             <UserCreatedNews
-              profileImg="/iStockPic.jpg"
+              profileImg="https://picsum.photos/seed/h/200/140"
               firstName="FirstName"
               lastName="lastName"
-              newsImage="/iStockPic.jpg"
+              newsImage="https://picsum.photos/seed/i/200/140"
               customClass="mb-4"
             />
             <UserCreatedNews
-              profileImg="/iStockPic.jpg"
+              profileImg="https://picsum.photos/seed/j/200/140"
               firstName="FirstName"
               lastName="lastName"
-              newsImage="/iStockPic.jpg"
+              newsImage="https://picsum.photos/seed/k/200/140"
               customClass="mb-4"
             />
             <UserCreatedNews
-              profileImg="/iStockPic.jpg"
+              profileImg="https://picsum.photos/seed/l/200/140"
               firstName="FirstName"
               lastName="lastName"
-              newsImage="/iStockPic.jpg"
+              newsImage="https://picsum.photos/seed/m/200/140"
               customClass="mb-4"
             />
           </div>
           <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">
             <div className="p-2 border rounded-md h-fit">
               <SideNews
-                imageUrl="/iStockPic.jpg"
+                imageUrl="https://picsum.photos/seed/n/200/140"
                 postedDate="Nov 30, 2020"
                 readingTime={30}
                 title="News title"
                 sideNewsClass="my-2"
               />
               <SideNews
-                imageUrl="/iStockPic.jpg"
+                imageUrl="https://picsum.photos/seed/o/200/140"
                 postedDate="Nov 30, 2020"
                 readingTime={30}
                 title="News title"
                 sideNewsClass="my-2"
               />
               <SideNews
-                imageUrl="/iStockPic.jpg"
+                imageUrl="https://picsum.photos/seed/p/200/140"
                 postedDate="Nov 30, 2020"
                 readingTime={30}
                 title="News title"
                 sideNewsClass="my-2"
               />
               <SideNews
-                imageUrl="/iStockPic.jpg"
+                imageUrl="https://picsum.photos/seed/q/200/140"
                 postedDate="Nov 30, 2020"
                 readingTime={30}
                 title="News title"
                 sideNewsClass="my-2"
               />
               <SideNews
-                imageUrl="/iStockPic.jpg"
+                imageUrl="https://picsum.photos/seed/r/200/140"
                 postedDate="Nov 30, 2020"
                 readingTime={30}
                 title="News title"
@@ -206,7 +206,7 @@ function HomePage() {
         </div>
       </div>
       <div className="my-5 mx-16">
-        <CallToAction imageUrl="/iStockPic.jpg" />
+        <CallToAction imageUrl="https://picsum.photos/seed/anotherrandom/800/400?grayscale" />
       </div>
       <section className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg">
         <div className="space-y-5">
