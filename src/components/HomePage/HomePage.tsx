@@ -20,7 +20,7 @@ function HomePage() {
         <div className="grid grid-cols-3 ">
           <div className=" h-96 col-span-2 ">
             <FeaturedNews
-              imageUrl="https://picsum.photos/seed/picsum/800/400"
+              imageUrl="https://picsum.photos/seed/picum/800/400"
               newsCategory="Health"
               postedDate="November 20 2022"
               postedBy="News Direct"
@@ -30,7 +30,7 @@ function HomePage() {
           </div>
           <div className="grid space-y-2 place-content-center ml-10">
             <SideNews
-              imageUrl="/iStockPic.jpg"
+              imageUrl="https://picsum.photos/seed/pium/800/400"
               postedDate="Nov 30, 2020"
               readingTime={30}
               title="News title"
