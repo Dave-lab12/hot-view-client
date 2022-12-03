@@ -9,11 +9,14 @@ import {
 } from "react-icons/ai";
 import { MdPhone } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 import Logo from "./Logo";
 import Link from "./Link";
 
 function MenuBar() {
+  const router = useRouter();
+
   return (
     <>
       <div className="grid grid-flow-col p-4 mx-4 mt-3 rounded-md bg-gray-200 items-center">
@@ -33,7 +36,9 @@ function MenuBar() {
           <NavBar.List>
             <Link
               link="/"
-              linkClass="flex mr-3 items-center text-orange-700"
+              linkClass={`flex mr-3 items-center text-orange-700 ${
+                router.asPath === "/" ? "text-orange-900" : ""
+              }`}
               text="Hotnews"
               key="logo"
             >
@@ -44,16 +49,40 @@ function MenuBar() {
             </Link>
           </NavBar.List>
           <NavBar.List className="mx-4 text-orange-700 text-lg">
-            <Link link="/signup" text="Stories" />
+            <Link
+              link="/signup"
+              linkClass={`${
+                router.asPath === "/signup" ? "text-orange-900" : ""
+              }`}
+              text="Stories"
+            />
           </NavBar.List>
           <NavBar.List className="mx-4 text-orange-700  text-lg">
-            <Link link="/signup" text="Forum" />
+            <Link
+              link="/signup"
+              text="Forum"
+              linkClass={`${
+                router.asPath === "/signup" ? "text-orange-900" : ""
+              }`}
+            />
           </NavBar.List>
           <NavBar.List className="mx-4 text-orange-700  text-lg">
-            <Link link="/signup" text="Store" />
+            <Link
+              link="/signup"
+              text="Store"
+              linkClass={`${
+                router.asPath === "/signup" ? "text-orange-900" : ""
+              }`}
+            />
           </NavBar.List>
           <NavBar.List className="mx-4 text-orange-700  text-lg">
-            <Link link="/signup" text="Contact" />
+            <Link
+              link="/#contact"
+              text="Contact"
+              linkClass={`${
+                router.asPath === "/#contact" ? "text-orange-900" : ""
+              }`}
+            />
           </NavBar.List>
         </div>
         <div className="place-self-end items-center">
