@@ -37,13 +37,13 @@ function TopNewsCard({
         objectFit="contain"
       />
       <div className="flex flex-row items-center">
-        <NewsHeading title={title} titleClass="text-orange-600 grow" />
-        <BsThreeDotsVertical className="place-self-end text-xl" />
+        <NewsHeading title={title} titleClass="text-orange-800 grow" />
+        <BsThreeDotsVertical className="place-self-end text-xl text-orange-800" />
       </div>
 
       <div className="flex flex-row text-gray-600 items-center">
         <NewsInfo displayInfo={postedBy} infoClass="pr-3 " />
-        {isVerified && <GoVerified className="" />}
+        {isVerified && <GoVerified className="text-orange-800" />}
       </div>
 
       <div className="flex flex-row text-gray-600 items-center">

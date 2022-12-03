@@ -10,7 +10,9 @@ interface IProps {
 function Contact({ address, email, phonenumber, customClass = "" }: IProps) {
   return (
     <>
-      <div className={`grid place-self-start items-start ${customClass}`}>
+      <div
+        className={`grid place-self-start items-start text-orange-700 ${customClass}`}
+      >
         <text>{address}</text>
         <text>{email}</text>
         <text>{phonenumber}</text>

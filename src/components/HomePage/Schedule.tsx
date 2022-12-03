@@ -12,7 +12,7 @@ interface IProps {
 function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
   return (
     <div className={`flex flex-row items-center p-1 ${customClass}`}>
-      <div className="grid rounded-md bg-blue-200 text-gray-800 px-3 h-16 place-content-center break-normal mr-3 ">
+      <div className="grid rounded-md bg-orange-200 text-gray-800 px-3 h-16 place-content-center break-normal mr-3 ">
         {date ? date.split(" ")[0] : "Jan"}
         <br />
         {date ? date.split(" ")[1] : "01"}
@@ -21,7 +21,7 @@ function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
         <Label.Root className="font-bold text-md">{title}</Label.Root>
         <Label.Root>{dateTimeStamp}</Label.Root>
       </div>
-      <BsCalendar4 className="text-gray-500 ml-16 text-3xl" />
+      <BsCalendar4 className="text-orange-700 ml-16 text-3xl" />
     </div>
   );
 }

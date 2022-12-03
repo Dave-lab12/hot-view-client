@@ -56,7 +56,7 @@ function HomePage() {
           </div>
         </div>
         <div className=" mt-10 pb-8 border-b">
-          <Label.Root className="font-bold text-orange-600 text-2xl">
+          <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
           <div className="grid md:grid-cols-5 sm:auto-cols-fr place-content-stretch mt-5">
@@ -110,7 +110,7 @@ function HomePage() {
         <div className="flex flex-row">
           <div className="col-span-2 mt-5 mr-10">
             <div className="py-2">
-              <Label.Root className="font-bold text-orange-600 text-2xl">
+              <Label.Root className="font-bold text-orange-800 text-2xl">
                 Top stories
               </Label.Root>
             </div>
@@ -182,7 +182,7 @@ function HomePage() {
               />
             </div>
             <div className="border rounded-md mt-5 p-2 h-fit">
-              <Label.Root className="text-xl text-orange-600 font-bold">
+              <Label.Root className="text-xl text-orange-800 font-bold">
                 Upcoming streams
               </Label.Root>
               <Schedule
@@ -223,7 +223,7 @@ function HomePage() {
             email="info@example.com"
             phonenumber="234-582432343"
           />
-          <div className="space-x-4 text-2xl mt-2">
+          <div className="space-x-4 text-2xl mt-2 text-orange-700">
             <BsFacebook className="inline-block" />
             <BsTwitter className="inline-block " />
             <BsInstagram className="inline-block " />
