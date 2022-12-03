@@ -25,7 +25,7 @@ function UserCreatedNews({
 }: IProps) {
   return (
     <div
-      className={`grid grid-cols-3 place-items-start border-b ${customClass}`}
+      className={`grid grid-cols-3 place-items-start border-b pb-2 ${customClass}`}
     >
       <div className="col-span-2  justify-center">
         <div className="flex flex-row items-center">
@@ -66,7 +66,7 @@ function UserCreatedNews({
         </div>
       </div>
       <div className="col-span-1 place-self-end">
-        <Image src={newsImage} alt="News image" width={250} height={250} />
+        <Image src={newsImage} alt="News image" width={200} height={250} />
       </div>
     </div>
   );

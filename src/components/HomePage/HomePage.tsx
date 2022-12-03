@@ -20,7 +20,7 @@ function HomePage() {
         <div className="grid grid-cols-3 ">
           <div className=" h-128 col-span-2 ">
             <FeaturedNews
-              imageUrl="https://picsum.photos/seed/picaum/800/400"
+              imageUrl="https://picsum.photos/seed/picraum/800/400"
               newsCategory="Health"
               postedDate="November 20 2022"
               postedBy="News Direct"
