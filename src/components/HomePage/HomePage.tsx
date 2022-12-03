@@ -18,7 +18,7 @@ function HomePage() {
       <MenuBar />
       <div className="grid grid-flow-row place-content-center md:px-40 mt-10">
         <div className="grid grid-cols-3 ">
-          <div className=" h-96 col-span-2 ">
+          <div className=" h-128 col-span-2 ">
             <FeaturedNews
               imageUrl="https://picsum.photos/seed/picaum/800/400"
               newsCategory="Health"
