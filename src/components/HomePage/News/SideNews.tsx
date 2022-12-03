@@ -46,7 +46,7 @@ function SideNews({
             infoClass="pr-3 text-gray-500 place-self-center grow"
           />
         </div>
-        <NewsHeading title={title} titleClass="text-blue-900" />
+        <NewsHeading title={title} titleClass="text-orange-600" />
       </div>
     </div>
   );

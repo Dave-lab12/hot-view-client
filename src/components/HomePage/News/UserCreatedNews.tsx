@@ -42,14 +42,14 @@ function UserCreatedNews({
               {fallBackUName}
             </Avatar.Fallback>
           </Avatar.Root>
-          <Label.Root className="pl-2 text-sm font-bold text-blue-900">
+          <Label.Root className="pl-2 text-sm font-bold text-orange-600">
             {`${firstName} ${lastName}`}
           </Label.Root>
         </div>
         <div className="flex flex-col space-y-2 mt-2">
           <NewsHeading
             title="User created news title"
-            titleClass="text-blue-900"
+            titleClass="text-orange-600"
           />
           <NewsDescription
             descClass="break-normal pr-20"

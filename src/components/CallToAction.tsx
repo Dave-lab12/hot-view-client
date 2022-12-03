@@ -15,13 +15,13 @@ function CallToAction({ imageUrl }: IProps) {
       className="grid place-content-center h-80 bg-no-repeat bg-cover"
     >
       <div>
-        <Label.Root className="font-bold text-5xl text-white">
+        <Label.Root className="font-bold text-4xl text-white">
           SignUp to get latest stories
         </Label.Root>
         <div className="grid place-content-center mt-16">
           <Link
             href={"/signup"}
-            className={` grid bg-orange-700 w-24 place-items-center text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg `}
+            className={` grid bg-orange-600 w-24 place-items-center text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg `}
           >
             Signup
           </Link>

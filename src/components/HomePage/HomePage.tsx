@@ -56,7 +56,7 @@ function HomePage() {
           </div>
         </div>
         <div className=" mt-10 pb-8 border-b">
-          <Label.Root className="font-bold text-blue-900 text-2xl">
+          <Label.Root className="font-bold text-orange-600 text-2xl">
             Top stories
           </Label.Root>
           <div className="grid md:grid-cols-5 sm:auto-cols-fr place-content-stretch mt-5">
@@ -109,6 +109,11 @@ function HomePage() {
         </div>
         <div className="flex flex-row">
           <div className="col-span-2 mt-5 mr-10">
+            <div className="py-2">
+              <Label.Root className="font-bold text-orange-600 text-2xl">
+                Top stories
+              </Label.Root>
+            </div>
             <UserCreatedNews
               profileImg="https://picsum.photos/seed/f/200/140"
               firstName="FirstName"
@@ -177,7 +182,7 @@ function HomePage() {
               />
             </div>
             <div className="border rounded-md mt-5 p-2 h-fit">
-              <Label.Root className="text-xl text-blue-900 font-bold">
+              <Label.Root className="text-xl text-orange-600 font-bold">
                 Upcoming streams
               </Label.Root>
               <Schedule

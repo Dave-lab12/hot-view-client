@@ -37,7 +37,7 @@ function TopNewsCard({
         objectFit="contain"
       />
       <div className="flex flex-row items-center">
-        <NewsHeading title={title} titleClass="text-blue-900 grow" />
+        <NewsHeading title={title} titleClass="text-orange-600 grow" />
         <BsThreeDotsVertical className="place-self-end text-xl" />
       </div>
 
