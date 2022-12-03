@@ -1,18 +1,26 @@
+import * as NavBar from "@radix-ui/react-navigation-menu";
+import { useRouter } from "next/router";
+import { ReactNode } from "react";
+
 interface IProps {
   link: string;
   text: string;
   linkClass?: string;
-  textClass?: string;
+  children?: ReactNode;
 }
 
-function Link({ link, text, linkClass, textClass }: IProps) {
+function Link({ link, text, linkClass, children }: IProps) {
+  const router = useRouter();
+
   return (
-    <a
+    <NavBar.Link
       href={link}
-      className={`hover:cursor-pointer mt-1 mx-2 text-orange-700 ${linkClass}`}
+      className={`hover:cursor-pointer mt-1 mx-2  ${
+        router.pathname === link ? "active:text-black" : "text-orange-700"
+      } ${linkClass}`}
     >
-      <p className={textClass}>{text}</p>
-    </a>
+      {children ? children : text}
+    </NavBar.Link>
   );
 }
 

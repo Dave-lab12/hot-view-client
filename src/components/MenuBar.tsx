@@ -11,6 +11,7 @@ import { MdPhone } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 
 import Logo from "./Logo";
+import Link from "./Link";
 
 function MenuBar() {
   return (
@@ -30,27 +31,29 @@ function MenuBar() {
       <NavBar.Root className="grid grid-flow-col p-7 mx-4 border-solid border-b items-center ">
         <div className="grid grid-flow-col place-content-start  items-center">
           <NavBar.List>
-            <NavBar.Link
-              href="/"
-              className="flex text-slate-800 mr-3 items-center"
+            <Link
+              link="/"
+              linkClass="flex mr-3 items-center text-orange-700"
+              text="Hotnews"
+              key="logo"
             >
               <div className="flex flex-row items-center space-x-4">
                 <Logo src="/hot-news-logo.png" width={60} height={60} />
-                <text className="text-2xl text-orange-700">Hot news</text>
+                <text className="text-2xl">Hot news</text>
               </div>
-            </NavBar.Link>
+            </Link>
           </NavBar.List>
           <NavBar.List className="mx-4 text-orange-700 text-lg">
-            <NavBar.Link href="/signup">Stories</NavBar.Link>
+            <Link link="/signup" text="Stories" />
           </NavBar.List>
-          <NavBar.List className="mx-4 text-orange-700 text-lg">
-            <NavBar.Link href="/signup">Forum</NavBar.Link>
+          <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <Link link="/signup" text="Forum" />
           </NavBar.List>
-          <NavBar.List className="mx-4 text-orange-700 text-lg">
-            <NavBar.Link href="/signup">Store</NavBar.Link>
+          <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <Link link="/signup" text="Store" />
           </NavBar.List>
-          <NavBar.List className="mx-4 text-orange-700 text-lg">
-            <NavBar.Link href="/signup">Contact</NavBar.Link>
+          <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <Link link="/signup" text="Contact" />
           </NavBar.List>
         </div>
         <div className="place-self-end items-center">

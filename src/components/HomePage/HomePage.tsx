@@ -215,7 +215,10 @@ function HomePage() {
       <div className="my-5 mx-16">
         <CallToAction imageUrl="https://picsum.photos/seed/anotherrandom/800/400?grayscale" />
       </div>
-      <section className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg">
+      <section
+        id="contact"
+        className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg"
+      >
         <div className="space-y-5">
           <div className="grid place-self-start">
             <Logo src="/hot-news-logo.png" width={70} height={70} />
