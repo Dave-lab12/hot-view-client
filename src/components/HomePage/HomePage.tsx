@@ -1,5 +1,6 @@
 import * as Label from "@radix-ui/react-label";
 import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { Html } from "next/document";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
@@ -17,8 +18,8 @@ function HomePage() {
     <>
       <MenuBar />
       <div className="grid grid-flow-row place-content-center md:px-40 mt-10">
-        <div className="grid grid-cols-3 ">
-          <div className=" h-128 col-span-2 ">
+        <div className="grid xl:grid-cols-3 sm:grid-cols-2 ">
+          <div className="h-128 col-span-2">
             <FeaturedNews
               imageUrl="https://picsum.photos/seed/picraum/800/400"
               newsCategory="Health"
@@ -28,7 +29,7 @@ function HomePage() {
               description="Short description for the featured news"
             />
           </div>
-          <div className="grid space-y-2 place-content-center ml-10">
+          <div className="grid sm:py-4 xl:py-0 sm:grid-cols-2 sm:col-span-2 xl:col-span-1 xl:grid-cols-1 space-y-2 xl:place-content-center ml-10">
             <SideNews
               imageUrl="https://picsum.photos/seed/pium/200/140"
               postedDate="Nov 30, 2020"
@@ -59,7 +60,7 @@ function HomePage() {
           <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid md:grid-cols-5 sm:auto-cols-fr place-content-stretch mt-5">
+          <div className="grid md:grid-cols-5 sm:grid-cols-2 place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
@@ -146,7 +147,7 @@ function HomePage() {
             </div>
           </div>
           <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">
-            <div className="p-2 border rounded-md h-fit">
+            <div className="gird space-y-2 place-content-center p-2 border rounded-md h-fit">
               <SideNews
                 imageUrl="https://picsum.photos/seed/n/200/140"
                 postedDate="Nov 30, 2020"

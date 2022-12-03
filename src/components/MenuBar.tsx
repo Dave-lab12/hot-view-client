@@ -31,7 +31,7 @@ function MenuBar() {
           <MdPhone className="inline-flex text-lg" /> (818) 919-5619
         </Label.Root>
       </div>
-      <NavBar.Root className="grid sticky top-0 z-50 bg-white  grid-flow-col p-7 mx-4 border-solid border-b items-center ">
+      <NavBar.Root className="grid sticky top-0 z-50 bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
         <div className="grid grid-flow-col place-content-start  items-center">
           <NavBar.List>
             <Link
