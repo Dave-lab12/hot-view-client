@@ -217,7 +217,6 @@ function HomePage() {
             address="F1 456 Caron Town"
             email="info@example.com"
             phonenumber="234-582432343"
-            customClass=""
           />
           <div className="space-x-4 text-2xl mt-2">
             <BsFacebook className="inline-block" />
