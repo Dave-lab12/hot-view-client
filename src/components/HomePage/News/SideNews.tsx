@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import NewsInfo from "../../NewsComponents/NewsInfo";
 import NewsHeading from "../../NewsComponents/NewsHeading";

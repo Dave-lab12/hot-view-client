@@ -9,9 +9,7 @@ interface IProps {
 function NewsInfo({ displayInfo, infoClass }: IProps) {
   return (
     <>
-      <Label.Root
-        className={`text-sm text-gray-500 hover:text-green-500 transition delay-100 ease-in-out ${infoClass}`}
-      >
+      <Label.Root className={`text-sm text-gray-300 ${infoClass}`}>
         {displayInfo}
       </Label.Root>
     </>

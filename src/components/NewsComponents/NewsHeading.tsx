@@ -9,7 +9,7 @@ interface IProps {
 function NewsHeading({ title, titleClass }: IProps) {
   return (
     <>
-      <Label.Root className={`font-bold text-xl ${titleClass}`}>
+      <Label.Root className={`font-bold text-xl text-white ${titleClass}`}>
         {title}
       </Label.Root>
     </>

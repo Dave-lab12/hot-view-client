@@ -55,7 +55,7 @@ function HomePage() {
             />
           </div>
         </div>
-        <div className=" mt-10 pb-8 border-b">
+        <div className=" mt-20 pb-8 border-b">
           <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
@@ -108,7 +108,7 @@ function HomePage() {
           </div>
         </div>
         <div className="flex flex-row">
-          <div className="col-span-2 mt-5 mr-10">
+          <div className="col-span-2 mt-10 mr-10">
             <div className="py-2">
               <Label.Root className="font-bold text-orange-800 text-2xl">
                 Top stories
@@ -119,28 +119,28 @@ function HomePage() {
               firstName="FirstName"
               lastName="lastName"
               newsImage="https://picsum.photos/seed/g/200/140"
-              customClass="mb-4"
+              customClass="mb-16 pb-5"
             />
             <UserCreatedNews
               profileImg="https://picsum.photos/seed/h/200/140"
               firstName="FirstName"
               lastName="lastName"
               newsImage="https://picsum.photos/seed/i/200/140"
-              customClass="mb-4"
+              customClass="mb-16 pb-5"
             />
             <UserCreatedNews
               profileImg="https://picsum.photos/seed/j/200/140"
               firstName="FirstName"
               lastName="lastName"
               newsImage="https://picsum.photos/seed/k/200/140"
-              customClass="mb-4"
+              customClass="mb-16 pb-5"
             />
             <UserCreatedNews
               profileImg="https://picsum.photos/seed/l/200/140"
               firstName="FirstName"
               lastName="lastName"
               newsImage="https://picsum.photos/seed/m/200/140"
-              customClass="mb-4"
+              customClass="mb-16 pb-5"
             />
           </div>
           <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">

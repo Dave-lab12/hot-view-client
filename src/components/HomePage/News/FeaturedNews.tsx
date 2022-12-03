@@ -32,9 +32,18 @@ function FeaturedNews({
         <div className="flex flex-col place-content-end h-3/4 bg-gradient-to-t from-black to-transparent">
           <div className=" ">
             <div className="flex flex-row text-gray-200">
-              <NewsInfo displayInfo={newsCategory} infoClass="px-4" />
-              <NewsInfo displayInfo={postedBy} infoClass="px-4" />
-              <NewsInfo displayInfo={postedDate} infoClass="px-4" />
+              <NewsInfo
+                displayInfo={newsCategory}
+                infoClass="pl-3 pr-4 hover:text-green-400 transition delay-100"
+              />
+              <NewsInfo
+                displayInfo={postedBy}
+                infoClass="px-4 hover:text-green-400 transition delay-100"
+              />
+              <NewsInfo
+                displayInfo={postedDate}
+                infoClass="px-4 hover:text-green-400 transition delay-100"
+              />
             </div>
             <div className=" flex flex-col px-3 py-4">
               <NewsHeading title={title} />
