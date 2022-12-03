@@ -60,7 +60,7 @@ function HomePage() {
           <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid md:grid-cols-5 sm:grid-cols-2 place-content-stretch mt-5">
+          <div className="grid xl:grid-cols-5 sm:grid-cols-3 sm:space-x-10 sm:space-y-10 xl:space-x-0 xl:space-y-0 place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
@@ -68,7 +68,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="mr-4"
+              cardClass="xl:mr-4"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/e/200/140"
