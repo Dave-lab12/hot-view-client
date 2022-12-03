@@ -9,7 +9,7 @@ interface IProps {
 function NewsDescription({ description, descClass }: IProps) {
   return (
     <>
-      <Label.Root className={`text-md text-gray-300 text-sm ${descClass}`}>
+      <Label.Root className={`text-md text-sm ${descClass}`}>
         {description}
       </Label.Root>
     </>

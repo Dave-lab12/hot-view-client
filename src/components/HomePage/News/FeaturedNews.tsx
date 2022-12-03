@@ -31,7 +31,7 @@ function FeaturedNews({
       >
         <div className="flex flex-col place-content-end h-3/4 bg-gradient-to-t from-black to-transparent">
           <div className=" ">
-            <div className="flex flex-row text-gray-200">
+            <div className="flex flex-row text-gray-300">
               <NewsInfo
                 displayInfo={newsCategory}
                 infoClass="pl-3 pr-4 hover:text-green-400 transition delay-100"
@@ -47,7 +47,10 @@ function FeaturedNews({
             </div>
             <div className=" flex flex-col px-3 py-4">
               <NewsHeading title={title} />
-              <NewsDescription description={description} />
+              <NewsDescription
+                description={description}
+                descClass="text-gray-300"
+              />
             </div>
           </div>
         </div>

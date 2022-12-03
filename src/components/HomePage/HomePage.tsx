@@ -114,34 +114,36 @@ function HomePage() {
                 Top stories
               </Label.Root>
             </div>
-            <UserCreatedNews
-              profileImg="https://picsum.photos/seed/f/200/140"
-              firstName="FirstName"
-              lastName="lastName"
-              newsImage="https://picsum.photos/seed/g/200/140"
-              customClass="mb-16 pb-5"
-            />
-            <UserCreatedNews
-              profileImg="https://picsum.photos/seed/h/200/140"
-              firstName="FirstName"
-              lastName="lastName"
-              newsImage="https://picsum.photos/seed/i/200/140"
-              customClass="mb-16 pb-5"
-            />
-            <UserCreatedNews
-              profileImg="https://picsum.photos/seed/j/200/140"
-              firstName="FirstName"
-              lastName="lastName"
-              newsImage="https://picsum.photos/seed/k/200/140"
-              customClass="mb-16 pb-5"
-            />
-            <UserCreatedNews
-              profileImg="https://picsum.photos/seed/l/200/140"
-              firstName="FirstName"
-              lastName="lastName"
-              newsImage="https://picsum.photos/seed/m/200/140"
-              customClass="mb-16 pb-5"
-            />
+            <div className="text-gray-500">
+              <UserCreatedNews
+                profileImg="https://picsum.photos/seed/f/200/140"
+                firstName="FirstName"
+                lastName="lastName"
+                newsImage="https://picsum.photos/seed/g/200/140"
+                customClass="mb-16 pb-5"
+              />
+              <UserCreatedNews
+                profileImg="https://picsum.photos/seed/h/200/140"
+                firstName="FirstName"
+                lastName="lastName"
+                newsImage="https://picsum.photos/seed/i/200/140"
+                customClass="mb-16 pb-5"
+              />
+              <UserCreatedNews
+                profileImg="https://picsum.photos/seed/j/200/140"
+                firstName="FirstName"
+                lastName="lastName"
+                newsImage="https://picsum.photos/seed/k/200/140"
+                customClass="mb-16 pb-5"
+              />
+              <UserCreatedNews
+                profileImg="https://picsum.photos/seed/l/200/140"
+                firstName="FirstName"
+                lastName="lastName"
+                newsImage="https://picsum.photos/seed/m/200/140"
+                customClass="mb-16 pb-5"
+              />
+            </div>
           </div>
           <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">
             <div className="p-2 border rounded-md h-fit">
