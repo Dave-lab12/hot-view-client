@@ -59,7 +59,7 @@ function HomePage() {
           <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid md:p-20 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch mt-5">
+          <div className="grid px-20 md:p-20 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
