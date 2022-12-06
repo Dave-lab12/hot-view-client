@@ -107,7 +107,7 @@ function HomePage() {
             />
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex xl:flex-row flex-col">
           <div className="col-span-2 mt-10 mr-10">
             <div className="py-2">
               <Label.Root className="font-bold text-orange-800 text-2xl">
@@ -145,7 +145,7 @@ function HomePage() {
               />
             </div>
           </div>
-          <div className="grid grid-flow-row col-span-1 mt-5 w-2/5">
+          <div className="grid xl:grid-flow-row lg:space-x-5 lg:grid-flow-col col-span-1 mt-5 xl:w-2/5">
             <div className="gird space-y-2 place-content-center p-2 border rounded-md h-fit">
               <SideNews
                 imageUrl="https://picsum.photos/seed/n/200/140"
@@ -183,7 +183,7 @@ function HomePage() {
                 sideNewsClass="my-2"
               />
             </div>
-            <div className="border rounded-md mt-5 p-2 h-fit">
+            <div className="border rounded-md xl:mt-5 p-2 h-fit">
               <Label.Root className="text-xl text-orange-800 font-bold">
                 Upcoming streams
               </Label.Root>
