@@ -1,6 +1,5 @@
 import * as Label from "@radix-ui/react-label";
 import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { Html } from "next/document";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
@@ -17,9 +16,9 @@ function HomePage() {
   return (
     <>
       <MenuBar />
-      <div className="grid grid-flow-row place-content-center md:px-40 mt-10">
+      <div className="grid grid-flow-row place-content-center lg:px-40 md:px-16 px-8 mt-10">
         <div className="grid xl:grid-cols-3 sm:grid-cols-2 ">
-          <div className="h-128 col-span-2">
+          <div className="h-128 col-span-2 mb-5">
             <FeaturedNews
               imageUrl="https://picsum.photos/seed/picraum/800/400"
               newsCategory="Health"
@@ -60,7 +59,7 @@ function HomePage() {
           <Label.Root className="font-bold text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid xl:grid-cols-5 sm:grid-cols-3 sm:space-x-10 sm:space-y-10 xl:space-x-0 xl:space-y-0 place-content-stretch mt-5">
+          <div className="grid md:p-0 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3 sm:place-content-center xl:place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
@@ -68,7 +67,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="xl:mr-4"
+              cardClass="md:mr-5  mb-5"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/e/200/140"
@@ -77,7 +76,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="mr-4"
+              cardClass="md:mr-5 md:mt-0 sm:mt-4 mb-5"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/b/200/140"
@@ -86,7 +85,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="mr-4"
+              cardClass="md:mr-5 md:mt-0 sm:mt-4 mb-5"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/c/200/140"
@@ -95,7 +94,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="mr-4"
+              cardClass="md:mr-5 md:mt-0 mt-4 mb-5"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/d/200/140"
@@ -104,7 +103,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="mr-4"
+              cardClass="md:mr-5 md:mt-0 mt-4 mb-5"
             />
           </div>
         </div>

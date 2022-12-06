@@ -36,17 +36,17 @@ function TopNewsCard({
         className="w-full"
         objectFit="contain"
       />
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-start">
         <NewsHeading title={title} titleClass="text-orange-800 grow" />
         <BsThreeDotsVertical className="place-self-end text-xl text-orange-800" />
       </div>
 
-      <div className="flex flex-row text-gray-600 sm:place-self-center  xl:items-center xl:place-self-start">
+      <div className="flex flex-row text-gray-600 items-start">
         <NewsInfo displayInfo={postedBy} infoClass="pr-3 " />
         {isVerified && <GoVerified className="text-orange-800" />}
       </div>
 
-      <div className="flex xl:flex-row sm:flex-col text-gray-600 items-center">
+      <div className="flex xl:flex-row sm:flex-col text-gray-600 items-center justify-center">
         <NewsInfo displayInfo={`${views} views`} infoClass="pr-1" />
         <RxDotFilled className="text-gray-600 text-xs" />
         <NewsInfo displayInfo={`${postedDate} ago`} infoClass="pl-1" />
