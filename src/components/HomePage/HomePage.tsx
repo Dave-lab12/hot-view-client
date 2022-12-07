@@ -85,7 +85,7 @@ function HomePage() {
               isVerified={true}
               views="10k"
               postedDate="Nov 20 2022"
-              cardClass="md:mr-5 md:mt-0 sm:mt-4 mb-5"
+              cardClass="md:mr-5 md:mt-0 mt-4 mb-5"
             />
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/c/200/140"

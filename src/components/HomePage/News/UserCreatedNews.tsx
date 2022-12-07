@@ -55,7 +55,7 @@ function UserCreatedNews({
             descClass="break-normal pr-20"
             description="User created news description in short which is very highly toxic that is used to do some stuff that are really great"
           />
-          <div className="flex flex-row items-start space-x-16">
+          <div className="flex flex-col sm:flex-row items-start md:space-x-16">
             <NewsInfo infoClass="" displayInfo="Nov 20 2022" />
             <NewsInfo infoClass="grow" displayInfo="10 min read" />
             <div className="text-sm md:space-x-5 md:pr-4 text-orange-700">
@@ -65,10 +65,10 @@ function UserCreatedNews({
           </div>
         </div>
       </div>
-      <div className="col-span-1 sm:palce-self-center md:place-self-end">
+      <div className="col-span-1 palce-self-center md:place-self-end">
         <Image
           src={newsImage}
-          className="sm:mt-5 md:mt-0"
+          className="mt-5 md:mt-0"
           alt="News image"
           width={200}
           height={250}
