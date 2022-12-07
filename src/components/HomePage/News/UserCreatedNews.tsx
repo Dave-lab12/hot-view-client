@@ -25,7 +25,7 @@ function UserCreatedNews({
 }: IProps) {
   return (
     <div
-      className={`grid grid-cols-3 place-items-start border-b pb-2 ${customClass}`}
+      className={`grid sm:grid-cols- md:grid-cols-3 place-items-start border-b pb-2 ${customClass}`}
     >
       <div className="col-span-2  justify-center">
         <div className="flex flex-row items-center">
@@ -58,15 +58,21 @@ function UserCreatedNews({
           <div className="flex flex-row items-start space-x-16">
             <NewsInfo infoClass="" displayInfo="Nov 20 2022" />
             <NewsInfo infoClass="grow" displayInfo="10 min read" />
-            <div className="text-sm space-x-5 pr-4 text-orange-700">
+            <div className="text-sm md:space-x-5 md:pr-4 text-orange-700">
               <BsBookmark className="inline-block text-xl" />
               <BsThreeDots className="inline-block text-xl" />
             </div>
           </div>
         </div>
       </div>
-      <div className="col-span-1 place-self-end">
-        <Image src={newsImage} alt="News image" width={200} height={250} />
+      <div className="col-span-1 sm:palce-self-center md:place-self-end">
+        <Image
+          src={newsImage}
+          className="sm:mt-5 md:mt-0"
+          alt="News image"
+          width={200}
+          height={250}
+        />
       </div>
     </div>
   );

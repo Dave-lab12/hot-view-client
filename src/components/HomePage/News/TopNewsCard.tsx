@@ -46,7 +46,7 @@ function TopNewsCard({
         {isVerified && <GoVerified className="text-orange-800" />}
       </div>
 
-      <div className="flex xl:flex-row sm:flex-col text-gray-600 items-center justify-center">
+      <div className="flex xl:flex-row sm:flex-col text-gray-600 items-start justify-center">
         <NewsInfo displayInfo={`${views} views`} infoClass="pr-1" />
         <RxDotFilled className="text-gray-600 text-xs" />
         <NewsInfo displayInfo={`${postedDate} ago`} infoClass="pl-1" />
