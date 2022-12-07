@@ -217,22 +217,24 @@ function HomePage() {
       </div>
       <section
         id="contact"
-        className="grid grid-cols-4 px-52 py-10 place-content-center text-gray-600 text-lg"
+        className="grid grid-cols-4 xl:px-52 py-10 place-content-center text-gray-600 text-lg"
       >
-        <div className="space-y-5">
-          <div className="grid place-self-start">
+        <div className="col-span-4 space-y-5">
+          <div className="grid place-content-center">
             <Logo src="/hot-news-logo.png" width={70} height={70} />
           </div>
-          <Contact
-            address="F1 456 Caron Town"
-            email="info@example.com"
-            phonenumber="234-582432343"
-          />
-          <div className="space-x-4 text-2xl mt-2 text-orange-700">
-            <BsFacebook className="inline-block" />
-            <BsTwitter className="inline-block " />
-            <BsInstagram className="inline-block " />
-            <BsLinkedin className="inline-block " />
+          <div className="grid place-items-center">
+            <Contact
+              address="F1 456 Caron Town"
+              email="info@example.com"
+              phonenumber="234-582432343"
+            />
+            <div className="space-x-4 text-2xl mt-2 text-orange-700">
+              <BsFacebook className="inline-block" />
+              <BsTwitter className="inline-block " />
+              <BsInstagram className="inline-block " />
+              <BsLinkedin className="inline-block " />
+            </div>
           </div>
         </div>
       </section>

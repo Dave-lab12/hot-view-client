@@ -11,7 +11,7 @@ function Contact({ address, email, phonenumber, customClass = "" }: IProps) {
   return (
     <>
       <div
-        className={`grid place-self-start items-start text-orange-700 ${customClass}`}
+        className={`grid place-self-center items-start text-orange-700 ${customClass}`}
       >
         <text>{address}</text>
         <text>{email}</text>
