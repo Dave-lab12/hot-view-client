@@ -14,8 +14,8 @@ function CallToAction({ imageUrl }: IProps) {
       style={{ backgroundImage: `url( ${imageUrl})` }}
       className="grid place-content-center h-80 bg-no-repeat bg-cover"
     >
-      <div>
-        <Label.Root className="font-bold text-4xl text-white">
+      <div className="">
+        <Label.Root className="font-bold text-3xl md:text-4xl text-white">
           SignUp to get latest stories
         </Label.Root>
         <div className="grid place-content-center mt-16">

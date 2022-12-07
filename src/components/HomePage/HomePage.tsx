@@ -212,7 +212,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="my-5 mx-16">
+      <div className="my-5 lg:mx-16 mx-7">
         <CallToAction imageUrl="https://picsum.photos/seed/anotherrandom/800/400?grayscale" />
       </div>
       <section
