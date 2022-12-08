@@ -18,12 +18,18 @@ function CallToAction({ imageUrl }: IProps) {
         <Label.Root className="font-bold text-2xl sm:text-3xl md:text-4xl text-white">
           SignUp to get latest stories
         </Label.Root>
-        <div className="grid place-content-center mt-16">
+        <div className="grid grid-flow-row place-content-center mt-16">
           <Link
             href={"/signup"}
-            className={` grid bg-orange-700 w-24 place-items-center text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg `}
+            className={` grid bg-orange-700 mb-3 w-24 place-items-center text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg `}
           >
             Signup
+          </Link>
+          <Link
+            href={"/login"}
+            className={` grid bg-orange-700 w-24 place-items-center text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg `}
+          >
+            Login
           </Link>
         </div>
       </div>
