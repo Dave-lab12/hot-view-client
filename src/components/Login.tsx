@@ -8,11 +8,11 @@ import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
 
 import Input from "./Form/Input";
-import Logo from "./Logo";
+import ErrorSpan from "./Form/ErrorSpan";
 import Button from "./Form/Button";
+import Logo from "./Logo";
 import Link from "./Link";
 import Header from "./Header";
-import ErrorSpan from "./Form/ErrorSpan";
 
 function Login() {
   const router = useRouter();
@@ -85,8 +85,7 @@ function Login() {
             <Link
               text="Forgot password"
               link="#"
-              linkClass="place-self-end mt-2"
-              textClass="text-sm"
+              linkClass="place-self-end mt-2 text-sm"
             />
 
             <h1 className="my-4 text-gray-700 mb-6">login with</h1>
@@ -114,8 +113,7 @@ function Login() {
             <Link
               text="Sign up"
               link="/signup"
-              linkClass="display:inline"
-              textClass="text-sm"
+              linkClass="display:inline text-sm"
             />
           </form>
         </div>
