@@ -18,7 +18,7 @@ function HomePage() {
       <MenuBar />
       <div className="grid grid-flow-row place-content-center lg:px-40 md:px-16 px-8 mt-10">
         <div className="grid xl:grid-cols-3 sm:grid-cols-2 ">
-          <div className="h-128 col-span-2 mb-5">
+          <div className=" h-80 sm:h-128 col-span-2 mb-5">
             <FeaturedNews
               imageUrl="https://picsum.photos/seed/picraum/800/400"
               newsCategory="Health"
@@ -56,10 +56,10 @@ function HomePage() {
           </div>
         </div>
         <div className=" mt-20 pb-8 border-b">
-          <Label.Root className="font-bold text-orange-800 text-2xl">
+          <Label.Root className="font-bold  text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid px-20 md:p-20 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch mt-5">
+          <div className="grid px-10 sm:px-20 md:p-20 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch mt-5">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
