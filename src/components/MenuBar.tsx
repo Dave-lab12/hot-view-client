@@ -89,6 +89,16 @@ function MenuBar() {
                 }`}
               />
             </NavBar.List>
+            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+              <Link
+                link="/login"
+                text="Login"
+                linkClass={`${
+                  router.asPath === "/login" ? "text-orange-900" : ""
+                }`}
+              />
+            </NavBar.List>
+
             <div className="place-self-end items-center">
               <NavBar.List className=" text-orange-700 text-lg mx-4">
                 <BsSearch />
@@ -140,11 +150,20 @@ function MenuBar() {
                   </DropDownMenu.Item>
                   <DropDownMenu.Item>
                     <Link
-                      link="/signup"
+                      link="/#contact"
                       linkClass={`${
                         router.asPath === "/signup" ? "text-orange-900" : ""
                       }`}
                       text="Contact"
+                    />
+                  </DropDownMenu.Item>
+                  <DropDownMenu.Item>
+                    <Link
+                      link="/login"
+                      linkClass={`${
+                        router.asPath === "/login" ? "text-orange-900" : ""
+                      }`}
+                      text="Login"
                     />
                   </DropDownMenu.Item>
                 </DropDownMenu.Content>
