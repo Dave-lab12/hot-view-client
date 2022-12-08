@@ -34,11 +34,11 @@ function MenuBar() {
         </Label.Root>
       </div>
       <NavBar.Root className="grid sticky top-0 z-30 bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
-        <div className="grid grid-flow-col justify-between  items-center">
+        <div className="grid grid-flow-col justify-between items-center">
           <NavBar.List>
             <Link
               link="/"
-              linkClass={`flex mr-3 items-center text-orange-700  ${
+              linkClass={`flex mr-3 items-center text-orange-700 ${
                 router.asPath === "/" ? "text-orange-900" : ""
               }`}
               text="Hotnews"
@@ -46,21 +46,23 @@ function MenuBar() {
             >
               <div className="flex flex-row z-50 items-center space-x-4">
                 <Logo src="/hot-news-logo.png" width={60} height={60} />
-                <text className="text-2xl">Hot news</text>
+                <text className="text-2xl hover:scale-105 transition ease-in duration-100">
+                  Hot news
+                </text>
               </div>
             </Link>
           </NavBar.List>
           <div className="hidden md:flex md:flex-row">
-            <NavBar.List className="mx-4 text-orange-700 text-lg">
+            <NavBar.List className="mx-4 text-orange-700 text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 linkClass={`${
-                  router.asPath === "/signup" ? "text-orange-900" : ""
+                  router.asPath === "/signup" ? "text-orange-900 " : ""
                 }`}
                 text="Stories"
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <NavBar.List className="mx-4 text-orange-700 text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Forum"
@@ -69,7 +71,7 @@ function MenuBar() {
                 }`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Store"
@@ -78,7 +80,7 @@ function MenuBar() {
                 }`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg">
+            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/#contact"
                 text="Contact"

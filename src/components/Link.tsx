@@ -12,7 +12,7 @@ function Link({ link, text, linkClass, children }: IProps) {
   return (
     <NavBar.Link
       href={link}
-      className={`hover:cursor-pointer mt-1 mx-2 text-orange-700 ${linkClass}`}
+      className={`hover:cursor-pointer mt-1 mx-2 ${linkClass}`}
     >
       {children ? children : text}
     </NavBar.Link>
