@@ -40,7 +40,7 @@ function Login() {
   });
 
   return (
-    <div className="bg-gray-300 overflow-auto">
+    <div className="bg-gray-300 font-Poppins overflow-auto">
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
@@ -113,7 +113,7 @@ function Login() {
             <Link
               text="Sign up"
               link="/signup"
-              linkClass="display:inline text-sm"
+              linkClass=" text-blue-black display:inline text-sm"
             />
           </form>
         </div>

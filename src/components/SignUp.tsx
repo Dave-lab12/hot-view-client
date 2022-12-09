@@ -47,7 +47,7 @@ function SignUp() {
   });
 
   return (
-    <div className="bg-gray-300 overflow-hidden">
+    <div className="bg-gray-300 font-Poppins overflow-hidden">
       <Header title="signup" />
       <main>
         <div className="grid place-items-center h-screen overflow-auto">
