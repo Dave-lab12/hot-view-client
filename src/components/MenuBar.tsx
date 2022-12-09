@@ -72,7 +72,7 @@ function MenuBar() {
               />
             </NavBar.List>
 
-            <div className="place-self-end items-center">
+            <div className="place-self-center items-center">
               <NavBar.List className=" text-blue-black text-lg mx-4">
                 <BsSearch />
               </NavBar.List>
