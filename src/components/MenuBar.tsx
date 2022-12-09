@@ -13,7 +13,7 @@ function MenuBar() {
 
   return (
     <>
-      <NavBar.Root className="grid sticky top-0 z-50 bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
+      <NavBar.Root className="grid sticky top-0 z-50 h-fit bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
         <div className="grid grid-flow-col justify-between items-center">
           <NavBar.List>
             <Link
@@ -85,11 +85,11 @@ function MenuBar() {
               </NavBar.List>
             </div>
           </div>
-          <div className="sm:block md:hidden">
+          <div className="block z-50 md:hidden">
             <DropDownMenu.Root>
               <DropDownMenu.Trigger asChild>
                 <button
-                  className="rounded-full h-10 w-10 inline-flex items-center justify-center text-orange-700 bg-white shadow hover:bg-gray-400 focus:shadow-lg"
+                  className="rounded-full h-10 w-10 inline-flex transition duration-100 ease-in items-center justify-center text-orange-700 bg-white shadow hover:bg-gray-400 focus:shadow-lg"
                   aria-label="Customise options"
                 >
                   <RxHamburgerMenu />
@@ -98,7 +98,7 @@ function MenuBar() {
 
               <DropDownMenu.Portal>
                 <DropDownMenu.Content
-                  className=" w-screen bg-white mx-32 p-3 rounded-sm shadow-sm transition ease-in-out duration-300"
+                  className=" w-screen bg-white px-16 border-b mt-5 p-3 z-50 rounded-sm shadow-sm"
                   sideOffset={5}
                 >
                   <DropDownMenu.Item>
