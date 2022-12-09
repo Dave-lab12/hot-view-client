@@ -29,9 +29,9 @@ function FeaturedNews({
           backgroundImage: `url(${imageUrl})`,
         }}
       >
-        <div className="flex flex-col place-content-end items-start h-3/4 bg-gradient-to-t from-black to-transparent">
+        <div className="flex flex-col place-content-end items-start h-1/4 bg-gradient-to-t from-black to-transparent bg-opacity-100">
           <div>
-            <div className="flex flex-row justify-between sm:space-x-10 px-3 text-gray-300">
+            <div className="flex flex-row justify-between  sm:space-x-10 px-3 text-gray-300">
               <NewsInfo
                 displayInfo={newsCategory}
                 infoClass=" hover:text-green-400 transition delay-100"
