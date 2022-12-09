@@ -24,7 +24,7 @@ function SideNews({
   sideNewsClass = "",
 }: IProps) {
   return (
-    <div className={`flex flex-row border-b pb-2 ${sideNewsClass}`}>
+    <div className={`flex flex-col sm:flex-row border-b pb-2 ${sideNewsClass}`}>
       <div>
         <Image
           src={imageUrl}
@@ -34,8 +34,8 @@ function SideNews({
           className="object-cover"
         />
       </div>
-      <div className="grid grid-flow-row px-5 py-1 w-full">
-        <div className="flex flex-row place-content-stretch items-center text-sm">
+      <div className="grid grid-flow-row px-0 sm:px-5 py-1 place-items-start w-full">
+        <div className="flex flex-col lg:flex-row place-content-stretch text-sm">
           <NewsInfo
             displayInfo={postedDate}
             infoClass="pr-3 text-gray-500 grow"
