@@ -31,7 +31,7 @@ function MenuBar() {
             </Link>
           </NavBar.List>
           <div className="hidden md:flex md:flex-row">
-            <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-800 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 linkClass={`${
@@ -40,21 +40,21 @@ function MenuBar() {
                 text="Stories"
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-800 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Forum"
                 linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-800 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Store"
                 linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-800 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/#contact"
                 text="Contact"
@@ -63,7 +63,7 @@ function MenuBar() {
                 }`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-800 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/login"
                 text="Login"
