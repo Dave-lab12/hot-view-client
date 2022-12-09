@@ -48,7 +48,7 @@ function Login() {
             onSubmit={formik.handleSubmit}
             className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg max-sm:w-3/4 sm:w-1/2 lg:w-1/4 p-5"
           >
-            <Logo src="/hot-news-logo.png" />
+            <Logo logoClass="mb-5" src="/hot-news-logo.png" />
 
             {isError && (
               <h1 className="place-self-start w-full my-3 text-sm text-white pt-1 text-center h-9 bg-blue-black rounded-lg ">
