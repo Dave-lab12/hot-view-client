@@ -19,8 +19,8 @@ function SideNews({
   postedDate,
   readingTime,
   title,
-  imageWidth = 220,
-  imageHeight = 220,
+  imageWidth = 270,
+  imageHeight = 200,
   sideNewsClass = "",
 }: IProps) {
   return (
