@@ -35,7 +35,6 @@ function SideNews({
         />
       </div>
       <div className="grid grid-flow-row px-5 py-1 w-full">
-        <NewsHeading title={title} titleClass="text-orange-800" />
         <div className="flex flex-row place-content-stretch items-center text-sm">
           <NewsInfo
             displayInfo={postedDate}
@@ -46,6 +45,7 @@ function SideNews({
             infoClass="pr-3 text-gray-500 place-self-center grow"
           />
         </div>
+        <NewsHeading title={title} titleClass="text-orange-800" />
       </div>
     </div>
   );
