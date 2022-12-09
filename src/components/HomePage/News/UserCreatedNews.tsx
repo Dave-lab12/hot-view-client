@@ -36,20 +36,20 @@ function UserCreatedNews({
               alt="User pic"
             />
             <Avatar.Fallback
-              className="w-full h-full flex items-center justify-center bg-white text-orange-600 font-bold "
+              className="w-full h-full flex items-center justify-center bg-white text-blue-black font-bold "
               delayMs={600}
             >
               {fallBackUName}
             </Avatar.Fallback>
           </Avatar.Root>
-          <Label.Root className="pl-2 text-sm font-bold text-orange-800">
+          <Label.Root className="pl-2 text-sm font-bold text-blue-black">
             {`${firstName} ${lastName}`}
           </Label.Root>
         </div>
         <div className="flex flex-col space-y-2 mt-2">
           <NewsHeading
             title="User created news title"
-            titleClass="text-orange-800"
+            titleClass="text-blue-black"
           />
           <NewsDescription
             descClass="sm:break-normal sm:pr-20"
@@ -60,7 +60,7 @@ function UserCreatedNews({
               <NewsInfo infoClass="" displayInfo="Nov 20 2022" />
               <NewsInfo infoClass="grow" displayInfo="10 min read" />
             </div>
-            <div className="text-sm md:space-x-5 md:pr-4 text-orange-700">
+            <div className="text-sm md:space-x-5 md:pr-4 text-blue-black">
               <BsBookmark className="inline-block text-xl" />
               <BsThreeDots className="inline-block text-xl" />
             </div>
