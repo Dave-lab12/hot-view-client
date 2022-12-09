@@ -29,7 +29,7 @@ function HomePage() {
               description="Short description for the featured news"
             />
           </div>
-          <div className="grid place-self-start col-span-3 sm:py-4 xl:py-0 sm:grid-cols-2 sm:col-span-2 xl:col-span-1 xl:grid-cols-1 space-y-8 sm:ml-10">
+          <div className="grid place-self-center md:place-self-start col-span-3 sm:py-4 xl:py-0 sm:grid-cols-2 sm:col-span-2 xl:col-span-1 xl:grid-cols-1 xl:space-y-8 sm:ml-10">
             <SideNews
               imageUrl="https://picsum.photos/seed/pium/200/140"
               postedDate="Nov 30, 2020"
@@ -56,11 +56,11 @@ function HomePage() {
             />
           </div>
         </div>
-        <div className=" mt-20 pb-8 border-b">
-          <Label.Root className="font-bold  text-orange-800 text-2xl">
+        <div className=" mt-10 xl:mt-20  border-b">
+          <Label.Root className="font-bold pl-10 text-orange-800 text-2xl">
             Top stories
           </Label.Root>
-          <div className="grid px-10 sm:px-20 md:p-20 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch mt-5">
+          <div className="grid px-10 sm:px-20 md:p-10 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch">
             <TopNewsCard
               imageUrl="https://picsum.photos/seed/a/200/140"
               title="Top news Title"
