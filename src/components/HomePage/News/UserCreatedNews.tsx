@@ -60,7 +60,7 @@ function UserCreatedNews({
               <NewsInfo infoClass="" displayInfo="Nov 20 2022" />
               <NewsInfo infoClass="grow" displayInfo="10 min read" />
             </div>
-            <div className="text-sm md:space-x-5 md:pr-4 text-blue-black">
+            <div className="text-sm md:space-x-5 space-x-2 md:pr-4 text-blue-black">
               <BsBookmark className="inline-block text-xl" />
               <BsThreeDots className="inline-block text-xl" />
             </div>
