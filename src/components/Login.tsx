@@ -51,7 +51,7 @@ function Login() {
             <Logo src="/hot-news-logo.png" />
 
             {isError && (
-              <h1 className="place-self-start w-full my-3 text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
+              <h1 className="place-self-start w-full my-3 text-sm text-white pt-1 text-center h-9 bg-blue-black rounded-lg ">
                 {error.response ? error.response.data.message : error.message}
               </h1>
             )}

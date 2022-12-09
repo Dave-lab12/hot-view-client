@@ -58,11 +58,11 @@ function SignUp() {
             />
             <div className="grid grid-flow-col place-content-evenly-center w-3/4 py-3">
               <form onSubmit={formik.handleSubmit}>
-                <h1 className="place-self-start text-center pt-1 my-2 text-white bg-orange-400 h-9 rounded-lg ">
+                <h1 className="place-self-start text-center pt-1 my-2 text-white bg-blue-400 h-9 rounded-lg ">
                   Fill the following form please
                 </h1>
                 {isError && (
-                  <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
+                  <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-blue-black rounded-lg ">
                     {error.response
                       ? error.response.data.message
                       : error.message}
