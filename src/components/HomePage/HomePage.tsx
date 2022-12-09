@@ -29,7 +29,7 @@ function HomePage() {
               description="Short description for the featured news"
             />
           </div>
-          <div className="grid sm:py-4 xl:py-0 sm:grid-cols-2 sm:col-span-2 xl:col-span-1 xl:grid-cols-1 space-y-2 xl:place-content-center ml-10">
+          <div className="grid place-self-center col-span-3 sm:py-4 xl:py-0 sm:grid-cols-2 sm:col-span-2 xl:col-span-1 xl:grid-cols-1 space-y-2 xl:place-content-center sm:ml-10">
             <SideNews
               imageUrl="https://picsum.photos/seed/pium/200/140"
               postedDate="Nov 30, 2020"
