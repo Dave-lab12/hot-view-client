@@ -91,7 +91,7 @@ function MenuBar() {
 
               <DropDownMenu.Portal>
                 <DropDownMenu.Content
-                  className=" w-screen bg-white px-16 border-b mt-5 p-3 z-50 rounded-sm shadow-sm"
+                  className=" w-screen bg-white text-blue-black px-16 border-b mt-5 p-3 z-50 rounded-sm shadow-sm"
                   sideOffset={5}
                 >
                   <DropDownMenu.Item>
