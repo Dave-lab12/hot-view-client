@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         "blue-black": "#1a2261",
       },
+      fontFamily: {
+        Poppins: ["Poppins", "serif"],
+      },
     },
   },
   plugins: [],

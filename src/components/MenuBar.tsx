@@ -5,7 +5,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { BsSearch } from "react-icons/bs";
 import { useRouter } from "next/router";
 
-import Logo from "./Logo";
 import Link from "./Link";
 
 function MenuBar() {
@@ -13,7 +12,7 @@ function MenuBar() {
 
   return (
     <>
-      <NavBar.Root className="grid sticky top-0 z-50 h-fit bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
+      <NavBar.Root className="grid sticky top-0 z-50 font-Poppins h-fit bg-white grid-flow-col p-7 mx-3 border-solid border-b items-center ">
         <div className="grid grid-flow-col justify-between items-center">
           <NavBar.List>
             <Link

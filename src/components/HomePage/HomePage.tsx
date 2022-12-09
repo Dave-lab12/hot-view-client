@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <>
       <MenuBar />
-      <div className="grid grid-flow-row place-content-center lg:px-40 md:px-16 px-8 mt-10">
+      <div className="grid grid-flow-row font-Poppins place-content-center lg:px-40 md:px-16 px-8 mt-10">
         <div className="grid xl:grid-cols-3 sm:grid-cols-2 ">
           <div className="h-64 sm:h-128 col-span-2 mb-5">
             <FeaturedNews
@@ -213,12 +213,12 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="my-5 lg:mx-16 mx-7">
+      <div className=" font-Poppins my-5 lg:mx-16 mx-7">
         <CallToAction imageUrl="https://picsum.photos/seed/anotherrandom/800/400?grayscale" />
       </div>
       <section
         id="contact"
-        className="grid grid-cols-4 xl:px-52 py-10 place-content-center text-gray-600 text-lg"
+        className="grid grid-cols-4 font-Poppins xl:px-52 py-10 place-content-center text-gray-600 text-lg"
       >
         <div className="col-span-4 space-y-5">
           <div className="grid place-items-center">
