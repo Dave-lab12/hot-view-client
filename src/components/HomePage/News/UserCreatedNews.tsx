@@ -72,7 +72,7 @@ function UserCreatedNews({
           src={newsImage}
           className="mt-5 md:mt-0"
           alt="News image"
-          width={200}
+          width={300}
           height={250}
         />
       </div>
