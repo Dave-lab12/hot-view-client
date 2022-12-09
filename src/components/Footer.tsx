@@ -8,10 +8,16 @@ import {
 } from "react-icons/ai";
 import { MdPhone } from "react-icons/md";
 
-function Footer() {
+interface Iprops {
+  className?: string;
+}
+
+function Footer({ className = "" }: Iprops) {
   return (
     <>
-      <div className="grid grid-flow-row sm:grid-flow-col p-2 sm:p-4 place-content-center sm:place-content-stretch mx-4 mt-3 rounded-md bg-gray-200 items-center">
+      <div
+        className={`grid grid-flow-row sm:grid-flow-col p-2 sm:p-4 place-content-center sm:place-content-stretch mx-4 mt-3 rounded-md bg-gray-200 items-center ${className}`}
+      >
         <p className="space-x-3 text-orange-800">
           <Label.Root className="text-sm">Follow us:</Label.Root>
           <AiFillFacebook className="inline-flex text-xl" />

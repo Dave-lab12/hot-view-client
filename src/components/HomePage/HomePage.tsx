@@ -5,6 +5,7 @@ import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
 import Contact from "../Contact";
 import Logo from "../Logo";
+import Footer from "../Footer";
 
 import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
@@ -229,14 +230,9 @@ function HomePage() {
               email="info@example.com"
               phonenumber="234-582432343"
             />
-            <div className="space-x-4 text-2xl mt-2 text-orange-700">
-              <BsFacebook className="inline-block" />
-              <BsTwitter className="inline-block " />
-              <BsInstagram className="inline-block " />
-              <BsLinkedin className="inline-block " />
-            </div>
           </div>
         </div>
+        <Footer className="col-span-4" />
       </section>
     </>
   );
