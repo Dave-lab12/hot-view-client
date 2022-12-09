@@ -13,7 +13,7 @@ function MenuBar() {
 
   return (
     <>
-      <NavBar.Root className="grid sticky top-0 z-30 bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
+      <NavBar.Root className="grid sticky top-0 z-50 bg-white grid-flow-col p-7 mx-4 border-solid border-b items-center ">
         <div className="grid grid-flow-col justify-between items-center">
           <NavBar.List>
             <Link
@@ -24,7 +24,7 @@ function MenuBar() {
               text="Hotnews"
               key="logo"
             >
-              <div className="flex flex-row z-50 items-center space-x-4">
+              <div className="flex flex-row items-center space-x-4">
                 <Logo src="/hot-news-logo.png" width={60} height={60} />
                 <text className="text-2xl hover:scale-105 transition ease-in duration-100">
                   Hot news
@@ -98,7 +98,7 @@ function MenuBar() {
 
               <DropDownMenu.Portal>
                 <DropDownMenu.Content
-                  className=" w-screen bg-white z-40 mx-32 p-3 rounded-sm shadow-sm transition ease-in-out duration-300"
+                  className=" w-screen bg-white mx-32 p-3 rounded-sm shadow-sm transition ease-in-out duration-300"
                   sideOffset={5}
                 >
                   <DropDownMenu.Item>
