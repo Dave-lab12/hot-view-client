@@ -25,7 +25,6 @@ function MenuBar() {
               key="logo"
             >
               <div className="flex flex-row items-center space-x-4">
-                <Logo src="/hot-news-logo.png" width={60} height={60} />
                 <text className="text-2xl hover:scale-105 transition ease-in duration-100">
                   Hot news
                 </text>

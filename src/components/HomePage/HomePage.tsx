@@ -221,9 +221,6 @@ function HomePage() {
         className="grid grid-cols-4 xl:px-52 py-10 place-content-center text-gray-600 text-lg"
       >
         <div className="col-span-4 space-y-5">
-          <div className="grid place-content-center">
-            <Logo src="/hot-news-logo.png" width={70} height={70} />
-          </div>
           <div className="grid place-items-center">
             <Contact
               address="F1 456 Caron Town"
