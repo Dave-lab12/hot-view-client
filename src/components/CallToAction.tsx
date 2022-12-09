@@ -2,8 +2,6 @@ import React from "react";
 import * as Label from "@radix-ui/react-label";
 import Link from "next/link";
 
-import Button from "./Form/Button";
-
 interface IProps {
   imageUrl: string;
 }
