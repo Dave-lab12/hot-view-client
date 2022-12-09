@@ -21,7 +21,7 @@ function Button({
   return (
     <button
       type={buttonType}
-      className={`bg-orange-700 w-full text-white transition duration-150 hover:bg-orange-600 h-9 rounded-lg ${buttonClass}`}
+      className={`bg-blue-black w-full text-white transition duration-150 hover:bg-blue-800 h-9 rounded-lg ${buttonClass}`}
       onClick={click as MouseEventHandler}
       disabled={disable}
     >
