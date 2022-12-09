@@ -57,7 +57,7 @@ function HomePage() {
           </div>
         </div>
         <div className=" mt-10 xl:mt-20  border-b">
-          <Label.Root className="font-bold pl-10 text-orange-800 text-2xl">
+          <Label.Root className="font-bold pl-10 text-blue-black text-2xl">
             Top stories
           </Label.Root>
           <div className="grid px-10 sm:px-20 md:p-10 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  sm:place-content-center xl:place-content-stretch">
@@ -111,7 +111,7 @@ function HomePage() {
         <div className="flex xl:flex-row flex-col">
           <div className="col-span-2 mt-10 mr-10">
             <div className="py-2">
-              <Label.Root className="font-bold text-orange-800 text-2xl">
+              <Label.Root className="font-bold text-blue-black text-2xl">
                 Top stories
               </Label.Root>
             </div>
@@ -185,7 +185,7 @@ function HomePage() {
               />
             </div>
             <div className="border rounded-md xl:mt-5 p-2 h-fit">
-              <Label.Root className="text-xl text-orange-800 font-bold">
+              <Label.Root className="text-xl text-blue-black font-bold">
                 Upcoming streams
               </Label.Root>
               <Schedule

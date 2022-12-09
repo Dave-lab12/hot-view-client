@@ -21,13 +21,13 @@ function CallToAction({ imageUrl }: IProps) {
         <div className="grid grid-flow-row place-content-center mt-16">
           <Link
             href={"/signup"}
-            className={` grid bg-blue-black mb-3 w-24 place-items-center text-white transition duration-150 hover:bg-blue-black h-9 rounded-lg `}
+            className={` grid bg-blue-black mb-3 w-24 place-items-center text-white transition duration-150 hover:bg-blue-800 h-9 rounded-lg `}
           >
             Signup
           </Link>
           <Link
             href={"/login"}
-            className={` grid bg-blue-black w-24 place-items-center text-white transition duration-150 hover:bg-blue-black h-9 rounded-lg `}
+            className={` grid bg-blue-black w-24 place-items-center text-white transition duration-150 hover:bg-blue-800 h-9 rounded-lg `}
           >
             Login
           </Link>
