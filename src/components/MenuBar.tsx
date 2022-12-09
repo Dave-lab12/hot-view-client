@@ -18,8 +18,8 @@ function MenuBar() {
           <NavBar.List>
             <Link
               link="/"
-              linkClass={`flex mr-3 items-center text-orange-700 ${
-                router.asPath === "/" ? "text-orange-900" : ""
+              linkClass={`flex mr-3 items-center text-blue-black ${
+                router.asPath === "/" ? "text-blue-black" : ""
               }`}
               text="Hotnews"
               key="logo"
@@ -33,54 +33,48 @@ function MenuBar() {
             </Link>
           </NavBar.List>
           <div className="hidden md:flex md:flex-row">
-            <NavBar.List className="mx-4 text-orange-700 text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 linkClass={`${
-                  router.asPath === "/signup" ? "text-orange-900 " : ""
+                  router.asPath === "/signup" ? "text-black " : ""
                 }`}
                 text="Stories"
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700 text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Forum"
-                linkClass={`${
-                  router.asPath === "/signup" ? "text-orange-900" : ""
-                }`}
+                linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/signup"
                 text="Store"
-                linkClass={`${
-                  router.asPath === "/signup" ? "text-orange-900" : ""
-                }`}
+                linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/#contact"
                 text="Contact"
                 linkClass={`${
-                  router.asPath === "/#contact" ? "text-orange-900" : ""
+                  router.asPath === "/#contact" ? "text-black" : ""
                 }`}
               />
             </NavBar.List>
-            <NavBar.List className="mx-4 text-orange-700  text-lg hover:bg-orange-700 hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
+            <NavBar.List className="mx-4 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 link="/login"
                 text="Login"
-                linkClass={`${
-                  router.asPath === "/login" ? "text-orange-900" : ""
-                }`}
+                linkClass={`${router.asPath === "/login" ? "text-black" : ""}`}
               />
             </NavBar.List>
 
             <div className="place-self-end items-center">
-              <NavBar.List className=" text-orange-700 text-lg mx-4">
+              <NavBar.List className=" text-blue-black text-lg mx-4">
                 <BsSearch />
               </NavBar.List>
             </div>
@@ -89,7 +83,7 @@ function MenuBar() {
             <DropDownMenu.Root>
               <DropDownMenu.Trigger asChild>
                 <button
-                  className="rounded-full h-10 w-10 inline-flex transition duration-100 ease-in items-center justify-center text-orange-700 bg-white shadow hover:bg-gray-400 focus:shadow-lg"
+                  className="rounded-full h-10 w-10 inline-flex transition duration-100 ease-in items-center justify-center text-blue-black bg-white shadow hover:bg-gray-400 focus:shadow-lg"
                   aria-label="Customise options"
                 >
                   <RxHamburgerMenu />
@@ -105,7 +99,7 @@ function MenuBar() {
                     <Link
                       link="/signup"
                       linkClass={`${
-                        router.asPath === "/signup" ? "text-orange-900" : ""
+                        router.asPath === "/signup" ? "text-black" : ""
                       }`}
                       text="Stories"
                     />
@@ -114,7 +108,7 @@ function MenuBar() {
                     <Link
                       link="/signup"
                       linkClass={`${
-                        router.asPath === "/signup" ? "text-orange-900" : ""
+                        router.asPath === "/signup" ? "text-black" : ""
                       }`}
                       text="Forum"
                     />
@@ -123,7 +117,7 @@ function MenuBar() {
                     <Link
                       link="/signup"
                       linkClass={`${
-                        router.asPath === "/signup" ? "text-orange-900" : ""
+                        router.asPath === "/signup" ? "text-black" : ""
                       }`}
                       text="Store"
                     />
@@ -132,7 +126,7 @@ function MenuBar() {
                     <Link
                       link="/#contact"
                       linkClass={`${
-                        router.asPath === "/signup" ? "text-orange-900" : ""
+                        router.asPath === "/signup" ? "text-black" : ""
                       }`}
                       text="Contact"
                     />
@@ -141,7 +135,7 @@ function MenuBar() {
                     <Link
                       link="/login"
                       linkClass={`${
-                        router.asPath === "/login" ? "text-orange-900" : ""
+                        router.asPath === "/login" ? "text-black" : ""
                       }`}
                       text="Login"
                     />
