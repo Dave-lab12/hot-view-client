@@ -19,7 +19,7 @@ function Footer({ className = "" }: Iprops) {
     <>
       <section
         id="contact"
-        className={`grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg ${className}`}
+        className={`grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg bg-gray-400 ${className}`}
       >
         <div className="space-y-5">
           <div className="grid py-10 place-items-center">
@@ -27,6 +27,7 @@ function Footer({ className = "" }: Iprops) {
               address="F1 456 Caron Town"
               email="info@example.com"
               phonenumber="234-582432343"
+              customClass="text-white"
             />
           </div>
         </div>
