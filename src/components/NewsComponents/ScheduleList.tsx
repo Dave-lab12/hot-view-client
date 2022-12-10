@@ -1,11 +1,11 @@
 import React from "react";
 import * as Label from "@radix-ui/react-label";
-import { Schedule } from "src/types/Schedule";
+import { ScheduleType } from "src/types/Schedule";
 
 import Schedule from "../HomePage/Schedule";
 
 interface IProps {
-  schedules: Schedule;
+  schedules: ScheduleType;
 }
 
 function ScheduleList() {
