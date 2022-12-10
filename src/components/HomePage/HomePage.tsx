@@ -220,8 +220,8 @@ function HomePage() {
         id="contact"
         className="grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg"
       >
-        <div className="col-span-4 space-y-5">
-          <div className="grid place-items-center">
+        <div className="space-y-5">
+          <div className="grid py-10 place-items-center">
             <Contact
               address="F1 456 Caron Town"
               email="info@example.com"
