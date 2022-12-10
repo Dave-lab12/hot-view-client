@@ -1,10 +1,7 @@
 import * as Label from "@radix-ui/react-label";
-import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
-import Contact from "../Contact";
-import Logo from "../Logo";
 import Footer from "../Footer";
 
 import FeaturedNews from "./News/FeaturedNews";
@@ -216,21 +213,7 @@ function HomePage() {
       <div className=" font-Poppins my-5 lg:mx-16 mx-7">
         <CallToAction imageUrl="https://picsum.photos/seed/anotherrandom/800/400?grayscale" />
       </div>
-      <section
-        id="contact"
-        className="grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg"
-      >
-        <div className="space-y-5">
-          <div className="grid py-10 place-items-center">
-            <Contact
-              address="F1 456 Caron Town"
-              email="info@example.com"
-              phonenumber="234-582432343"
-            />
-          </div>
-        </div>
-        <Footer className="col-span-4" />
-      </section>
+      <Footer />
     </>
   );
 }
