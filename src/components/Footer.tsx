@@ -19,7 +19,7 @@ function Footer({ className = "" }: Iprops) {
     <>
       <section
         id="contact"
-        className={`grid grid-cols-4 font-Poppins xl:px-10 px-5 py-10 place-content-center text-gray-600 text-lg bg-gray-200 ${className}`}
+        className={`grid grid-cols-4 font-Poppins xl:px-10 px-5 py-10 place-content-center text-gray-600 text-lg bg-gray-100 ${className}`}
       >
         <div className="space-y-5">
           <div className="grid py-10 place-items-center">

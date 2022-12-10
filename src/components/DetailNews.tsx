@@ -15,12 +15,12 @@ function DetailNews() {
     <>
       <MenuBar />
       <div className="grid pt-10 grid-flow-row place-content-center space-y-5">
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <Image
             src="https://picsum.photos/seed/adersone/800/400"
             alt="News image"
-            width={1000}
-            height={600}
+            width={400}
+            height={200}
           />
           <NewsHeading title="News title" titleClass="text-blue-black mt-5" />
           <NewsContent content="News content" className="break-normal" />
