@@ -12,7 +12,7 @@ import ScheduleList from "./NewsComponents/ScheduleList";
 
 function DetailNews() {
   return (
-    <div className="font-Poppins">
+    <>
       <MenuBar />
       <div className="grid pt-10 grid-flow-row place-content-center space-y-5">
         <div className="flex flex-col">
@@ -22,7 +22,7 @@ function DetailNews() {
             width={1000}
             height={600}
           />
-          <NewsHeading title="News title" titleClass="text-black" />
+          <NewsHeading title="News title" titleClass="text-blue-black mt-5" />
           <NewsContent content="News content" className="break-normal" />
         </div>
       </div>
@@ -64,11 +64,11 @@ function DetailNews() {
             />
           </div>
         </div>
-        <ScheduleList />
+        <ScheduleList className="lg:w-1/3 w-full" />
       </div>
 
       <Footer className="bg-blue-black text-white" />
-    </div>
+    </>
   );
 }
 
