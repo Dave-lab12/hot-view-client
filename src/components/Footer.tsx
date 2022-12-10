@@ -19,7 +19,7 @@ function Footer({ className = "" }: Iprops) {
     <>
       <section
         id="contact"
-        className="grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg"
+        className={`grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg ${className}`}
       >
         <div className="space-y-5">
           <div className="grid py-10 place-items-center">
@@ -31,7 +31,7 @@ function Footer({ className = "" }: Iprops) {
           </div>
         </div>
         <div
-          className={`grid col-span-4  grid-flow-row sm:grid-flow-col p-2 sm:p-4 place-content-center sm:place-content-stretch mx-4 mt-3 rounded-md bg-gray-200 items-center ${className}`}
+          className={`grid col-span-4  grid-flow-row sm:grid-flow-col p-2 sm:p-4 place-content-center sm:place-content-stretch mx-4 mt-3 rounded-md bg-gray-200 items-center`}
         >
           <p className="space-x-3 text-blue-black">
             <Label.Root className="text-sm">Follow us:</Label.Root>
