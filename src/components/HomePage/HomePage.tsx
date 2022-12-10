@@ -218,7 +218,7 @@ function HomePage() {
       </div>
       <section
         id="contact"
-        className="grid grid-cols-4 font-Poppins xl:px-52 py-10 place-content-center text-gray-600 text-lg"
+        className="grid grid-cols-4 font-Poppins xl:px-10 py-10 place-content-center text-gray-600 text-lg"
       >
         <div className="col-span-4 space-y-5">
           <div className="grid place-items-center">
