@@ -7,7 +7,6 @@ import Footer from "./Footer";
 import NewsHeading from "./NewsComponents/NewsHeading";
 import NewsContent from "./NewsComponents/NewsContent";
 import UserCreatedNews from "./HomePage/News/UserCreatedNews";
-import Schedule from "./HomePage/Schedule";
 import ScheduleList from "./NewsComponents/ScheduleList";
 
 function DetailNews() {
@@ -15,7 +14,7 @@ function DetailNews() {
     <>
       <MenuBar />
       <div className="flex pt-10 flex-col items-center content-center space-y-5">
-        <div className="flex w-full flex-col">
+        <div className="flex object-cover flex-col">
           <Image
             src="https://picsum.photos/seed/adersone/800/400"
             alt="News image"
