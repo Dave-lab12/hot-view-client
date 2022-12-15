@@ -1,20 +1,26 @@
-import { useFormik, ErrorMessage } from "formik";
+import { useFormik } from "formik";
 import { useMutation } from "react-query";
 import { IUser } from "src/types/User";
-import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { RegisterSchema } from "../schema/signup.schema";
 import { signUpUserFn } from "../utils/authApi";
 
-import Input from "./Input";
-import Button from "./Button";
+import Input from "./Form/Input";
+import Button from "./Form/Button";
 import Header from "./Header";
 import Logo from "./Logo";
-import ErrorSpan from "./ErrorSpan";
+import ErrorSpan from "./Form/ErrorSpan";
 
 function SignUp() {
-  const { mutate, isError, error } = useMutation((userData: IUser) =>
-    signUpUserFn(userData)
+  const router = useRouter();
+  const { mutate, isError, error } = useMutation(
+    (userData: IUser) => signUpUserFn(userData),
+    {
+      onSuccess: () => {
+        router.push("/login");
+      },
+    }
   );
   const formik = useFormik({
     initialValues: {
@@ -41,7 +47,7 @@ function SignUp() {
   });
 
   return (
-    <div className="bg-gray-300 overflow-hidden">
+    <div className="bg-gray-300 font-Poppins overflow-hidden">
       <Header title="signup" />
       <main>
         <div className="grid place-items-center h-screen overflow-auto">
@@ -52,12 +58,14 @@ function SignUp() {
             />
             <div className="grid grid-flow-col place-content-evenly-center w-3/4 py-3">
               <form onSubmit={formik.handleSubmit}>
-                <h1 className="place-self-start text-center pt-1 my-2 text-white bg-orange-400 h-9 rounded-lg ">
+                <h1 className="place-self-start text-center pt-1 my-2 text-white bg-blue-400 h-9 rounded-lg ">
                   Fill the following form please
                 </h1>
                 {isError && (
-                  <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
-                    {error?.response.data.message}
+                  <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-blue-black rounded-lg ">
+                    {error.response
+                      ? error.response.data.message
+                      : error.message}
                   </h1>
                 )}
 

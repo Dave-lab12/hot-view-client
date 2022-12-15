@@ -5,7 +5,17 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        128: "30rem",
+      },
+      colors: {
+        "blue-black": "#1a2261",
+      },
+      fontFamily: {
+        Poppins: ["Poppins", "serif"],
+      },
+    },
   },
   plugins: [],
 };

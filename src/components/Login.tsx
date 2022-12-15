@@ -2,20 +2,27 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
+import { useRouter } from "next/router";
 
 import { loginUserFn } from "../utils/authApi";
 import { LoginInput } from "../types/LoginInput";
 
-import Input from "./Input";
+import Input from "./Form/Input";
+import ErrorSpan from "./Form/ErrorSpan";
+import Button from "./Form/Button";
 import Logo from "./Logo";
-import Button from "./Button";
 import Link from "./Link";
 import Header from "./Header";
-import ErrorSpan from "./ErrorSpan";
 
 function Login() {
-  const { mutate, isError, error } = useMutation((userData: LoginInput) =>
-    loginUserFn(userData)
+  const router = useRouter();
+  const { mutate, isError, error } = useMutation(
+    (userData: LoginInput) => loginUserFn(userData),
+    {
+      onSuccess: () => {
+        router.push("/");
+      },
+    }
   );
   const formik = useFormik({
     initialValues: {
@@ -33,19 +40,19 @@ function Login() {
   });
 
   return (
-    <div className="bg-gray-300 overflow-auto">
+    <div className="bg-gray-300 font-Poppins overflow-auto">
       <Header title="Login" />
       <main>
         <div className="grid place-items-center h-screen">
           <form
             onSubmit={formik.handleSubmit}
-            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg max-sm:w-3/4 sm:w-1/2 lg:w-1/4  p-5"
+            className="grid place-items-center bg-gray-100 transition hover:shadow-lg rounded-lg max-sm:w-3/4 sm:w-1/2 lg:w-1/4 p-5"
           >
-            <Logo src="/hot-news-logo.png" />
+            <Logo logoClass="mb-5" src="/hot-news-logo.png" />
 
             {isError && (
-              <h1 className="place-self-start text-sm text-white pt-1 text-center h-9 bg-red-600 rounded-lg ">
-                {error?.response.data.message}
+              <h1 className="place-self-start w-full my-3 text-sm text-white pt-1 text-center h-9 bg-blue-black rounded-lg ">
+                {error.response ? error.response.data.message : error.message}
               </h1>
             )}
             <Input
@@ -78,8 +85,7 @@ function Login() {
             <Link
               text="Forgot password"
               link="#"
-              linkClass="place-self-end mt-2"
-              textClass="text-sm"
+              linkClass="place-self-end mt-2 text-sm"
             />
 
             <h1 className="my-4 text-gray-700 mb-6">login with</h1>
@@ -107,8 +113,7 @@ function Login() {
             <Link
               text="Sign up"
               link="/signup"
-              linkClass="display:inline"
-              textClass="text-sm"
+              linkClass=" text-blue-black display:inline text-sm"
             />
           </form>
         </div>
