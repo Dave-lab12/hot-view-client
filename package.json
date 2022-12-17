@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
@@ -10,7 +10,8 @@
     "format": "prettier '**/*.{js,ts,css}' --write --ignore-unknown",
     "lint": "eslint src --ext .ts,.tsx,.js",
     "lint-and-fix": "eslint src --ext .ts,.tsx,.js --fix",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "server": "json-server --watch ./src/utils/db.json"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.1",
