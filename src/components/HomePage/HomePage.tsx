@@ -1,8 +1,10 @@
 import * as Label from "@radix-ui/react-label";
+import { useQuery } from "react-query";
 
 import MenuBar from "../MenuBar";
 import CallToAction from "../CallToAction";
 import Footer from "../Footer";
+import { getArticles, getArticle } from "../../utils/articlesApi";
 
 import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
@@ -11,6 +13,18 @@ import UserCreatedNews from "./News/UserCreatedNews";
 import Schedule from "./Schedule";
 
 function HomePage() {
+  const { isLoading, data, error } = useQuery("articles", getArticles);
+  console.log(`IsLoading: ${isLoading}`);
+  console.log(`Data: ${data}`);
+  console.log(`Error: ${error}`);
+
+  const { isLoadingArticle, articleData, articleError } = useQuery(
+    "article",
+    () => {
+      getArticle("random string");
+    }
+  );
+
   return (
     <>
       <MenuBar />
