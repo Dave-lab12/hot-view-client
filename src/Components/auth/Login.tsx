@@ -3,8 +3,13 @@ import { useFormik } from "formik";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
 
+<<<<<<< HEAD:src/Components/auth/Login.tsx
 import { LoginSchema } from "@/lib/schema/login.schema";
 import { loginUserFn } from "@/lib/utils/authApi";
+=======
+import { loginUserFn } from "../utils/authApii
+import { LoginInput } from "../types/LoginInput";
+>>>>>>> a08fee2 (refactor: Changed json server to the backend):src/components/Login.tsx
 
 import { Header, Logo, Link, Button, ErrorSpan, Input } from "../Ui";
 

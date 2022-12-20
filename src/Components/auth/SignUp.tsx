@@ -2,8 +2,13 @@ import { useFormik } from "formik";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
 
+<<<<<<< HEAD:src/Components/auth/SignUp.tsx
 import { RegisterSchema } from "@/lib/schema/signup.schema";
 import { signUpUserFn } from "@/lib/utils/authApi";
+=======
+import { RegisterSchema } from "../schema/signup.schema";
+import { signUpUserFn } from "../utils/authApii
+>>>>>>> a08fee2 (refactor: Changed json server to the backend):src/components/SignUp.tsx
 
 import { Header, Logo, Button, ErrorSpan, Input } from "../Ui";
 
