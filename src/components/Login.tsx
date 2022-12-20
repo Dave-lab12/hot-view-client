@@ -4,7 +4,7 @@ import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
 
-import { loginUserFn } from "../utils/authApi";
+import { loginUserFn } from "../utils/authApii
 import { LoginInput } from "../types/LoginInput";
 
 import Input from "./Form/Input";

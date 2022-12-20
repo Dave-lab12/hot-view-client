@@ -4,7 +4,7 @@ import { IUser } from "src/types/User";
 import { useRouter } from "next/router";
 
 import { RegisterSchema } from "../schema/signup.schema";
-import { signUpUserFn } from "../utils/authApi";
+import { signUpUserFn } from "../utils/authApii
 
 import Input from "./Form/Input";
 import Button from "./Form/Button";
