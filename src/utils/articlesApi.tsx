@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhosst:8001/";
+const BASE_URL = "http://localhost:3000/articles";
 
 export const articleApi = axios.create({
   baseURL: BASE_URL,
@@ -12,6 +12,6 @@ export const getArticles = async () => {
 };
 
 export const getArticle = async (id: string) => {
-  const response = await articleApi.get(`/:${id}`);
+  const response = await articleApi.get(`/${id}`);
   return response;
 };

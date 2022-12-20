@@ -13,17 +13,9 @@ import UserCreatedNews from "./News/UserCreatedNews";
 import Schedule from "./Schedule";
 
 function HomePage() {
-  const { isLoading, data, error } = useQuery("articles", getArticles);
-  console.log(`IsLoading: ${isLoading}`);
-  console.log(`Data: ${data}`);
-  console.log(`Error: ${error}`);
-
-  const { isLoadingArticle, articleData, articleError } = useQuery(
-    "article",
-    () => {
-      getArticle("random string");
-    }
-  );
+  const { isLoading, data, error } = useQuery("article", () => {
+    getArticle("1");
+  });
 
   return (
     <>
