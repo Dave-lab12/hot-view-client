@@ -10,7 +10,7 @@ interface IParams {
   error: unknown;
 }
 
-export default function useValidateForm({ mutate, error }: IParams) {
+export default function useValidateLogin({ mutate, error }: IParams) {
   const formik = useFormik({
     initialValues: {
       email: "",
