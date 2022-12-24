@@ -1,10 +1,5 @@
-import { useFormik } from "formik";
-import { useMutation } from "react-query";
-import { IUser } from "src/types/User";
-import { useRouter } from "next/router";
-
-import { RegisterSchema } from "../schema/signup.schema";
-import { signUpUserFn } from "../utils/authApi";
+import useSignupUser from "../hooks/useSignupUser";
+import useValidateSignup from "../hooks/useValidateSignup";
 
 import Input from "./Form/Input";
 import Button from "./Form/Button";
