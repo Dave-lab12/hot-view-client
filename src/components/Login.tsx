@@ -1,11 +1,7 @@
 import { signIn } from "next-auth/react";
-import { useFormik } from "formik";
-import { LoginSchema } from "src/schema/login.schema";
-import { useMutation } from "react-query";
-import { useRouter } from "next/router";
 
-import { loginUserFn } from "../utils/authApii
-import { LoginInput } from "../types/LoginInput";
+import useRegisterUser from "../hooks/useRegisterUser";
+import useValidateForm from "../hooks/useValidateForm";
 
 import Input from "./Form/Input";
 import ErrorSpan from "./Form/ErrorSpan";
@@ -15,29 +11,8 @@ import Link from "./Link";
 import Header from "./Header";
 
 function Login() {
-  const router = useRouter();
-  const { mutate, isError, error } = useMutation(
-    (userData: LoginInput) => loginUserFn(userData),
-    {
-      onSuccess: () => {
-        router.push("/");
-      },
-    }
-  );
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: LoginSchema,
-    onSubmit(values) {
-      const user: LoginInput = { ...values };
-      mutate(user);
-      if (!error) {
-        formik.resetForm();
-      }
-    },
-  });
+  const { mutate, error, isError } = useRegisterUser();
+  const formik = useValidateForm({ mutate, error });
 
   return (
     <div className="bg-gray-300 font-Poppins overflow-auto">
