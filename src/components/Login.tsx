@@ -1,6 +1,6 @@
 import { signIn } from "next-auth/react";
 
-import useRegisterUser from "../hooks/useRegisterUser";
+import useLoginUser from "../hooks/useLoginUser";
 import useValidateForm from "../hooks/useValidateForm";
 
 import Input from "./Form/Input";
@@ -11,7 +11,7 @@ import Link from "./Link";
 import Header from "./Header";
 
 function Login() {
-  const { mutate, error, isError } = useRegisterUser();
+  const { mutate, error, isError } = useLoginUser();
   const formik = useValidateForm({ mutate, error });
 
   return (
