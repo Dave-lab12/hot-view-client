@@ -1,7 +1,7 @@
 import { signIn } from "next-auth/react";
 
 import useLoginUser from "../hooks/useLoginUser";
-import useValidateForm from "../hooks/useValidateForm";
+import useValidateLogin from "../hooks/useValidateLogin";
 
 import Input from "./Form/Input";
 import ErrorSpan from "./Form/ErrorSpan";
@@ -12,7 +12,7 @@ import Header from "./Header";
 
 function Login() {
   const { mutate, error, isError } = useLoginUser();
-  const formik = useValidateForm({ mutate, error });
+  const formik = useValidateLogin({ mutate, error });
 
   return (
     <div className="bg-gray-300 font-Poppins overflow-auto">
