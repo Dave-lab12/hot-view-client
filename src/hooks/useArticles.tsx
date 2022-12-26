@@ -12,21 +12,23 @@ interface IParams {
   id: string;
 }
 
-const queryOptions: UseQueryOptions = {
+const queryOptions = {
   staleTime: 1000,
   refetchOnMount: true,
   refetchIntervalInBackground: true,
 };
 
 export function useGetArticles() {
-  const query = useQuery("Fetch Articles", getArticles, { ...queryOptions });
+  const query = useQuery("Fetch Articles", getArticles, queryOptions);
   return query;
 }
 
 export function useGetArticle({ id }: IParams) {
-  const query = useQuery(`Fetch Article ${id}`, () => getArticle(id), {
-    ...queryOptions,
-  });
+  const query = useQuery(
+    `Fetch Article ${id}`,
+    () => getArticle(id),
+    queryOptions
+  );
   return query;
 }
 
