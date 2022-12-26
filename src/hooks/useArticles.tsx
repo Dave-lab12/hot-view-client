@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery, useMutation, UseQueryOptions } from "react-query";
 
 import { getArticles, getArticle } from "../utils/articlesApi";
 
@@ -6,12 +6,24 @@ interface IParams {
   id: string;
 }
 
-export function useArticles() {
-  const query = useQuery("Fetch Articles", getArticles);
+const queryOptions: UseQueryOptions = {
+  staleTime: 1000,
+  refetchOnMount: true,
+  refetchIntervalInBackground: true,
+};
+
+export function useQueryArticles() {
+  const query = useQuery("Fetch Articles", getArticles, { ...queryOptions });
   return query;
 }
 
-export function useArticle({ id }: IParams) {
-  const query = useQuery("Fetch Articles", () => getArticle(id));
+export function useQueryArticle({ id }: IParams) {
+  const query = useQuery("Fetch Articles", () => getArticle(id), {
+    ...queryOptions,
+  });
   return query;
+}
+
+export function useMutationArticle() {
+  const mutation = useMutation();
 }
