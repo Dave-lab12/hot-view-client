@@ -4,24 +4,20 @@ import * as NavBar from "@radix-ui/react-navigation-menu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsSearch } from "react-icons/bs";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-import Link from "./Link";
-
-function MenuBar() {
+export function NavigationBar() {
   const router = useRouter();
-
   return (
     <>
       <NavBar.Root className="grid sticky top-0 z-50 font-Poppins h-fit bg-white grid-flow-col p-7 mx-3 border-solid border-b items-center ">
         <div className="grid grid-flow-col justify-between items-center">
           <NavBar.List>
             <Link
-              link="/"
-              linkClass={`flex mr-3 items-center text-blue-black ${
+              href="/"
+              className={`flex mr-3 items-center text-blue-black ${
                 router.asPath === "/" ? "text-blue-black" : ""
               }`}
-              text="Hotnews"
-              key="logo"
             >
               <div className="flex flex-row items-center space-x-4">
                 <text className="text-2xl hover:scale-105 transition ease-in duration-100">
@@ -33,44 +29,49 @@ function MenuBar() {
           <div className="hidden md:flex md:flex-row">
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
-                link="/signup"
-                linkClass={`${
+                href="/signup"
+                className={`${
                   router.asPath === "/signup" ? "text-black " : ""
                 }`}
-                text="Stories"
-              />
+              >
+                Stories
+              </Link>
             </NavBar.List>
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
-                link="/signup"
-                text="Forum"
+                href="/signup"
                 linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
-              />
+              >
+                Forum
+              </Link>
             </NavBar.List>
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
-                link="/signup"
-                text="Store"
-                linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
-              />
+                href="/signup"
+                className={`${router.asPath === "/signup" ? "text-black" : ""}`}
+              >
+                Store
+              </Link>
             </NavBar.List>
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
-                link="/#contact"
-                text="Contact"
-                linkClass={`${
+                href="/#contact"
+                className={`${
                   router.asPath === "/#contact" ? "text-black" : ""
                 }`}
-              />
+              >
+                Contact
+              </Link>
             </NavBar.List>
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black  text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
-                link="/login"
-                text="Login"
+                href="/login"
+                className="Login"
                 linkClass={`${router.asPath === "/login" ? "text-black" : ""}`}
-              />
+              >
+                Login
+              </Link>
             </NavBar.List>
-
             <div className="place-self-center items-center">
               <NavBar.List className=" text-blue-black text-lg mx-4">
                 <BsSearch />
@@ -95,48 +96,54 @@ function MenuBar() {
                 >
                   <DropDownMenu.Item>
                     <Link
-                      link="/signup"
-                      linkClass={`${
+                      href="/signup"
+                      className={`${
                         router.asPath === "/signup" ? "text-black" : ""
                       }`}
-                      text="Stories"
-                    />
+                    >
+                      Stories
+                    </Link>
                   </DropDownMenu.Item>
                   <DropDownMenu.Item>
                     <Link
-                      link="/signup"
-                      linkClass={`${
+                      href="/signup"
+                      className={`${
                         router.asPath === "/signup" ? "text-black" : ""
                       }`}
-                      text="Forum"
-                    />
+                    >
+                      Forum
+                    </Link>
                   </DropDownMenu.Item>
                   <DropDownMenu.Item>
                     <Link
-                      link="/signup"
-                      linkClass={`${
+                      href="/signup"
+                      className={`${
                         router.asPath === "/signup" ? "text-black" : ""
                       }`}
-                      text="Store"
-                    />
+                    >
+                      Store
+                    </Link>
                   </DropDownMenu.Item>
                   <DropDownMenu.Item>
                     <Link
-                      link="/#contact"
-                      linkClass={`${
+                      href="/#contact"
+                      className={`${
                         router.asPath === "/signup" ? "text-black" : ""
                       }`}
-                      text="Contact"
-                    />
+                    >
+                      Contact
+                    </Link>
                   </DropDownMenu.Item>
                   <DropDownMenu.Item>
                     <Link
-                      link="/login"
-                      linkClass={`${
+                      href="/login"
+                      className={`${
                         router.asPath === "/login" ? "text-black" : ""
                       }`}
-                      text="Login"
-                    />
+                    >
+                      {" "}
+                      Login
+                    </Link>
                   </DropDownMenu.Item>
                 </DropDownMenu.Content>
               </DropDownMenu.Portal>
@@ -147,5 +154,3 @@ function MenuBar() {
     </>
   );
 }
-
-export default MenuBar;

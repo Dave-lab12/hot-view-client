@@ -14,6 +14,18 @@
     "no-console": 2, // change to 0 to enable console
     "no-loops/no-loops": 2
   },
+  "globals": {
+    "React": true,
+    "google": true,
+    "mount": true,
+    "mountWithRouter": true,
+    "shallow": true,
+    "shallowWithRouter": true,
+    "context": true,
+    "expect": true,
+    "jsdom": true,
+    "JSX": true
+  },
   "overrides": [
     // Only uses Testing Library lint rules in test files
     {

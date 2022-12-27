@@ -8,13 +8,13 @@ import {
 } from "react-icons/ai";
 import { MdPhone } from "react-icons/md";
 
-import Contact from "./Contact";
+import Contact from "../Contact";
 
 interface Iprops {
   className?: string;
 }
 
-function Footer({ className = "" }: Iprops) {
+export function Footer({ className = "" }: Iprops) {
   return (
     <>
       <section
@@ -49,5 +49,3 @@ function Footer({ className = "" }: Iprops) {
     </>
   );
 }
-
-export default Footer;

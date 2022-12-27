@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { IUser } from "src/types/User";
 import { LoginInput } from "src/types/LoginInput";
 

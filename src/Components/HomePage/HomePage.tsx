@@ -8,12 +8,13 @@ import FeaturedNews from "./News/FeaturedNews";
 import SideNews from "./News/SideNews";
 import TopNewsCard from "./News/TopNewsCard";
 import UserCreatedNews from "./News/UserCreatedNews";
+
 import Schedule from "./Schedule";
 
 function HomePage() {
   return (
     <>
-      <MenuBar />
+      {/* <MenuBar /> */}
       <div className="grid grid-flow-row font-Poppins place-content-center lg:px-40 md:px-16 px-8 mt-10">
         <div className="grid xl:grid-cols-3 sm:grid-cols-2 ">
           <div className="h-64 sm:h-128 col-span-2 mb-5">
