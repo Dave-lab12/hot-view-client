@@ -7,7 +7,12 @@ interface IProps {
   customClass?: string;
 }
 
-function Contact({ address, email, phonenumber, customClass = "" }: IProps) {
+export const Contact = ({
+  address,
+  email,
+  phonenumber,
+  customClass = "",
+}: IProps) => {
   return (
     <>
       <div className={`grid place-self-center items-start  ${customClass}`}>
@@ -17,6 +22,4 @@ function Contact({ address, email, phonenumber, customClass = "" }: IProps) {
       </div>
     </>
   );
-}
-
-export default Contact;
+};

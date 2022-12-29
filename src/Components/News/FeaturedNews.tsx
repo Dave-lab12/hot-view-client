@@ -1,8 +1,10 @@
 import React from "react";
 
-import NewsDescription from "../../NewsComponents/NewsDescription";
-import NewsInfo from "../../NewsComponents/NewsInfo";
-import NewsHeading from "../../NewsComponents/NewsHeading";
+import {
+  NewsDescription,
+  NewsHeading,
+  NewsInfo,
+} from "@/components/Ui/Typography";
 
 interface IProps {
   imageUrl: string;
@@ -13,14 +15,14 @@ interface IProps {
   description: string;
 }
 
-function FeaturedNews({
+export const FeaturedNews = ({
   imageUrl,
   newsCategory,
   postedDate,
   postedBy,
   title,
   description,
-}: IProps) {
+}: IProps) => {
   return (
     <>
       <div
@@ -57,6 +59,4 @@ function FeaturedNews({
       </div>
     </>
   );
-}
-
-export default FeaturedNews;
+};

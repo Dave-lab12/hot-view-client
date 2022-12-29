@@ -6,7 +6,7 @@ interface IProps {
   titleClass?: string;
 }
 
-function NewsHeading({ title, titleClass }: IProps) {
+export const NewsHeading = ({ title, titleClass }: IProps) => {
   return (
     <>
       <Label.Root className={`font-bold text-xl text-white ${titleClass}`}>
@@ -14,6 +14,6 @@ function NewsHeading({ title, titleClass }: IProps) {
       </Label.Root>
     </>
   );
-}
+};
 
 export default NewsHeading;

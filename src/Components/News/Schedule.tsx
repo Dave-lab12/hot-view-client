@@ -9,7 +9,12 @@ interface IProps {
   customClass?: string;
 }
 
-function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
+export const Schedule = ({
+  title,
+  date,
+  dateTimeStamp,
+  customClass = " ",
+}: IProps) => {
   return (
     <div
       className={`flex flex-row items-center justify-between p-1 ${customClass}`}
@@ -28,6 +33,4 @@ function Schedule({ title, date, dateTimeStamp, customClass = " " }: IProps) {
       <BsCalendar4 className="flex text-blue-black ml-16 text-3xl" />
     </div>
   );
-}
-
-export default Schedule;
+};

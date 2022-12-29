@@ -6,7 +6,7 @@ interface IProps {
   descClass?: string;
 }
 
-function NewsDescription({ description, descClass }: IProps) {
+export const NewsDescription = ({ description, descClass }: IProps) => {
   return (
     <>
       <Label.Root className={`text-md text-sm ${descClass}`}>
@@ -14,6 +14,6 @@ function NewsDescription({ description, descClass }: IProps) {
       </Label.Root>
     </>
   );
-}
+};
 
 export default NewsDescription;

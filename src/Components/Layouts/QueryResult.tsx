@@ -13,9 +13,9 @@ export const QueryResult = ({ loading, data, error, children }: Props) => {
   }
   if (loading) {
     return (
-      <>
+      <div className="flex justify-center items-center h-screen">
         <MoonLoader color="#f6adad" size={100} />
-      </>
+      </div>
     );
   }
   if (!data) {

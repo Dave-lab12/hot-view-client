@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import NewsInfo from "../../NewsComponents/NewsInfo";
-import NewsHeading from "../../NewsComponents/NewsHeading";
+import { NewsHeading, NewsInfo } from "@/components/Ui/Typography";
 
 interface IProps {
   imageUrl: string;
@@ -14,7 +13,7 @@ interface IProps {
   sideNewsClass?: string;
 }
 
-function SideNews({
+export const SideNews = ({
   imageUrl,
   postedDate,
   readingTime,
@@ -22,7 +21,7 @@ function SideNews({
   imageWidth = 230,
   imageHeight = 200,
   sideNewsClass = "",
-}: IProps) {
+}: IProps) => {
   return (
     <div className={`flex flex-col sm:flex-row border-b pb-2 ${sideNewsClass}`}>
       <div>
@@ -49,6 +48,4 @@ function SideNews({
       </div>
     </div>
   );
-}
-
-export default SideNews;
+};

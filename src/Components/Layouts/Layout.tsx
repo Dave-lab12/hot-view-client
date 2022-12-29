@@ -1,4 +1,4 @@
-import { Header, Footer, NavigationBar } from "../Components";
+import { Header, Footer, NavigationBar } from "@/components/Ui";
 
 type Props = {
   title: string;

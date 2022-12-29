@@ -1,11 +1,14 @@
 import React from "react";
 import * as Avatar from "@radix-ui/react-avatar";
 import * as Label from "@radix-ui/react-label";
-import NewsHeading from "@/components/NewsComponents/NewsHeading";
-import NewsDescription from "@/components/NewsComponents/NewsDescription";
-import NewsInfo from "@/components/NewsComponents/NewsInfo";
 import Image from "next/image";
 import { BsBookmark, BsThreeDots } from "react-icons/bs";
+
+import {
+  NewsDescription,
+  NewsHeading,
+  NewsInfo,
+} from "@/components/Ui/Typography";
 
 interface IProps {
   profileImg: string;
@@ -15,14 +18,14 @@ interface IProps {
   newsImage: string;
   customClass?: string;
 }
-function UserCreatedNews({
+export const UserCreatedNews = ({
   profileImg,
   firstName,
   lastName,
   newsImage,
   fallBackUName = firstName[0] + lastName[0],
   customClass = " ",
-}: IProps) {
+}: IProps) => {
   return (
     <div
       className={`grid sm:grid-cols-2 md:grid-cols-3 place-items-start border-b pb-2 ${customClass}`}
@@ -78,6 +81,4 @@ function UserCreatedNews({
       </div>
     </div>
   );
-}
-
-export default UserCreatedNews;
+};

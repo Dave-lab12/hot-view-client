@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { MdPhone } from "react-icons/md";
 
-import Contact from "../Contact";
+import { Contact } from "@/components/Ui/Contact";
 
 interface Iprops {
   className?: string;

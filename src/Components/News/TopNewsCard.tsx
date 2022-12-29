@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import NewsHeading from "@/components/NewsComponents/NewsHeading";
-import NewsInfo from "@/components/NewsComponents/NewsInfo";
-import Header from "@/components/Header";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import { RxDotFilled } from "react-icons/rx";
+
+import { NewsHeading, NewsInfo } from "@/components/Ui/Typography";
 
 interface IProps {
   imageUrl: string;
@@ -17,7 +16,7 @@ interface IProps {
   cardClass?: string;
 }
 
-function TopNewsCard({
+export const TopNewsCard = ({
   imageUrl,
   title,
   postedBy,
@@ -25,7 +24,7 @@ function TopNewsCard({
   views,
   postedDate,
   cardClass = "",
-}: IProps) {
+}: IProps) => {
   return (
     <div className={`flex flex-col space-y-2 ${cardClass}`}>
       <Image
@@ -53,6 +52,4 @@ function TopNewsCard({
       </div>
     </div>
   );
-}
-
-export default TopNewsCard;
+};
