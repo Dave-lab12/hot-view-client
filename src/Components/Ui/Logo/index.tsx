@@ -6,7 +6,7 @@ interface IProps {
   width?: number;
   height?: number;
 }
-function Logo({ src, logoClass, width = 100, height = 100 }: IProps) {
+export function Logo({ src, logoClass, width = 100, height = 100 }: IProps) {
   return (
     <div className={logoClass}>
       <Image
@@ -20,5 +20,3 @@ function Logo({ src, logoClass, width = 100, height = 100 }: IProps) {
     </div>
   );
 }
-
-export default Logo;

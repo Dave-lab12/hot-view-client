@@ -10,7 +10,7 @@ interface IProps {
   acceptedValue: string | number | undefined;
 }
 
-function Input({
+export const Input = ({
   inputName,
   inputType,
   inputClass = "",
@@ -18,7 +18,7 @@ function Input({
   changed,
   blur,
   acceptedValue,
-}: IProps) {
+}: IProps) => {
   return (
     <div className={`relative ${inputClass}`}>
       <input
@@ -38,6 +38,4 @@ function Input({
       </label>
     </div>
   );
-}
-
-export default Input;
+};

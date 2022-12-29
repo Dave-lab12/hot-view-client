@@ -10,14 +10,14 @@ interface IProps {
   disable?: boolean;
 }
 
-function Button({
+export const Button = ({
   buttonType,
   text,
   buttonClass,
   click,
   iconLink,
   disable,
-}: IProps) {
+}: IProps) => {
   return (
     <button
       type={buttonType}
@@ -29,6 +29,4 @@ function Button({
       {text}
     </button>
   );
-}
-
-export default Button;
+};

@@ -7,12 +7,10 @@ interface IProps {
   children?: ReactNode;
 }
 
-function Link({ link, text, linkClass, children }: IProps) {
+export const Link = ({ link, text, linkClass, children }: IProps) => {
   return (
     <a href={link} className={linkClass}>
       {children ? children : text}
     </a>
   );
-}
-
-export default Link;
+};

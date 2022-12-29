@@ -40,7 +40,7 @@ export function NavigationBar() {
             <NavBar.List className="mx-4 p-1 px-2 text-blue-black text-lg hover:bg-blue-black hover:text-white hover:rounded-md transition duration-200 transfrom ease-in">
               <Link
                 href="/signup"
-                linkClass={`${router.asPath === "/signup" ? "text-black" : ""}`}
+                className={`${router.asPath === "/signup" ? "text-black" : ""}`}
               >
                 Forum
               </Link>
@@ -67,7 +67,7 @@ export function NavigationBar() {
               <Link
                 href="/login"
                 className="Login"
-                linkClass={`${router.asPath === "/login" ? "text-black" : ""}`}
+                className={`${router.asPath === "/login" ? "text-black" : ""}`}
               >
                 Login
               </Link>

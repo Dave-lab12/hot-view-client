@@ -1,18 +1,14 @@
 import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
-import { LoginSchema } from "src/schema/login.schema";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
 
-import { loginUserFn } from "../utils/authApi";
-import { LoginInput } from "../types/LoginInput";
+import { LoginSchema } from "@/lib/schema/login.schema";
+import { loginUserFn } from "@/lib/utils/authApi";
 
-import Input from "./Form/Input";
-import ErrorSpan from "./Form/ErrorSpan";
-import Button from "./Form/Button";
-import Logo from "./Logo";
-import Link from "./Link";
-import Header from "./Header";
+import { Header, Logo, Link, Button, ErrorSpan, Input } from "../Ui";
+
+import { LoginInput } from "./types";
 
 function Login() {
   const router = useRouter();
