@@ -1,10 +1,5 @@
-import { useFormik } from "formik";
-import { useMutation } from "react-query";
-import { IUser } from "src/types/User";
-import { useRouter } from "next/router";
-
-import { RegisterSchema } from "../schema/signup.schema";
-import { signUpUserFn } from "../utils/authApi";
+import useSignupUser from "../hooks/useSignupUser";
+import useValidateSignup from "../hooks/useValidateSignup";
 
 import Input from "./Form/Input";
 import Button from "./Form/Button";
@@ -13,39 +8,8 @@ import Logo from "./Logo";
 import ErrorSpan from "./Form/ErrorSpan";
 
 function SignUp() {
-  const router = useRouter();
-  const { mutate, isError, error } = useMutation(
-    (userData: IUser) => signUpUserFn(userData),
-    {
-      onSuccess: () => {
-        router.push("/login");
-      },
-    }
-  );
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      firstName: "",
-      lastName: "",
-      phonenumber: "",
-      password: "",
-      passwordConfirm: "",
-    },
-    validationSchema: RegisterSchema,
-    onSubmit(values) {
-      const user: IUser = {
-        ...values,
-        phonenumber: parseInt(values.phonenumber, 10),
-      };
-
-      mutate(user);
-
-      if (!isError) {
-        formik.resetForm();
-      }
-    },
-  });
-
+  const { mutate, isError, error } = useSignupUser();
+  const formik = useValidateSignup({ mutate, isError });
   return (
     <div className="bg-gray-300 font-Poppins overflow-hidden">
       <Header title="signup" />
